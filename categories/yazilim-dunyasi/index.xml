@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Yazilim Dunyasi on Tolgahan Üzün</title>
+        <link>http://tolgahanuzun.com/categories/yazilim-dunyasi/</link>
+        <description>Recent content in Yazilim Dunyasi on Tolgahan Üzün</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>tr</language>
+        <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
+        <lastBuildDate>Tue, 12 Jul 2016 03:21:05 +0300</lastBuildDate><atom:link href="http://tolgahanuzun.com/categories/yazilim-dunyasi/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Debian (Ubuntu &#43; Mint ) Heroku Kurulum Sorunu</title>
+        <link>http://tolgahanuzun.com/debian-ubuntu-mint-heroku-kurulum-sorunu/</link>
+        <pubDate>Tue, 12 Jul 2016 03:21:05 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/debian-ubuntu-mint-heroku-kurulum-sorunu/</guid>
+        <description>&lt;p&gt;Gece saat 3 ve ben pervasızca Heroku kurmaya çalışıyorum. Deli oldum resmen! Buraya bu yazıyı yazmalıyım ki benim gibi sorun yaşayan arkadaşlar çözüm bulsunlar. Öncelikle Heroku süper bir sistem. Ancak nalet olsun ki kurulurken sıkıntı veriyor. Bunu önceden de yaşamıştım ve çözümünü bir yere kaydetmemişim. İşte şimdi saatler boşa gitti.&lt;/p&gt;
+&lt;p&gt;Öncelikle Debian tabanlı bir sistemde heroku kurmaya çalışıyor ve size bazı hatalar veriyorsa, tahminen bunun sebebi &amp;ldquo;sources.list&amp;rdquo; konusudur. Anlayacağınız üzere kaynak listesi olarak adlandırılan bu dosya, anlam veremediğim bir şekilde çakışıyor veya başka bir şey oluyor. Bazen Google Chrome yüklerken veya Sublime Text yüklerken bu sorun ile karşılaşmıştım. Çözüm ise, hata veren listeyi silerek hallediyordum. Heroku toolbelt kurarken daha büyük çaplı bir sorun ile karşılaştım.&lt;/p&gt;
+&lt;h4 id=&#34;mint-heroku-kurulumu--ubuntu-heroku-kurulumu&#34;&gt;Mint Heroku Kurulumu | Ubuntu Heroku Kurulumu&lt;/h4&gt;
+&lt;p&gt;İlk denemeniz gereken kod aşağıdaki gibi; sitesinde verilen .sh scriptidir.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget -O- &amp;lt;https://toolbelt.heroku.com/install-ubuntu.sh&amp;gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Sizde benim gibi bu kod&amp;rsquo;da sorun yaşıyorsanız, http olarak çağırmayı denemeniz veya alt taraftaki adımları yapmanız olacaktır.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-add-repository ‘deb http://toolbelt.herokuapp.com/ubuntu ./’
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl https://toolbelt.herokuapp.com/apt/release.key &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo apt-key add –
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install heroku-toolbelt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Öncelikle bu makale 12.07.2016 tarihi için geçerlidir. Yani bundan 2 sene sonra bunu okuyorsanız; muhtemelen &amp;ldquo;deb&amp;rdquo; paketinin linki değişmiş olabilir.&lt;/p&gt;
+&lt;p&gt;Nalet olasıca Heroku yüzünden django derslerine şu anlık başlayamadım. Öncelikle kafamda bir proje var. Onu yaparsam, derslere o proje üzerinden devam edebilirim. Ders, ders diye duruyorum. Aslında bende çok birşey bilmiyorum. Ama birşeyler anlatma hevesim; araştırmamı ve daha fazla öğrenmemi sağlıyor. Bunu da söyleyeyim dedim.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Nodejs-Npm Versiyon uyuşmazlığı</title>
+        <link>http://tolgahanuzun.com/nodejs-npm-versiyon-uyusmazligi/</link>
+        <pubDate>Thu, 14 Apr 2016 01:19:24 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/nodejs-npm-versiyon-uyusmazligi/</guid>
+        <description>&lt;p&gt;Bu yazım oldukça kısa ama bence oldukça işe yarar olacak diye umut ediyorum. Ben ubuntu kullanıcısıyım ve en sevdiğim yani evrensel program kütüphanesi olması. Bütün evrensel araçlar ubuntu windows vb. diye seçenek sunuluyor. Ama bugün 1 saattir bu olayın iğrençliği ile karşı karşıyayım. NPM ve NodeJs paketlerindeki uyuşmazlıklar!!!&lt;/p&gt;
+&lt;p&gt;Arkadaşlar Nodejs ve NPM paketlerini ubuntu üzerinde&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install nodejs npm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;şeklinde çok kolay bir şekilde kuruyorsunuz. Sonra&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;node -v
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm -v
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;yapıyorsunuz ama node komutu bazen hata verebilir. Yada tam tersi iterasyonda sıkıntı yaşayabilirsiniz. Çözümü google&amp;rsquo;ayınca oldukça basit.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -s /usr/bin/nodejs /usr/bin/node
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Burada aynı işlevi her iki keywords için standartlaştırıyorsunuz.&lt;/p&gt;
+&lt;h3 id=&#34;hayır-hala-hatalar-bitmedi&#34;&gt;Hayır hala hatalar bitmedi&lt;/h3&gt;
+&lt;p&gt;Şimdide NPM üzerinde login olmayı deneyin! Olmadı dimi :)Arkadaşlar sürümden dolayı sıkıntı yaşıyorsunuz ve Ubuntu yazılım merkezinde ise oldukça eski bir sürümde kaynak dosyası bulunuyor. Biraz interneti kurcaladım ama maalesef istediğim bir yöntem bulamadım. Sonra ise çok komik birşeyi fark ettim. Npm&amp;rsquo;de aslında bir npm paketi! Evet kendisini güncellemek için kendisini çağırabiliriz. Evet bencede çok saçma&amp;hellip;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install -g npm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Bu komut ile artık npm paketiniz güncel sürüme ulaştı! Gece 1&amp;rsquo;de bu yazıyı benim gibi mağdur olan arkadaşlara itafen yazıyor ve saçma yazılım merkezine güzel temennilerimi (!) sunuyorum.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

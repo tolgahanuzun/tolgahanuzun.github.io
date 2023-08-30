@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>pip komutları on Tolgahan Üzün</title>
+        <link>http://tolgahanuzun.com/tags/pip-komutlar%C4%B1/</link>
+        <description>Recent content in pip komutları on Tolgahan Üzün</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>tr</language>
+        <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
+        <lastBuildDate>Mon, 11 Jul 2016 01:18:19 +0300</lastBuildDate><atom:link href="http://tolgahanuzun.com/tags/pip-komutlar%C4%B1/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Python Paket Yönetim Sistemi - PİP Kurulumu</title>
+        <link>http://tolgahanuzun.com/python-paket-yonetimi-pip-kurulumu/</link>
+        <pubDate>Mon, 11 Jul 2016 01:18:19 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/python-paket-yonetimi-pip-kurulumu/</guid>
+        <description>&lt;p&gt;Canını yediğim Python dilinin en güzel şeylerinden birisi bence PİP. &lt;em&gt;Nedir bu pip?&lt;/em&gt; Başlıktan da anlaşılacağı üzerine paket yönetim sistemi. Burada birçok paket, güzel dökümantasyonlarıyla birlikte sunulmuş ve büyük topluluklar tarafından desteklenen bir yönetim sistemi olduğunu söyleyebilirim.&lt;/p&gt;
+&lt;h2 id=&#34;pip-kurulumu-nasıl-yapılır&#34;&gt;Pip kurulumu nasıl yapılır?&lt;/h2&gt;
+&lt;p&gt;Öncelikle bunun için bilgisayarınızda tabi ki python yüklü olması gerekiyor. Aşağıdaki adımları izleyerek hızlı bir şekilde &lt;strong&gt;PİP kurulumu&lt;/strong&gt;nu gerçekleştirebilirsiniz.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Konsolda &amp;ldquo;Python&amp;rdquo; komutunu çalıştırın.&lt;/li&gt;
+&lt;li&gt;Eğer python yüklü ise bu &lt;a class=&#34;link&#34; href=&#34;https://bootstrap.pypa.io/get-pip.py&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;dosyayı&lt;/a&gt; indirin.&lt;/li&gt;
+&lt;li&gt;Shell&amp;rsquo;de exit() komutu ile Python Shell&amp;rsquo;ini kapatın.&lt;/li&gt;
+&lt;li&gt;İndirdiğiniz dosya dizinine terminal üzerinde gidin.&lt;/li&gt;
+&lt;li&gt;Son olarak terminalde &amp;ldquo;sudo python get-pip.py&amp;rdquo; komutunu çalıştırın.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ben pip kullanımını çok seviyorum. İhtiyacım olan bir şeyi çok rahatlıkla bulabiliyorum. Örnek verecek olursam, &lt;strong&gt;django modülü&lt;/strong&gt;nü yüklemem gerekiyor. Siteye girmeden direk şu şekilde Pip komutlarını çalıştırarak &lt;strong&gt;django&lt;/strong&gt; modülünü yükleyebiliyorum.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install Django //Bu paketin son versiyonunu kurmamı sağlar.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install &lt;span class=&#34;nv&#34;&gt;Django&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;1.7.0 // belirli bir paket sürümünü kurmam sağlar.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip uninstall Django // Yüklediğim pakete güle güle demek için. 😀
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip show Django // Paket hakkında detaylara erişmek için.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip search “Flask” // Anlaşıldığı gibi paket aramak için.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo pip uninstall pip // Niyedir bilinmez ama, hani pip’i silmek isterseniz diye bunu da buraya ekleyeyim dedim
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;neden-pip-yükledim-ki-ben&#34;&gt;Neden Pip Yükledim ki Ben?&lt;/h3&gt;
+&lt;p&gt;Mint işletim sisteminde pip yok. Normalde ubuntu da var diye hatırlıyorum, hayırlısı! Django derslerine devam etmek istiyorum. Öncelikle ortamı hazırlayayım. Sonra Videolar ve Yazılı derslere devam edeyim diyorum. İnsallah patlak vermeden devam edebilirim.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>django mvc on Tolgahan Üzün</title>
+        <link>http://tolgahanuzun.com/tags/django-mvc/</link>
+        <description>Recent content in django mvc on Tolgahan Üzün</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>tr</language>
+        <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
+        <lastBuildDate>Sun, 20 Sep 2015 16:00:18 +0000</lastBuildDate><atom:link href="http://tolgahanuzun.com/tags/django-mvc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>M-V-C Nedir ? (Model-view-controller)</title>
+        <link>http://tolgahanuzun.com/m-v-c-nedir-model-view-controller/</link>
+        <pubDate>Sun, 20 Sep 2015 16:00:18 +0000</pubDate>
+        
+        <guid>http://tolgahanuzun.com/m-v-c-nedir-model-view-controller/</guid>
+        <description>&lt;p&gt;Django nedir ? yazımda da bahsettiğim gibi son sözel / tanım ağırlıklı yazımı yazıyor ve teknik eğitimler için önümüzdeki sözel engelleri kaldırmak istiyorum.&lt;/p&gt;
+&lt;h2 id=&#34;model-view-controller-nedir&#34;&gt;Model-View-Controller Nedir?&lt;/h2&gt;
+&lt;p&gt;İsminden fark ettiğiniz gibi 3 farklı sekmede çalışan bir sistem olduğunu söylemek mümkün. Bu sistem. Parça parça çalışıp bir bütün olarak hareket etmektedir. Şöyle 3 madde ile bunun amacını anlatmaya çalışayım:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;İlk olarak sitemizdeki verilerin &lt;strong&gt;veri tiplerini&lt;/strong&gt;, yani veri modellerini belirlememiz gerekiyor. Yani yazı yazacağımız zaman bunun TextField olmasını söylemezsek, sonrada görünüşte saçmalamalar olacaktır. Veriler tutulamayacaktır.&lt;/li&gt;
+&lt;li&gt;Eğer yukarıdaki verileri doğru tipte kaydetmeyi başardıysak, sırada kullanıcıya göstereceğimiz verilerin doğru olarak gönderilmesi aşamasıyla karşılaşıyoruz. Kullanıcıya kendi ismini veya yapacağı işlemleri, sayfa üzerinde görüntülemesini sağlamamız gerekiyor.&lt;/li&gt;
+&lt;li&gt;Son olarak bu işlemlerin yanı sıra, tarayıcıdan yapılacak değişiklikler, yani veri akışı diyebileceğimiz Form kontrollerine &lt;strong&gt;veri tabanının ve sayfa görüntüleme aracısı&lt;/strong&gt;nın doğru cevaplar vermesini sağlamamız gerekiyor.
+Yukarıda bahsettiğim olayları, herhangi bir dilde yapmanız mümkün. Ancak anlayacağınız gibi oldukça meşakkatli bir yol&amp;hellip; İşte M-V-C frameworkleri bize bu durumda oldukça kolaylık sağlamayı başarıyor.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;m-v-c-biraz-açalım&#34;&gt;M-V-C Biraz açalım&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;MODEL&lt;/strong&gt;: Veri tabanı ile ilgili emirlerin, işlemlerin yapılacağı kısımdır.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VİEW&lt;/strong&gt;: Controllerden alacağımız verilerin sayfa tasarımına yapacağı etkilerin olduğu kısımdır.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CONTROLLER&lt;/strong&gt;: Model ve View arasında işlemlerin doğruluğunu kontrol eden ve form yapılarını şekillendirmemizi sağlayan bir yapıdır.
+Bir sonraki derste Django kurulumu hakkında sizleri bilgilendireceğim. İyi günler dilerim.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

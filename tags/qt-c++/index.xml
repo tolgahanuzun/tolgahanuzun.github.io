@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>qt c&#43;&#43; on Tolgahan Üzün</title>
+        <link>http://tolgahanuzun.com/tags/qt-c&#43;&#43;/</link>
+        <description>Recent content in qt c&#43;&#43; on Tolgahan Üzün</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>tr</language>
+        <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
+        <lastBuildDate>Thu, 08 Oct 2015 04:17:09 +0000</lastBuildDate><atom:link href="http://tolgahanuzun.com/tags/qt-c++/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Qt Kullanımı</title>
+        <link>http://tolgahanuzun.com/qt-kullanimi/</link>
+        <pubDate>Thu, 08 Oct 2015 04:17:09 +0000</pubDate>
+        
+        <guid>http://tolgahanuzun.com/qt-kullanimi/</guid>
+        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/Screenshot_1.jpg" alt="Featured image of post Qt Kullanımı" /&gt;&lt;p&gt;C dersleri için giriş ihtiyacımız olan program seçeneklerinden olan QT programı; oldukça kullanışlı ve geniş amaçlar ile çalışabilecek bir yapıda olduğu için tercih etmenizi önereceğim bir araç olacaktır.&lt;/p&gt;
+&lt;p&gt;İlk önce &lt;a class=&#34;link&#34; href=&#34;http://www.qt.io/download/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.qt.io/download/&lt;/a&gt; adresi üzerinde gerekli paremetreleri takip ederek istediğimiz türden dosyayı indirme işlemini başlatıyoruz.&lt;/p&gt;
+&lt;p&gt;UYARI!!! kendi kütüphaneleri bulunan sürümleri indirirseniz, yüksek boyutta bir dosyayı indirmeyi kabul ettiğinizi unutmamanızı gerekir! Eğer sadece giriş seviyesinde ve basit düzeyde bir İDE&amp;rsquo;ye ihtiyacınız varsa&lt;a class=&#34;link&#34; href=&#34;http://tolgahanuzun.com/dev-c-kurulumu.html&#34; &gt; Dev-C++ kurulumu&lt;/a&gt; yazımı incelemenizi öneririm.Gerekli dosyaları indirdikten sonra klasikleşmiş kurulum dosyası paremetrelerini izleyerek ( Yani Next&amp;rsquo;leyerek) kurulumu tamamlamanız gerekiyor. Gördüğünüz gibi oldukça basit ve kolay bir şekilde kurulum gerçekleşiyor.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;QT ile C Derlemek&lt;/li&gt;
+&lt;li&gt;Şimdi ise asıl çalışma mantığına bakalım.&lt;/li&gt;
+&lt;li&gt;QT Creator açalım.&lt;/li&gt;
+&lt;li&gt;New Project tıklayalım.&lt;/li&gt;
+&lt;li&gt;Karşımıza gelen pencerede Non-qt Project tablosunu açarak sağ tarafta &lt;strong&gt;Plan C &amp;hellip;&lt;/strong&gt; şeklinde olan paketi aktif ederek çalıştıralım. Aynı Next mantığıyla bu paketin kurulumunu bitirelim.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://tolgahanuzun.com/theme/images/wp/Screenshot_1.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot_1&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Yukarıda görüldüğü gibi bir klasör yapısı ve kod penceresi ile karşılaşacaksınız. Artık kodlarınızı yazmak için herşey tamam. Sadece geriye fikirler ve tecrübeler kalıyor.Tecrübeleri birlikte halledeceğiz ama fikirler sizle alakalı bir konu olduğunu unutmayın!&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

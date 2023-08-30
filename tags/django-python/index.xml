@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>django python on Tolgahan Üzün</title>
+        <link>http://tolgahanuzun.com/tags/django-python/</link>
+        <description>Recent content in django python on Tolgahan Üzün</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>tr</language>
+        <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
+        <lastBuildDate>Sun, 27 Sep 2015 16:44:44 +0000</lastBuildDate><atom:link href="http://tolgahanuzun.com/tags/django-python/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Windowsta Python Django Kurulumu</title>
+        <link>http://tolgahanuzun.com/windowsta-python-django-kurulumu/</link>
+        <pubDate>Sun, 27 Sep 2015 16:44:44 +0000</pubDate>
+        
+        <guid>http://tolgahanuzun.com/windowsta-python-django-kurulumu/</guid>
+        <description>&lt;p&gt;Django hakkında bilgilendirmeler yaptıktan sonra artık bir şeyler kurmaya başlayalım değil mi? :) Şimdi Windows için Django kurulumu hakkında sizlere bilgilendirmeler yapacağız. Bundan sonra elimden geldikçe, yazının yanında video serisi de paylaşmaya çalışacağım. Bu sayede hem dökümantasyon hem de video serisi olmuş olacak.&lt;/p&gt;
+&lt;h2 id=&#34;ilk-önce-python&#34;&gt;İlk Önce Python!&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;İlk önce &lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.python.org/downloads/&lt;/a&gt; web sitesine giriyoruz.&lt;/li&gt;
+&lt;li&gt;Tercihen 2.7 sürümünü indiriyoruz. ( size kalmış, videoda sebebinden biraz bahsettim)&lt;/li&gt;
+&lt;li&gt;Normal Exe dosya kurarcasına programı kuruyoruz.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;python-yolu-eklemek--konsolda-direk-python-yazarak-çalıştırmak&#34;&gt;Python yolu eklemek ( konsolda direk python yazarak çalıştırmak)&lt;/h3&gt;
+&lt;p&gt;Ubuntu gibi işletim sistemlerinde direk terminalden python komutu ile işlem yapmamızı sağlayan bu durum, windowsta maalesef yok. Ancak bunu yapmak bizim elimizde!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bilgisayara sağ tıklıyoruz ve özelliklere giriyoruz.&lt;/li&gt;
+&lt;li&gt;Sol taraftaki menüde gelişmiş sistem ayarlarına tıklıyoruz.&lt;/li&gt;
+&lt;li&gt;Karşımıza çıkan ekranda Ortam değişkenlerine tıklıyoruz.&lt;/li&gt;
+&lt;li&gt;Aşağıda bulunan tabloda Path değişkenini düzenleye tıklayıp, sonuna &amp;quot; ; &amp;ldquo;koyduktan sonra python dizinini yazıyoruz. ( ;C:\Python27 )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Artık CMD ekranında python komutu aktif oldu.&lt;/p&gt;
+&lt;h2 id=&#34;şimdi-ise-django-kurulumu&#34;&gt;Şimdi ise Django Kurulumu&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;İlk önce &lt;a class=&#34;link&#34; href=&#34;https://www.djangoproject.com/download/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.djangoproject.com/download/&lt;/a&gt; sitesinden sağ tarafta tar.gz dosyasını indiriyoruz.&lt;/li&gt;
+&lt;li&gt;Kararlı sürüm olduğuna dikkat etmenizde yarar var!.&lt;/li&gt;
+&lt;li&gt;Sonra C dizininde sıkıştırılmış dosyayı çıkartıyoruz.&lt;/li&gt;
+&lt;li&gt;CMD ekranını açıyor ve aşağıdaki kodları yazıyoruz.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;python&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;django&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;django&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;VERSION&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Yüklediğiniz versiyonu görüyorsanız, windows ortamında çalışan python terminali ve django kütüphanesine sahipsiniz.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

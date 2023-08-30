@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>python paket yapımı on Tolgahan Üzün</title>
+        <link>http://tolgahanuzun.com/tags/python-paket-yap%C4%B1m%C4%B1/</link>
+        <description>Recent content in python paket yapımı on Tolgahan Üzün</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>tr</language>
+        <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
+        <lastBuildDate>Thu, 11 Jan 2018 23:28:10 +0000</lastBuildDate><atom:link href="http://tolgahanuzun.com/tags/python-paket-yap%C4%B1m%C4%B1/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Python paket oluşturma - PyPi</title>
+        <link>http://tolgahanuzun.com/pypi-ile-paket-olusturmak/</link>
+        <pubDate>Thu, 11 Jan 2018 23:28:10 +0000</pubDate>
+        
+        <guid>http://tolgahanuzun.com/pypi-ile-paket-olusturmak/</guid>
+        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/pypi.png" alt="Featured image of post Python paket oluşturma - PyPi" /&gt;&lt;h2 id=&#34;pypi-nedir&#34;&gt;PYPI nedir?&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;PyPI — The Python Package Index&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Yazdığımız projeleri buraya ekleyerek &lt;code&gt;pip install paket&lt;/code&gt; seklinde çalışma dizinimize indirerek kullanmaya çalışacağız.&lt;/p&gt;
+&lt;h3 id=&#34;hadi-paket-olusturalım&#34;&gt;Hadi paket olusturalım.&lt;/h3&gt;
+&lt;p&gt;Ilk önce çalışma dizininden bahselim.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;project   #(1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   setup.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   setup.cfg    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   LICENSE.txt   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   README.md    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└───project  #(2)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    │   app1.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    │   app2.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    │
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Yukarıda 1 etiketi ile belirttiğim yer projemizi PyPi gönderirken setlememiz gereken verilerinde yer aldığı dizin. 2 etiketi ile belirttiğim dizin ise projemizin kodlarınin bulunduğu yer olarak kısaca özetleyeyim. Uygulamanızı yukarıdaki hiyerarşiye getirmeniz gerekiyor.&lt;/p&gt;
+&lt;h3 id=&#34;pypi-konfigürasyonu&#34;&gt;PyPi konfigürasyonu&lt;/h3&gt;
+&lt;p&gt;Eski kaynaklara bakan arkadaşlar için uyarayım. Pypi için bazı gereksinimler artık bulunmuyor. Mesela ilk önce test serverına yüklememiz bekleniyordu. Şimdi buna gerek duymadan direk yükleme işlemi yapılıyor. Kafa karışmadan direk konuya geçeyim.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cd $HOME&lt;/code&gt; komutunu terminale yazın ve bulunduğunuz dizine &lt;code&gt;.pypirc&lt;/code&gt; adında bir dosya oluşturun. Içine ise kendi bilgilerinizi değistirerek şunları yazmanız gerekiyor.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[distutils]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;index-servers =
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  pypi
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[pypi]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;repository: https://pypi.python.org/pypi
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;username: [kullanici_adi]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;password: [parola]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Bu kısım tamamdır, şimdi çalışma dizinimize tekrar dönebiliriz.&lt;/p&gt;
+&lt;h4 id=&#34;setup-kısımları&#34;&gt;Setup kısımları&lt;/h4&gt;
+&lt;p&gt;Burada uygulamanın önemli bilgilerini setleyeceğiz. Ama ilk önce projemizi github vb. yerlere göndermemiz gerekiyor.
+Standart bir sekilde github&amp;rsquo;a push yapma islemini yaptiktan sonra şu aşagıdaki iki komutu çalıştırın.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git tag 0.1 -m &amp;#39;bu bir denemedir&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin 0.1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Bu aşamadan sonra aşağıdaki verileri kendinize uygun olarak setleyin.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;setup.py&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;from distutils.core import setup
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;setup(
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  name = &amp;#39;name&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  packages = [&amp;#39;name&amp;#39;], 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  version = &amp;#39;0.1&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  description = &amp;#39;proje açıklaması&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  author = &amp;#39;isminiz&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  author_email = &amp;#39;mailiniz&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  url = &amp;#39;https://github.com/kullaniciadi/repoadı&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  download_url = &amp;#39;https://github.com/kullaniciadi/repoadı/tarball/0.1&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  keywords = [&amp;#39;etiketler1&amp;#39;, &amp;#39;etiketler2&amp;#39;],
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  install_requires = [&amp;#34;numpy&amp;#34;], # Burada projeniz için kullandığıniz paketleri tanimlamanız gerekiyor. Yani dependence...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  classifiers = [],
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Readme kısmını buradan tanımlıyoruz. Burayı kendimizde manipüle edebilirdik.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;setup.cfg&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[metadata]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;description-file = README.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;license.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Bu konuyu araştırmanız gerekiyor. Cünkü bu konu ayrıca bir blog yazısını hak ediyor. Şu kaynaktan bakabilirsiniz: &lt;a class=&#34;link&#34; href=&#34;http://www.yusufaytas.com/acik-kaynak-lisanslari/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Açık Kaynak Lisansları&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Vee tamamdır.&lt;/p&gt;
+&lt;p&gt;Son olarak bashte şu komutu çalıştıralım. Artık tamamdır.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;python setup.py sdist upload -r pypi&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Notlar:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Yanlış birşey yaptınız ve güncellemek istiyorsunuz, ne yapmalıyım?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Çok basit projedeki düzenlemeleri yapın ve istediğiniz düzenlemeyi 0.2 vb.. gibi şekilde &lt;code&gt;tag&lt;/code&gt;&amp;lsquo;layın. Hemen ardından setup.py üzerinden version kısmını düzenleyin ve download_url kısmındaki son version bilgilerini güncelleyin. Tekrar upload işlemi yapın. 10 dk içerisinde güncellenmiş halini pip ile indirebiliyor olacaksiniz.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Paketi kurdum ama localde denerken nasıl tanımlayacağımı bilmiyorum?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;IPython sizin en yakın dostunuz. Otamatik tamamlama ve yorumlayıcıda rahatlık sunması ile size büyük hız kazandıracak. Ilk önce onu bir edinin. Simdi ise &lt;code&gt;from paket_ismi import dosya_ismi&lt;/code&gt; ile dosyayi import edin. Içinde bir class veya fonksyionu &lt;code&gt;dosya_ismi.Class()&lt;/code&gt; gibi notasyonlarda kullanmayı deneyin. Bunu başarabilirsiniz; size güveniyorum. :)&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

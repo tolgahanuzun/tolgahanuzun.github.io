@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>django nedir on Tolgahan Üzün</title>
+        <link>http://tolgahanuzun.com/tags/django-nedir/</link>
+        <description>Recent content in django nedir on Tolgahan Üzün</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>tr</language>
+        <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
+        <lastBuildDate>Sun, 20 Sep 2015 14:28:10 +0000</lastBuildDate><atom:link href="http://tolgahanuzun.com/tags/django-nedir/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Django Nedir? Neyin nesidir?</title>
+        <link>http://tolgahanuzun.com/django-nedir-neyin-nesidir/</link>
+        <pubDate>Sun, 20 Sep 2015 14:28:10 +0000</pubDate>
+        
+        <guid>http://tolgahanuzun.com/django-nedir-neyin-nesidir/</guid>
+        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/django.png" alt="Featured image of post Django Nedir? Neyin nesidir?" /&gt;&lt;h2 id=&#34;django-nedir&#34;&gt;Django nedir?&lt;/h2&gt;
+&lt;p&gt;Arkadaşlar Django bir Web framework’u olarak tanımlayabiliriz. Eğer yazılımla ilgiliyseniz bunun ne olduğunu anlayacaksınız. Ancak ilginiz yoksa size şöyle söyleyebilirim:&lt;/p&gt;
+&lt;p&gt;Marangoza gidip istediğiniz tahtaları hazırlatmayı istemek; normal bir web tasarım olarak görebilirsiniz.&lt;/p&gt;
+&lt;p&gt;Bunun aksine Framework ise istediğiniz malzemelerin hazır hallerini daha uyguna ve daha sağlam ( Destek ) bir şekilde elde etmenizi sağlayacak yoldur.&lt;/p&gt;
+&lt;h2 id=&#34;tamam-tamam-sus-djangodan-bahset&#34;&gt;Tamam tamam sus Django’dan bahset&lt;/h2&gt;
+&lt;p&gt;Tamam gevezeliği bırakıyorum. Django M-V-C ( Model-View-Controller ) Sistemine bağlı bir prensipte çalışır. Bu prensip için başka bir yazı yazmam gerektiği için burada tanıtımını yapmıyorum. ( Hadi iyisiniz gevezelikten kurtuldunuz)&lt;/p&gt;
+&lt;h3 id=&#34;ben-hala-anlamadım&#34;&gt;Ben hala Anlamadım?&lt;/h3&gt;
+&lt;p&gt;Arkadaşım anlamadıysan, Bana Mail at, yorum at anlamanı sağlayalım. Ama senin için bir kez daha açıklamaya çalışayım;&lt;/p&gt;
+&lt;p&gt;Django, veri tabanı gibi ağır işleri ve sitenin arka tabanını kolay olarak yönetmen için geliştirilen bir Python dili ile yazılmış web kütüphanesidir. Kullanıcı sayısı oldukça fazladır ve birçok büyük web sitesi kullanmaktadır.&lt;/p&gt;
+&lt;p&gt;Kısa süre içerisinde alt yapısı sağlam bir web sitesi yapmanı sağlayabileceği gibi, aklında ki projeleri;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Veri atamaları&lt;/li&gt;
+&lt;li&gt;if else&lt;/li&gt;
+&lt;li&gt;for&lt;/li&gt;
+&lt;li&gt;fonksiyon kullanımı ile gerçekten basit şekilde gerçekleştirmen mümkün.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Şimdilik Django için giriş yazımı sonlandırmış bulunuyorum. Son olarak MVC’den bahseder ve teknik eğitimlere geçerim sayın arkadaşım. İyi günler.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

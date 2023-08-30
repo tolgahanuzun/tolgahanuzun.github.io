@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>projeler on Tolgahan Üzün</title>
+        <link>http://tolgahanuzun.com/categories/projeler/</link>
+        <description>Recent content in projeler on Tolgahan Üzün</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>tr</language>
+        <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
+        <lastBuildDate>Tue, 26 Dec 2017 14:28:10 +0000</lastBuildDate><atom:link href="http://tolgahanuzun.com/categories/projeler/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Markov zinciri ve Stokastik Süreçler</title>
+        <link>http://tolgahanuzun.com/markov-zinciri-projesi/</link>
+        <pubDate>Tue, 26 Dec 2017 14:28:10 +0000</pubDate>
+        
+        <guid>http://tolgahanuzun.com/markov-zinciri-projesi/</guid>
+        <description>&lt;img src="http://tolgahanuzun.com/theme/images/markov-zinciri.png" alt="Featured image of post Markov zinciri ve Stokastik Süreçler" /&gt;&lt;h2 id=&#34;markov-zinciri-nedir&#34;&gt;Markov Zinciri Nedir?&lt;/h2&gt;
+&lt;p&gt;Lisede kısmen; üniversitede ilgili bölümlerde (Mühendislik, yazılım veya matematik) iseniz Markov zincirini veya Stokastik süreçler kelime grubunu kesinlikle duymuşsunuzdur. Olasılık-Matematik ile ilgili olan bu kelime grubu; Andrey Markov adli Rus Matematikçi tarafından geliyor. Ancak etkilediği konular ise tam olarak bizi yani yazılım ile uğraşan insanlari ilgilendiriyor.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Markov zincirleri bize geçmişe bakmaksızın bir durum üzerinden bir başka bir duruma geçiş kurallarını olasılıksal olarak belirleyebildiğimiz bir model sunuyor. Bu sürecin en önemli özelliği hafızasız olması.
+&lt;a class=&#34;link&#34; href=&#34;http://blog.fatiherikli.com/post/markov-ile-birtakim-olaylar-zinciri/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Kaynak&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;yaani-hala-anlamadim-&#34;&gt;Yaani hala anlamadim ?&lt;/h3&gt;
+&lt;p&gt;Yanisi çok basit. Bir durumdan diğer duruma geçerken sadece kendi bulunduğu yere bakıyor. Yani geçmişe bakmadan istatistiksel veriler ile hareket ediyor. Markov zinciri günlük hayatımızda her yerde kullanılıyor. Özellikle yazılım üzerinde yıllardır tercih edilen bir algoritma olduğunu söylersem, abartıyor olmam.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;T9 Klavye Özelliğinden örnek verelim:&lt;/p&gt;
+&lt;p&gt;Günlük hayatta mesaj yolu ile iletişim kurduğumuz A ve B kişileri olsun.&lt;/p&gt;
+&lt;p&gt;A kişisine 5 gün boyunca &lt;code&gt;Merhaba A günaydın okula ne zaman geliyorsun?&lt;/code&gt; sorusunu sorduğumuzu düşünelim.&lt;/p&gt;
+&lt;p&gt;B kişisine 5 gün boyunca &lt;code&gt;Merhaba B günaydın işler nasıl?&lt;/code&gt; sorusunu sorduğumuzu düşünelim.&lt;/p&gt;
+&lt;p&gt;Veri kümemi istatistiksel olarak yazılıma şu notasyonda verdiğimi düşünelim.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;(&#39;buluduğum ver&#39;, &#39;gidebilecegim veri&#39;, &#39;olasılığı&#39;)&lt;/code&gt; ve birkaç adımı yazalım.&lt;/p&gt;
+&lt;p&gt;(&amp;lsquo;Merhaba&amp;rsquo;,&amp;lsquo;A&amp;rsquo;,&amp;rsquo;%50&amp;rsquo;) - (&amp;lsquo;Merhaba&amp;rsquo;,&amp;lsquo;B&amp;rsquo;,&amp;rsquo;%50&amp;rsquo;) - (&amp;lsquo;A&amp;rsquo;,&amp;lsquo;günaydın&amp;rsquo;,&amp;rsquo;%100&amp;rsquo;) - (&amp;lsquo;B&amp;rsquo;,&amp;lsquo;günaydın&amp;rsquo;,&amp;rsquo;%100&amp;rsquo;)  - (&amp;lsquo;günaydın&amp;rsquo;,&amp;lsquo;okula&amp;rsquo;,&amp;rsquo;%50&amp;rsquo;) - (&amp;lsquo;günaydın&amp;rsquo;,&amp;lsquo;işler&amp;rsquo;,&amp;rsquo;%50&amp;rsquo;)&lt;/p&gt;
+&lt;p&gt;Normalde &lt;code&gt;Merhaba A günaydın&lt;/code&gt; cümle öbeğinde sonra gelmesi gereken kelimenin %100 &lt;code&gt;okula&lt;/code&gt; olmasini bekliyoruz.
+Ancak belleksizlik kavramıyla sadece o anki veriyi dikkate almamiz gerektiğini unutmamamiz gerekiyor.
+Yani bizim o anki verimiz sadece &lt;code&gt;günaydın&lt;/code&gt; ve bu veriyle bir sonraki gelecek olan kelime %50 ihtimal ile &lt;code&gt;okula&lt;/code&gt; ya da %50 ihtimal ile &lt;code&gt;işler&lt;/code&gt; kelimesi olacak.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Yukarıdaki örnek ile markov zincirini çalıştırdıgımda aşağıdaki veri ortaya çıkıyor.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tolgahanuzun.com/theme/images/markov.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Kaynak&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;bitirme-projesi-ve-düşüncelerim&#34;&gt;Bitirme projesi ve düşüncelerim&lt;/h2&gt;
+&lt;p&gt;Hedefim elimdeki veriyi (Flask) Markov Zinciri kütüphanesinin anlayacağı dile getirmek ve veriyi işlemek. Bunu yaparken ise elimdeki veriyi istatisiksel olarak bir Graf yapısında sunmak.
+Projenin %70&amp;rsquo;i tamamlanmış durumda. Tam anlamı ile bittiğinde tekrar bu konuyu toparlayacak ve bitirmedeki verileri paylaşacak bir yazı yazmayı planlıyorum.&lt;/p&gt;
+&lt;h3 id=&#34;ver-şurdan-iki-api-bitirme-yapayım&#34;&gt;Ver şurdan iki API, Bitirme yapayım!&lt;/h3&gt;
+&lt;p&gt;Maalesef ki okududuğum &lt;strong&gt;Karadeniz Teknik Üniversitesi Bilgisayar Mühendisliği&lt;/strong&gt;ndeki ögrenciler ve Hocalar (Kesinliklik bu tezimi yıkan çok kaliteli hocalarımızda var) biraz tembel. Bitirme ve tasarım projelerinde gerçekten komik projeler yapılıyor ve kabul ediliyor.
+Bazı derslerin ödevlerinde dahi kabul edilmeyecek seviyedeki projeler Bitirme kapsamında Mühendislik ünvanına ulaştırıyor. Aslında bende basit bir proje alarak 2 gün uğraşla bitirmeyi halledebilirdim. Ancak üniversitedeki bu imkankarın bir daha karşıma gelmeyeceği gerceğini hatırladım.
+Özellikle bölümüm ile alakalı bir konu seçmeye özen gösterdim. Sevdiğim bir felsefe var:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; Bir işi yaparken zorlanmıyorsan; o işten birşeyler öğrenmiyorsundur.&lt;/code&gt; Bu yüzden daha önce üzerine durmadığım ancak duyduğum ve ilgimi çeken Markov zinciri konusuyla ilgilenmeyi karar verdim.&lt;/p&gt;
+&lt;p&gt;Bitirme projesinde &lt;strong&gt;Markov zinciri&lt;/strong&gt; konusunda bana fikir katan &lt;a class=&#34;link&#34; href=&#34;http://fatiherikli.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Fatih Erikli&lt;/a&gt;&amp;rsquo;nin yazılarını ve projelerini göstermezsem ayıp olacağını düşünüyorum.
+Bir başka etken ise 2017 yılının yazında tanıştığım Hipo&amp;rsquo;da (Zorunlu olmadığı halde) staj yapan &lt;a class=&#34;link&#34; href=&#34;https://medium.com/@aycignl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Gönül Aycı&lt;/a&gt; ile akademik anlamda yaptığımız sohbetler.
+Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde hayatınızda güzel yönlendirmelere sahip olabilirsiniz.&lt;/p&gt;
+&lt;p&gt;(Hatalıysam lütfen yorum bırakın)&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Treeage</title>
+        <link>http://tolgahanuzun.com/p/treeage/</link>
+        <pubDate>Fri, 27 Nov 2015 16:10:15 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/p/treeage/</guid>
+        <description>&lt;p&gt;Agaç yaş hesaplama&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

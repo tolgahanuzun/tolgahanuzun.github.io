@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>3 programlama günleri on Tolgahan Üzün</title>
+        <link>http://tolgahanuzun.com/tags/3-programlama-g%C3%BCnleri/</link>
+        <description>Recent content in 3 programlama günleri on Tolgahan Üzün</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>tr</language>
+        <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
+        <lastBuildDate>Mon, 29 Feb 2016 22:44:00 +0000</lastBuildDate><atom:link href="http://tolgahanuzun.com/tags/3-programlama-g%C3%BCnleri/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>3. Programlama Günleri - Karabük Macerası</title>
+        <link>http://tolgahanuzun.com/3-programlama-gunleri-karabuk-macerasi/</link>
+        <pubDate>Mon, 29 Feb 2016 22:44:00 +0000</pubDate>
+        
+        <guid>http://tolgahanuzun.com/3-programlama-gunleri-karabuk-macerasi/</guid>
+        <description>&lt;p&gt;Son 1 aydır iple çektiğim, etkinliği düzenleyen Muhammet Dilmaç adlı arkadaşımın davet ettiği harika bir etkinliğe katıldım. Karabük Üniversitesinde gerçekleşen bu güzel etkinlik için ne söylesem az. Ama elimden geldiğince bu deneyimi yazıya dökmeye çalışacağım. (Umarım çok uzun olmaz.)&lt;/p&gt;
+&lt;h2 id=&#34;3-programlama-günleri-etkinliğine-kısa-bir-bakış&#34;&gt;3 Programlama günleri Etkinliğine kısa bir bakış&lt;/h2&gt;
+&lt;p&gt;Cuma sabahı Karabük otogarına varıp biraz zaman geçirdikten sonra Üniversiteye arkadaşlarla beraber geçtik. İlk izlenimim olarak bu şehre 2 beden büyük bir üniversite olduğu olacaktır. :) Yani anlayacağınız oldukça güzel bir üniversitesi ve imkanları bulunuyor. Yeni kurulmuş olması sebebiyle çalışmalar çok hızlı olduğunu gördük. Cuma günü bölüm içinde aktif ders olması sebebiyle oradaki öğrenci arkadaşlarla iç içe bir şekilde zaman geçirdik. Şunu söylemeliyim ki ortam ve insanlar oldukça güzel :)&lt;/p&gt;
+&lt;p&gt;Hemen girişte kalabalık ve yardımsever bir ekip orada duruyordu. Muhammet&amp;rsquo;i gözlerim aramadı değil. :) İçeride yerleri tuttuktan sonra etkinliğe başlandı. Kantin ve teknik ekibin bize sunduğu içecek ve yiyecek desteği ile oldukça güzel bir gün geçirdik. Tabi ki benim ve eminim ki yanımdaki arkadaşların (Yasin Karadeniz, Abdullah Velioğlu, Taha İbrahim Bayram, Ergenekon Yiğit) en çok dikkatini çeken ve mutlu eden olayı ise Fatih Arslan. :) İdol kelimesinin insan karşılığı olan Fatih abi ile 1 saat boyunca yüz yüze harika bir sohbet etme şansımız oldu. Harika bir sohbetin ardından günü tamamladık.&lt;/p&gt;
+&lt;p&gt;En güzel şeylerden birisi ise konuşmacıları ve ilgilendikleri alanların hakkında fikir sahibi olmamdı. İlk kez dinlemek ve ağzım açık bir şekilde hayret etme aşamasını Kodla etkinliğinde atlatmış ve bu sefer birebir sohbet etme şansı yanında fikirlerine yorum yapabilme seviyesine ulaşmıştım. Cumartesi günüde yoğun sunumlarla beraber bu faslı kapatmış olduk.&lt;/p&gt;
+&lt;h3 id=&#34;talihsiz-workshop-deneyimim&#34;&gt;Talihsiz Workshop deneyimim&lt;/h3&gt;
+&lt;p&gt;5 adet seçebileceğim eğitimlerin arasında ben Nodejs ve Javascript sunumuna gitmeyi tercih ettim. Ancak bu sefer biraz üzgün bir durumla karşılaştım. Sabah erken kalkıp sınıfta yer tutma çabamıza rağmen bizim konuşmacılarımızdan birisi 1 diğeri ise 1.5-2 saat geç kaldılar. Eğitim ilk 30 dk çok güzel ilerlerken birden OOP dersine dönmesi biraz beni şaşırttı. Birde Caffescript ile beraber konunun değişmesi hayal kırıklığına uğrattı! Çünkü bir dili öğrenmek için birisine ihtiyaç duymak gerekmiyor.&lt;/p&gt;
+&lt;p&gt;Npm ve Nodejs konularına ise 30-45 dk değindikten sonra eğitim sonlandı. Konuşmacıların bize ayırdıkları vakit ve anlatılış şeklindeki şikayetim oldukça yersiz olabilir. Bunları bize gönüllülükle yaptıklarını düşününce bende haksızlık yaptığıma karar veriyorum. Hatta birşeyler hakkında fikir sahibi olduğum için bana uygun bir eğitim olmadığını da söyleyebilirim.&lt;/p&gt;
+&lt;h3 id=&#34;unutulmaz-sunumlar-ve-insanlar&#34;&gt;Unutulmaz Sunumlar ve İnsanlar&lt;/h3&gt;
+&lt;p&gt;Öncelikle Muhammet Dilmaç adlı arkadaşa buradan teşekkürlerimi sunmaz isem büyük ayıp etmiş olurum. Kendisini 5 dk bir yerde sabit görmek mümkün değildi. Aynı şekilde arkadaşları da öyleydi. Bazı arkadaşlar USA başkanı koruması gibi hissederek hareket etse dahi :) oldukça yardımcı oldular.&lt;/p&gt;
+&lt;h4 id=&#34;git-eğitimi---lemi-orhan-ergin&#34;&gt;Git Eğitimi - Lemi Orhan Ergin&lt;/h4&gt;
+&lt;p&gt;Bildiğimi sandığım ama aslında sadece ezberlediğim bir alanı bize ve hatta konuşmacılara öğreten o muhteşem insan. :) Ağzımız açık bir şekilde ve oldukça anlaşılır bir git eğitimi verdi. Konuşma bitince ilk işimiz koşarak ona teşekkür etmek oldu.&lt;/p&gt;
+&lt;h4 id=&#34;romete-nasıl-çalışılır---fatih-arslan&#34;&gt;Romete Nasıl Çalışılır - Fatih Arslan&lt;/h4&gt;
+&lt;p&gt;Pek fazla yorum yapmaya gerek yok. Fatih abi ağzımızı açık bırakacak harika bir sunum yaptı. Keşke ayrılan süre daha fazla olsa idi. Parti kursa milletvekili yaptırırız o adamı. :)&lt;/p&gt;
+&lt;p&gt;Daha yazılacak o kadar çok şey var ki ama bu kadarı kafi olacaktır diye düşünüyorum. :) Varsa sorularınız, yorumlarda sorabilirsiniz, kısa sürede cevap veririm.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

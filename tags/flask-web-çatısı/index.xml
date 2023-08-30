@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>flask web çatısı on Tolgahan Üzün</title>
+        <link>http://tolgahanuzun.com/tags/flask-web-%C3%A7at%C4%B1s%C4%B1/</link>
+        <description>Recent content in flask web çatısı on Tolgahan Üzün</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>tr</language>
+        <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
+        <lastBuildDate>Sat, 18 Feb 2017 17:50:58 +0300</lastBuildDate><atom:link href="http://tolgahanuzun.com/tags/flask-web-%C3%A7at%C4%B1s%C4%B1/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Flask Hayat Kurtarir</title>
+        <link>http://tolgahanuzun.com/flask-hayat-kurtarir/</link>
+        <pubDate>Sat, 18 Feb 2017 17:50:58 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/flask-hayat-kurtarir/</guid>
+        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/flask.png" alt="Featured image of post Flask Hayat Kurtarir" /&gt;&lt;center&gt;
+![Flask](http://www.unixstickers.com/image/cache/data/stickers/flask/Flask.sh-600x600.png){:height=&#34;400px&#34; width=&#34;400px&#34;}
+&lt;/center&gt;
+## Flask Micro Framework Web Catisi
+&lt;p&gt;Öncelikle Fremework anlamında bu yapı oldukça basit ve creative mekanizmasına sahip değil. Yani Django, Rails vb. çatılar gibi size hazır bir klasör yapısı sunmuyor. Bu beni ilk aşamada yoruyordu. Çünkü ben Django ile birşeylere başladığım için hazır yapının rahatlığına alışmıştım. Sonradan terminal ile yakınlaşınca bu durumdan kurtuldum. Kolaya kaçmaya gerek yok! Herşey sizin hayal gücünüze ve kafanızdaki dizine bağlı! Sorun yok halledebilirsiniz. :)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install flask
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Simdi basit bir linux komutu ile kendi catimizi olusturma zamani!&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir ortamdizini
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ortamdizini
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;virtualenv -p python3 ./sanalortam
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ./sanalortam/bin/activate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir projedizini
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; projedizini
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;touuch app.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Genelde flask için oluşturulan yapılarda dosya ismi app.py oluyor. Çünkü sistem büyüdükçe bazı yeni &amp;lsquo;.p&amp;rsquo; dosyalar oluşturmamız gerekecek. Model dosyası veya views gibi dosyalar. Şimdilik bu yapıların hepsi app.py içinde olacak tabi; çok kafa karıştırmaya gerek yok. :)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python3&#34; data-lang=&#34;python3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;flask&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Flask&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;app&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Flask&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;vm&#34;&gt;__name__&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@app.route&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;hello_world&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Merhaba Dunya!&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;vm&#34;&gt;__name__&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;__main__&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;şimdi-web-yapısını-koşalım&#34;&gt;Şimdi Web Yapısını Koşalım!&lt;/h3&gt;
+&lt;p&gt;Gördüğünüz gibi çok çok basit bir şekilde web çatısını oluşturduk. Terminalden python app.py komutuyla artık komutumuz koşmaya hazır! Burada iki satıra dikkat edelim. Birincisi &lt;code&gt;@app.route(&#39;/&#39;)&lt;/code&gt; ile ürl üzerinden gelen &amp;lsquo;routing&amp;rsquo; kontrolü yapıyoruz. Yani Linklenme yapısında route bize yardımcı olan fonksiyon görevi görüyor. Şimdilik bunu detaylandırmayalım. Sonraki içeriklerde detaylandırmaya çalışacağım.&lt;/p&gt;
+&lt;p&gt;İkinci dikkat edilmesi gereken satır ise &lt;code&gt;if __name__ == &amp;quot;__main__&amp;quot;:&lt;/code&gt; bu yapı. Burada python app.py dediğimizde bir paremetre vb. şeyler girmediğimiz için default değer olarak görünüyor. İlerleyen zamanlarda veritabanı gibi şeyler işin içine girdiğinde: bazı fonksiyonla buraya gelecek ve kontrol amaçlı denetlenecek. IF sorgusu ile app.run() yapmaya ne gerek vardı? İşte dediğim gibi suan pek gerek yok gibi görünsede sonradan bu yapıya ihtiyaç duyuluyor. Suanlık böyle bir yapıda olduğunu benimsemek yeterli.&lt;/p&gt;
+&lt;h3 id=&#34;neden-bunu-yapıyoruz&#34;&gt;Neden Bunu Yapıyoruz?&lt;/h3&gt;
+&lt;p&gt;Pythonda yazdığınız bir scripti kullanışlı hale getirmek istiyorsunuz, basit bir yapıyı insanlara sunmak ve tanıtmak istiyorsun; işte Flask burada oldukça güzel işler başarıyor. Belli login işlemleri ve form yapısı ile kısa kod yapısı sayesinde veri tabanı ihtiyacı duymadan güzel projeler üretmek mümkün. Örnek verecek olursam ınstagram için yazdığım unfollow yapısını rahatlıkla kullanmak ve arkadaşlarımın kullanmasına imkan sunmak istiyorum. Digitalocean üzerinden bir sunucu açarak bu yapıyı Flask ile ipadres:8000/ınstagramlogin ile hızlı bir şekilde hizmet haline getiriyorum. Tadam! Bu çok basit bir senaryo.&lt;/p&gt;
+&lt;p&gt;Şimdilik bu kadar. Burada Flask ile basit bir giriş yaptık ve sadece neden kullanıldığına baktık. İlerleyen yazılarda daha farklı dinamikler üzerinde durmaya çabalayacağım.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>arduino dht11 Isı sensörü 16x2 lcd kullanımı on Tolgahan Üzün</title>
+        <link>http://tolgahanuzun.com/tags/arduino-dht11-is%C4%B1-sens%C3%B6r%C3%BC-16x2-lcd-kullan%C4%B1m%C4%B1/</link>
+        <description>Recent content in arduino dht11 Isı sensörü 16x2 lcd kullanımı on Tolgahan Üzün</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>tr</language>
+        <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
+        <lastBuildDate>Sat, 09 Jul 2016 15:18:50 +0300</lastBuildDate><atom:link href="http://tolgahanuzun.com/tags/arduino-dht11-is%C4%B1-sens%C3%B6r%C3%BC-16x2-lcd-kullan%C4%B1m%C4%B1/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Linux Ortamında Arduino Kurulumu ve Kullanımı</title>
+        <link>http://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi/</link>
+        <pubDate>Sat, 09 Jul 2016 15:18:50 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi/</guid>
+        <description>&lt;p&gt;Birkaç aydır Win7 + Ubuntu şeklinde işletim sistemi tercihim bulunuyordu. Şimdi ise artık full Linux kullanıcısı oldum diyebilirim. Bu durum da beni kullandığım programları linux ortamına taşımaya itti. İlk olarak Arduino programını çalışır bir hale getirmem gerekiyor.&lt;/p&gt;
+&lt;h2 id=&#34;linux-arduino-kurulumu-nasıl-olur&#34;&gt;Linux Arduino Kurulumu nasıl olur?&lt;/h2&gt;
+&lt;p&gt;Öncelikle ben şuan Linux dağıtımlarından Mint adı altında olan, tabanı ubuntu üzerine kurulmuş 64 bit&amp;rsquo;lik işletim sistemini kullanıyorum. Yapmanız gereken şey çok basit; kendi sitesi üzerinden size uygun olan 32-64bit sürümünü indirmeniz olacaktır.İndirdiğinizde dosyayı bulunduğu konuma çıkarmalısınız. Sonra CTRL+ALT+T komutlarıyla Terminali çağırın.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; arduino-1.6.9
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo sh install.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;komutları yeterli olacaktır. Burada yaptığımız şey, Windows işletim sisteminde, kuracağınız uygulamanın install.exe&amp;rsquo;sine çift tıklamak ile aynı işlevde olacaktır. Biraz daha metin tabanlısı. :)&lt;/p&gt;
+&lt;h3 id=&#34;arduino-linux-port-hatası&#34;&gt;Arduino Linux Port Hatası&lt;/h3&gt;
+&lt;p&gt;Aslında bu yazıyı yazma sebebim bu başlıktaki sorunu yaşamam oldu. 2 gün önce çalıştırdığım Arduino Unu clone ürünü; şimdi çalışmıyor! Hata mesajı olarak ise; &amp;ldquo;Ben senin söylediğin portu bulamıyorum hocam!!&amp;rdquo; diyor. E haklı, çünkü ben ona port söylemedim. Linux biraz sizden bilgi ister. Ona bağladığınız cihazı söylemeniz gerekir. Güvenli ve sevilmesinin sebebi de bize söz hakkı tanımasıdır aslında. Çözüm çok basit. CTRL+ALT+T ile terminali yine çağıralım.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chmod a+rw /dev/ttyACM0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Burada söylediğimiz şey aslında çok çok basit. Bak bu benim cihazım ve buna yazma / okuma yetkisi vereceksin. Şimdi denediğimde artık arduino uno cihazım port sorunu olmadan çalışır hale gelmiş oldu. Birkaç küçük projem var. Onları başarırsam, buraya eklemeyi planlıyorum.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

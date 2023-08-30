@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tolgahan Üzün</title>
+        <link>http://tolgahanuzun.com/</link>
+        <description>Recent content on Tolgahan Üzün</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>tr</language>
+        <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
+        <lastBuildDate>Thu, 11 Jan 2018 23:28:10 +0000</lastBuildDate><atom:link href="http://tolgahanuzun.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hakkımda</title>
+        <link>http://tolgahanuzun.com/about/</link>
+        <pubDate>Fri, 24 Nov 2017 16:45:50 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/about/</guid>
+        <description>&lt;p&gt;Beni mi merak ettin? Çok yakında buraya birşeyler ekleyeceğim. Çok yakında! (Bu sefer ins)&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Python paket oluşturma - PyPi</title>
+        <link>http://tolgahanuzun.com/pypi-ile-paket-olusturmak/</link>
+        <pubDate>Thu, 11 Jan 2018 23:28:10 +0000</pubDate>
+        
+        <guid>http://tolgahanuzun.com/pypi-ile-paket-olusturmak/</guid>
+        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/pypi.png" alt="Featured image of post Python paket oluşturma - PyPi" /&gt;&lt;h2 id=&#34;pypi-nedir&#34;&gt;PYPI nedir?&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;PyPI — The Python Package Index&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Yazdığımız projeleri buraya ekleyerek &lt;code&gt;pip install paket&lt;/code&gt; seklinde çalışma dizinimize indirerek kullanmaya çalışacağız.&lt;/p&gt;
+&lt;h3 id=&#34;hadi-paket-olusturalım&#34;&gt;Hadi paket olusturalım.&lt;/h3&gt;
+&lt;p&gt;Ilk önce çalışma dizininden bahselim.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;project   #(1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   setup.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   setup.cfg    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   LICENSE.txt   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   README.md    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└───project  #(2)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    │   app1.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    │   app2.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    │
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Yukarıda 1 etiketi ile belirttiğim yer projemizi PyPi gönderirken setlememiz gereken verilerinde yer aldığı dizin. 2 etiketi ile belirttiğim dizin ise projemizin kodlarınin bulunduğu yer olarak kısaca özetleyeyim. Uygulamanızı yukarıdaki hiyerarşiye getirmeniz gerekiyor.&lt;/p&gt;
+&lt;h3 id=&#34;pypi-konfigürasyonu&#34;&gt;PyPi konfigürasyonu&lt;/h3&gt;
+&lt;p&gt;Eski kaynaklara bakan arkadaşlar için uyarayım. Pypi için bazı gereksinimler artık bulunmuyor. Mesela ilk önce test serverına yüklememiz bekleniyordu. Şimdi buna gerek duymadan direk yükleme işlemi yapılıyor. Kafa karışmadan direk konuya geçeyim.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cd $HOME&lt;/code&gt; komutunu terminale yazın ve bulunduğunuz dizine &lt;code&gt;.pypirc&lt;/code&gt; adında bir dosya oluşturun. Içine ise kendi bilgilerinizi değistirerek şunları yazmanız gerekiyor.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[distutils]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;index-servers =
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  pypi
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[pypi]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;repository: https://pypi.python.org/pypi
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;username: [kullanici_adi]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;password: [parola]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Bu kısım tamamdır, şimdi çalışma dizinimize tekrar dönebiliriz.&lt;/p&gt;
+&lt;h4 id=&#34;setup-kısımları&#34;&gt;Setup kısımları&lt;/h4&gt;
+&lt;p&gt;Burada uygulamanın önemli bilgilerini setleyeceğiz. Ama ilk önce projemizi github vb. yerlere göndermemiz gerekiyor.
+Standart bir sekilde github&amp;rsquo;a push yapma islemini yaptiktan sonra şu aşagıdaki iki komutu çalıştırın.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git tag 0.1 -m &amp;#39;bu bir denemedir&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin 0.1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Bu aşamadan sonra aşağıdaki verileri kendinize uygun olarak setleyin.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;setup.py&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;from distutils.core import setup
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;setup(
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  name = &amp;#39;name&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  packages = [&amp;#39;name&amp;#39;], 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  version = &amp;#39;0.1&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  description = &amp;#39;proje açıklaması&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  author = &amp;#39;isminiz&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  author_email = &amp;#39;mailiniz&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  url = &amp;#39;https://github.com/kullaniciadi/repoadı&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  download_url = &amp;#39;https://github.com/kullaniciadi/repoadı/tarball/0.1&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  keywords = [&amp;#39;etiketler1&amp;#39;, &amp;#39;etiketler2&amp;#39;],
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  install_requires = [&amp;#34;numpy&amp;#34;], # Burada projeniz için kullandığıniz paketleri tanimlamanız gerekiyor. Yani dependence...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  classifiers = [],
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Readme kısmını buradan tanımlıyoruz. Burayı kendimizde manipüle edebilirdik.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;setup.cfg&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[metadata]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;description-file = README.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;license.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Bu konuyu araştırmanız gerekiyor. Cünkü bu konu ayrıca bir blog yazısını hak ediyor. Şu kaynaktan bakabilirsiniz: &lt;a class=&#34;link&#34; href=&#34;http://www.yusufaytas.com/acik-kaynak-lisanslari/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Açık Kaynak Lisansları&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Vee tamamdır.&lt;/p&gt;
+&lt;p&gt;Son olarak bashte şu komutu çalıştıralım. Artık tamamdır.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;python setup.py sdist upload -r pypi&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Notlar:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Yanlış birşey yaptınız ve güncellemek istiyorsunuz, ne yapmalıyım?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Çok basit projedeki düzenlemeleri yapın ve istediğiniz düzenlemeyi 0.2 vb.. gibi şekilde &lt;code&gt;tag&lt;/code&gt;&amp;lsquo;layın. Hemen ardından setup.py üzerinden version kısmını düzenleyin ve download_url kısmındaki son version bilgilerini güncelleyin. Tekrar upload işlemi yapın. 10 dk içerisinde güncellenmiş halini pip ile indirebiliyor olacaksiniz.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Paketi kurdum ama localde denerken nasıl tanımlayacağımı bilmiyorum?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;IPython sizin en yakın dostunuz. Otamatik tamamlama ve yorumlayıcıda rahatlık sunması ile size büyük hız kazandıracak. Ilk önce onu bir edinin. Simdi ise &lt;code&gt;from paket_ismi import dosya_ismi&lt;/code&gt; ile dosyayi import edin. Içinde bir class veya fonksyionu &lt;code&gt;dosya_ismi.Class()&lt;/code&gt; gibi notasyonlarda kullanmayı deneyin. Bunu başarabilirsiniz; size güveniyorum. :)&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Markov zinciri ve Stokastik Süreçler</title>
+        <link>http://tolgahanuzun.com/markov-zinciri-projesi/</link>
+        <pubDate>Tue, 26 Dec 2017 14:28:10 +0000</pubDate>
+        
+        <guid>http://tolgahanuzun.com/markov-zinciri-projesi/</guid>
+        <description>&lt;img src="http://tolgahanuzun.com/theme/images/markov-zinciri.png" alt="Featured image of post Markov zinciri ve Stokastik Süreçler" /&gt;&lt;h2 id=&#34;markov-zinciri-nedir&#34;&gt;Markov Zinciri Nedir?&lt;/h2&gt;
+&lt;p&gt;Lisede kısmen; üniversitede ilgili bölümlerde (Mühendislik, yazılım veya matematik) iseniz Markov zincirini veya Stokastik süreçler kelime grubunu kesinlikle duymuşsunuzdur. Olasılık-Matematik ile ilgili olan bu kelime grubu; Andrey Markov adli Rus Matematikçi tarafından geliyor. Ancak etkilediği konular ise tam olarak bizi yani yazılım ile uğraşan insanlari ilgilendiriyor.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Markov zincirleri bize geçmişe bakmaksızın bir durum üzerinden bir başka bir duruma geçiş kurallarını olasılıksal olarak belirleyebildiğimiz bir model sunuyor. Bu sürecin en önemli özelliği hafızasız olması.
+&lt;a class=&#34;link&#34; href=&#34;http://blog.fatiherikli.com/post/markov-ile-birtakim-olaylar-zinciri/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Kaynak&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;yaani-hala-anlamadim-&#34;&gt;Yaani hala anlamadim ?&lt;/h3&gt;
+&lt;p&gt;Yanisi çok basit. Bir durumdan diğer duruma geçerken sadece kendi bulunduğu yere bakıyor. Yani geçmişe bakmadan istatistiksel veriler ile hareket ediyor. Markov zinciri günlük hayatımızda her yerde kullanılıyor. Özellikle yazılım üzerinde yıllardır tercih edilen bir algoritma olduğunu söylersem, abartıyor olmam.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;T9 Klavye Özelliğinden örnek verelim:&lt;/p&gt;
+&lt;p&gt;Günlük hayatta mesaj yolu ile iletişim kurduğumuz A ve B kişileri olsun.&lt;/p&gt;
+&lt;p&gt;A kişisine 5 gün boyunca &lt;code&gt;Merhaba A günaydın okula ne zaman geliyorsun?&lt;/code&gt; sorusunu sorduğumuzu düşünelim.&lt;/p&gt;
+&lt;p&gt;B kişisine 5 gün boyunca &lt;code&gt;Merhaba B günaydın işler nasıl?&lt;/code&gt; sorusunu sorduğumuzu düşünelim.&lt;/p&gt;
+&lt;p&gt;Veri kümemi istatistiksel olarak yazılıma şu notasyonda verdiğimi düşünelim.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;(&#39;buluduğum ver&#39;, &#39;gidebilecegim veri&#39;, &#39;olasılığı&#39;)&lt;/code&gt; ve birkaç adımı yazalım.&lt;/p&gt;
+&lt;p&gt;(&amp;lsquo;Merhaba&amp;rsquo;,&amp;lsquo;A&amp;rsquo;,&amp;rsquo;%50&amp;rsquo;) - (&amp;lsquo;Merhaba&amp;rsquo;,&amp;lsquo;B&amp;rsquo;,&amp;rsquo;%50&amp;rsquo;) - (&amp;lsquo;A&amp;rsquo;,&amp;lsquo;günaydın&amp;rsquo;,&amp;rsquo;%100&amp;rsquo;) - (&amp;lsquo;B&amp;rsquo;,&amp;lsquo;günaydın&amp;rsquo;,&amp;rsquo;%100&amp;rsquo;)  - (&amp;lsquo;günaydın&amp;rsquo;,&amp;lsquo;okula&amp;rsquo;,&amp;rsquo;%50&amp;rsquo;) - (&amp;lsquo;günaydın&amp;rsquo;,&amp;lsquo;işler&amp;rsquo;,&amp;rsquo;%50&amp;rsquo;)&lt;/p&gt;
+&lt;p&gt;Normalde &lt;code&gt;Merhaba A günaydın&lt;/code&gt; cümle öbeğinde sonra gelmesi gereken kelimenin %100 &lt;code&gt;okula&lt;/code&gt; olmasini bekliyoruz.
+Ancak belleksizlik kavramıyla sadece o anki veriyi dikkate almamiz gerektiğini unutmamamiz gerekiyor.
+Yani bizim o anki verimiz sadece &lt;code&gt;günaydın&lt;/code&gt; ve bu veriyle bir sonraki gelecek olan kelime %50 ihtimal ile &lt;code&gt;okula&lt;/code&gt; ya da %50 ihtimal ile &lt;code&gt;işler&lt;/code&gt; kelimesi olacak.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Yukarıdaki örnek ile markov zincirini çalıştırdıgımda aşağıdaki veri ortaya çıkıyor.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tolgahanuzun.com/theme/images/markov.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Kaynak&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;bitirme-projesi-ve-düşüncelerim&#34;&gt;Bitirme projesi ve düşüncelerim&lt;/h2&gt;
+&lt;p&gt;Hedefim elimdeki veriyi (Flask) Markov Zinciri kütüphanesinin anlayacağı dile getirmek ve veriyi işlemek. Bunu yaparken ise elimdeki veriyi istatisiksel olarak bir Graf yapısında sunmak.
+Projenin %70&amp;rsquo;i tamamlanmış durumda. Tam anlamı ile bittiğinde tekrar bu konuyu toparlayacak ve bitirmedeki verileri paylaşacak bir yazı yazmayı planlıyorum.&lt;/p&gt;
+&lt;h3 id=&#34;ver-şurdan-iki-api-bitirme-yapayım&#34;&gt;Ver şurdan iki API, Bitirme yapayım!&lt;/h3&gt;
+&lt;p&gt;Maalesef ki okududuğum &lt;strong&gt;Karadeniz Teknik Üniversitesi Bilgisayar Mühendisliği&lt;/strong&gt;ndeki ögrenciler ve Hocalar (Kesinliklik bu tezimi yıkan çok kaliteli hocalarımızda var) biraz tembel. Bitirme ve tasarım projelerinde gerçekten komik projeler yapılıyor ve kabul ediliyor.
+Bazı derslerin ödevlerinde dahi kabul edilmeyecek seviyedeki projeler Bitirme kapsamında Mühendislik ünvanına ulaştırıyor. Aslında bende basit bir proje alarak 2 gün uğraşla bitirmeyi halledebilirdim. Ancak üniversitedeki bu imkankarın bir daha karşıma gelmeyeceği gerceğini hatırladım.
+Özellikle bölümüm ile alakalı bir konu seçmeye özen gösterdim. Sevdiğim bir felsefe var:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; Bir işi yaparken zorlanmıyorsan; o işten birşeyler öğrenmiyorsundur.&lt;/code&gt; Bu yüzden daha önce üzerine durmadığım ancak duyduğum ve ilgimi çeken Markov zinciri konusuyla ilgilenmeyi karar verdim.&lt;/p&gt;
+&lt;p&gt;Bitirme projesinde &lt;strong&gt;Markov zinciri&lt;/strong&gt; konusunda bana fikir katan &lt;a class=&#34;link&#34; href=&#34;http://fatiherikli.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Fatih Erikli&lt;/a&gt;&amp;rsquo;nin yazılarını ve projelerini göstermezsem ayıp olacağını düşünüyorum.
+Bir başka etken ise 2017 yılının yazında tanıştığım Hipo&amp;rsquo;da (Zorunlu olmadığı halde) staj yapan &lt;a class=&#34;link&#34; href=&#34;https://medium.com/@aycignl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Gönül Aycı&lt;/a&gt; ile akademik anlamda yaptığımız sohbetler.
+Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde hayatınızda güzel yönlendirmelere sahip olabilirsiniz.&lt;/p&gt;
+&lt;p&gt;(Hatalıysam lütfen yorum bırakın)&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Flask Hayat Kurtarir</title>
+        <link>http://tolgahanuzun.com/flask-hayat-kurtarir/</link>
+        <pubDate>Sat, 18 Feb 2017 17:50:58 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/flask-hayat-kurtarir/</guid>
+        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/flask.png" alt="Featured image of post Flask Hayat Kurtarir" /&gt;&lt;center&gt;
+![Flask](http://www.unixstickers.com/image/cache/data/stickers/flask/Flask.sh-600x600.png){:height=&#34;400px&#34; width=&#34;400px&#34;}
+&lt;/center&gt;
+## Flask Micro Framework Web Catisi
+&lt;p&gt;Öncelikle Fremework anlamında bu yapı oldukça basit ve creative mekanizmasına sahip değil. Yani Django, Rails vb. çatılar gibi size hazır bir klasör yapısı sunmuyor. Bu beni ilk aşamada yoruyordu. Çünkü ben Django ile birşeylere başladığım için hazır yapının rahatlığına alışmıştım. Sonradan terminal ile yakınlaşınca bu durumdan kurtuldum. Kolaya kaçmaya gerek yok! Herşey sizin hayal gücünüze ve kafanızdaki dizine bağlı! Sorun yok halledebilirsiniz. :)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install flask
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Simdi basit bir linux komutu ile kendi catimizi olusturma zamani!&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir ortamdizini
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ortamdizini
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;virtualenv -p python3 ./sanalortam
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ./sanalortam/bin/activate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir projedizini
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; projedizini
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;touuch app.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Genelde flask için oluşturulan yapılarda dosya ismi app.py oluyor. Çünkü sistem büyüdükçe bazı yeni &amp;lsquo;.p&amp;rsquo; dosyalar oluşturmamız gerekecek. Model dosyası veya views gibi dosyalar. Şimdilik bu yapıların hepsi app.py içinde olacak tabi; çok kafa karıştırmaya gerek yok. :)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python3&#34; data-lang=&#34;python3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;flask&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Flask&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;app&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Flask&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;vm&#34;&gt;__name__&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@app.route&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;hello_world&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Merhaba Dunya!&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;vm&#34;&gt;__name__&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;__main__&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;şimdi-web-yapısını-koşalım&#34;&gt;Şimdi Web Yapısını Koşalım!&lt;/h3&gt;
+&lt;p&gt;Gördüğünüz gibi çok çok basit bir şekilde web çatısını oluşturduk. Terminalden python app.py komutuyla artık komutumuz koşmaya hazır! Burada iki satıra dikkat edelim. Birincisi &lt;code&gt;@app.route(&#39;/&#39;)&lt;/code&gt; ile ürl üzerinden gelen &amp;lsquo;routing&amp;rsquo; kontrolü yapıyoruz. Yani Linklenme yapısında route bize yardımcı olan fonksiyon görevi görüyor. Şimdilik bunu detaylandırmayalım. Sonraki içeriklerde detaylandırmaya çalışacağım.&lt;/p&gt;
+&lt;p&gt;İkinci dikkat edilmesi gereken satır ise &lt;code&gt;if __name__ == &amp;quot;__main__&amp;quot;:&lt;/code&gt; bu yapı. Burada python app.py dediğimizde bir paremetre vb. şeyler girmediğimiz için default değer olarak görünüyor. İlerleyen zamanlarda veritabanı gibi şeyler işin içine girdiğinde: bazı fonksiyonla buraya gelecek ve kontrol amaçlı denetlenecek. IF sorgusu ile app.run() yapmaya ne gerek vardı? İşte dediğim gibi suan pek gerek yok gibi görünsede sonradan bu yapıya ihtiyaç duyuluyor. Suanlık böyle bir yapıda olduğunu benimsemek yeterli.&lt;/p&gt;
+&lt;h3 id=&#34;neden-bunu-yapıyoruz&#34;&gt;Neden Bunu Yapıyoruz?&lt;/h3&gt;
+&lt;p&gt;Pythonda yazdığınız bir scripti kullanışlı hale getirmek istiyorsunuz, basit bir yapıyı insanlara sunmak ve tanıtmak istiyorsun; işte Flask burada oldukça güzel işler başarıyor. Belli login işlemleri ve form yapısı ile kısa kod yapısı sayesinde veri tabanı ihtiyacı duymadan güzel projeler üretmek mümkün. Örnek verecek olursam ınstagram için yazdığım unfollow yapısını rahatlıkla kullanmak ve arkadaşlarımın kullanmasına imkan sunmak istiyorum. Digitalocean üzerinden bir sunucu açarak bu yapıyı Flask ile ipadres:8000/ınstagramlogin ile hızlı bir şekilde hizmet haline getiriyorum. Tadam! Bu çok basit bir senaryo.&lt;/p&gt;
+&lt;p&gt;Şimdilik bu kadar. Burada Flask ile basit bir giriş yaptık ve sadece neden kullanıldığına baktık. İlerleyen yazılarda daha farklı dinamikler üzerinde durmaya çabalayacağım.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Kişisel Deneyimlerimle Xiaomi Mi Band</title>
+        <link>http://tolgahanuzun.com/kisisel-xiaomi-mi-band-deneyimlerim/</link>
+        <pubDate>Sun, 04 Sep 2016 17:20:38 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/kisisel-xiaomi-mi-band-deneyimlerim/</guid>
+        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/fd562ce1f9484d2f90410ec3ccf29201.jpg" alt="Featured image of post Kişisel Deneyimlerimle Xiaomi Mi Band" /&gt;&lt;p&gt;Bu yaz yapmayı planladığım spor aktiviteleri için beni teşvik etmesi amacıyla aldığım Xiaomi Mi Band ürünü, beklediğimden de kaliteli ve uzun ömürlü çıktı. Normalde saat ve benzeri türden takılar kullanan birisi değilim. Ancak hafifliği ve sadeliği beğenimi kazandırdığını da inkar edemem. Sizlere aldığım günden beri kullandığı Xiaomi Mi Band hakkında birkaç şey söylemek istiyorum.&lt;/p&gt;
+&lt;p&gt;Öncelikle 21/07/2016 tarihinde ürünü satın aldım ve birkaç gün içinde cihaz elime ulaştı. Cihazın hafifliği ve sadeliği oldukça güzel ayarlanmış. Asıl donanımı bilekliğe geçirmekte biraz zorlandığımı inkar edemem. Ayrıca bilekliğe takılan düğmelerde biraz sert ve zor yerine oturuyor. Ancak bu kullandıkça daha rahat bir hale geldiğini de geçtiğim süre içerisinde gördüm. Bu cihazı günlük aktivitelerde ve yapabilirsem koşularımda analiz yapması için almıştım. Cihazı aldığım günler bir hevesle (Töbe yalan pokemon haftasına denk geliyordu) baya yürüdüğümü ve kullandığımı söylemeliyim. Sonra ise standart bir şekilde kullanmaya devam ettim.&lt;/p&gt;
+&lt;h2 id=&#34;gündelik-hayatta-akıllı-bileklik-kullanımı&#34;&gt;Gündelik hayatta akıllı bileklik kullanımı&lt;/h2&gt;
+&lt;p&gt;Öncelikle ben telefonu tamamen sessize alarak kullanan bir kullanıcıyım. Ancak bazı zamanlar; aramalarda, Telegram veya Slack gibi platformlarda veya twitter uygulamasında** bildirim almak** isteyebiliyorum. Böyle durumlarda cihaz için geliştirilmiş çeşitli uygulamalardan birisini kullanarak bu tarz bir iletişi ağı oluşturdum. Dışarıda gezerken telefonumun Bluetooth 4.0 desteği ile cihazımın titreşimleriyle bildirimlerden haberdar olmak beni gayet memnun etti.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tolgahanuzun.com/theme/images/wp/fd562ce1f9484d2f90410ec3ccf29201.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;fd562ce1f9484d2f90410ec3ccf29201&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;uyku-takibi-ve-günlük-adım-hedefi&#34;&gt;Uyku Takibi ve Günlük Adım Hedefi&lt;/h3&gt;
+&lt;p&gt;Öncelikle cihaz basit ve ucuz bir cihaz. Bunun daha pahalı olan ürünleri mevcut. Cihaz için yayınlanan uygulamalarda günlük belirli bir adım kotası bulunuyor. Bunu siz ayarlıyorsunuz ve telefonunuzla bir kere senkronize ettikten sonra bağlantınız olmasa dahi bunu saymaya ve tamamladığında size titreşimle uyarmaya ayarlanmış güzel bir yapısı bulunuyor. Ayrıca bazen bluotooth kapalı olmasına rağmen arada bilekliğe bildirimde geliyor.&lt;/p&gt;
+&lt;p&gt;Uyku konusunda hassas olduğum için her zaman kullanmadığım ama arada test ettiğim uyku takibi sisteminden bahsedeyim. Uyku takibi sistemi sizin uyuduğunuzu ve uyandığınızı anlayarak o ara süreçteki hassas hareketlerinizi analiz ediyor. Derin uykuyu ve hafif uykuyu analiz edebiliyor.&lt;/p&gt;
+&lt;p&gt;Şuan bu cihazı yaklaşık 40 gündür kullanıyorum. Aldığım gün şarjını tamamen doldurup kullanmaya başladığımdan beri daha hiç şarj etmedim. Bu şekilde cihaz bana %65 şarj ile 40 gün yetti. Şuan batarya seviyesi %34 olarak görünen cihaz, benim kullanım oranıma bağlı olarak 2 ay dayanabiliyor.&lt;/p&gt;
+&lt;p&gt;Teknik özellikleri vb konularda bilgi vermekten çok, Xiaomi Mi Band kişisel deneyimim**i sunmaya çalıştım. Akıllı bileklik veya akıllı saat almak isteyenlere umarım iyi bir öneri niteliği taşır.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tolgahanuzun.com/theme/images/wp/853af97446b6bbf20b6129c9db02131aa3c7b265-e1472999044992.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;853af97446b6bbf20b6129c9db02131aa3c7b265&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Github Neden Candır?</title>
+        <link>http://tolgahanuzun.com/github-neden-candir/</link>
+        <pubDate>Mon, 08 Aug 2016 13:37:26 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/github-neden-candir/</guid>
+        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/github.png" alt="Featured image of post Github Neden Candır?" /&gt;&lt;p&gt;Github ile ilgili reel hayatta her zaman kullandığım bir tabir vardır: &amp;ldquo;Github candır!&amp;rdquo;. Bunun sebebi ise birçok kez karşılaştığım güzel imkanlar ve insanlar olduğunu söyleyebilirim.&lt;/p&gt;
+&lt;p&gt;Konu başlığı kadar içeriğinde biraz farklı olacağını şimdiden söyleyeyim. Ben blog&amp;rsquo;larımı biraz bu şekilde, absürt tutmayı seven birisiyim. Neyse, asıl konuya gelelim. 2 Yıl önce aldığım github hesabım, son 1 yıldır aktif bir şekilde kullanılmakta olduğunu; bazen proje üretmesem de oradaki repolarımdan veya başka kişilerin repolarından yararlandığım oluyor.&lt;/p&gt;
+&lt;p&gt;Bu yararlanma, projelerin nasıl ortaya çıktığı veya bir api&amp;rsquo;nin kullanım örneği olabileceği gibi, kendi yazdığım kodlara bakarak hatalarımı ve yazım şeklimde ki sorunları da görmeme sebep oluyor. Bunun yanında yaptığım, daha doğrusu yapmaya çalıştığım projeler ve PR&amp;rsquo;ler ile insanların ilgisini çekebiliyorsunuz.&lt;/p&gt;
+&lt;p&gt;Şu ana kadar yazılım anlamında &lt;em&gt;profesyonel düzeyde&lt;/em&gt; (Kendimin profesyonel olduğunu söylemiyorum, ki de değilim. Sadece bu işi icra ederken daha profesyonel bir bakış açısında uğraşma gayretinde olduğunu düşünerek bu kelimeyi kullanıyorum.) geçirdiğim 1 yıl boyunca, son** 6 ay içinde** 2 tanesi yurt dışı odaklı olmasıyla beraber toplam 5 iş teklifi geldi. Bunlardan 1 tanesi tanıdığım bir kişi aracılığıyla olduğunu da söylemeliyim.&lt;/p&gt;
+&lt;p&gt;Burada güzel olan şey, daha mezun olmamış bir &lt;strong&gt;bilgisayar mühendisi adayı&lt;/strong&gt; olmam ve önüme birkaç kez iş imkanın çıkması! Zaten &lt;strong&gt;Freelance&lt;/strong&gt; olarak küçük işler alarak bulunduğum zaman dilimini değerlendirmeye çalıştığımı söylesem de bu iş teklifleri beni ayrıca mutlu ediyor. Şu ana kadar gerek iş alanları ve gerek mesafe sorunlarından dolayı hiç birini kabul etmedim. Ancak mesela kabul edip etmemek değil, bu teklifin gelmesi ve beni mutlu etmesi.&lt;/p&gt;
+&lt;p&gt;Bazen de kullanmadığım teknolojilerde ihtiyaçlar olduğunu görmemde iş teklifini değerlendirmemem aşamasında önemli rol oynadığını söyleyebilirim.&lt;/p&gt;
+&lt;h2 id=&#34;neden-bu-yazıyı-yazıyorum&#34;&gt;Neden bu yazıyı yazıyorum?&lt;/h2&gt;
+&lt;p&gt;Bugün uyandığımda ilk yaptığım işlerden olan mail kontrolü ve takip ettiğim bazı mecraları ziyaret sırasında dikkatimi çeken bir şeyin olması! Yabancı bir &lt;strong&gt;start-up firması&lt;/strong&gt;, geliştirmekte olduğu ürünleri için çeşitli ülkelerde yazılımcılar ile çalışmak istediklerini ve lokasyon ile beraber bana mail attıklarını söylediler. Github repomu ve linkedin profilimi ve farklı analizler sonucu mail attıklarını ve detaylı bir şekilde konuşmak istediklerini söylediler. Büyük ihtimal uygun fiyata çalıştırmak istedikleri için böyle bir tercihe gitmiş olsalar da bunun sonucu oldukça mutlu olduğumu söylemem gerek.&lt;/p&gt;
+&lt;p&gt;Github&amp;rsquo;ın ne kadar önemli olduğuna ve iletişim ağınızın nasıl genişleyeceğine değindim veya değinmeye çalıştım. Umarım Github neden candır sorusunun cevabını burada belirtebilmişimdir.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Debian (Ubuntu &#43; Mint ) Heroku Kurulum Sorunu</title>
+        <link>http://tolgahanuzun.com/debian-ubuntu-mint-heroku-kurulum-sorunu/</link>
+        <pubDate>Tue, 12 Jul 2016 03:21:05 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/debian-ubuntu-mint-heroku-kurulum-sorunu/</guid>
+        <description>&lt;p&gt;Gece saat 3 ve ben pervasızca Heroku kurmaya çalışıyorum. Deli oldum resmen! Buraya bu yazıyı yazmalıyım ki benim gibi sorun yaşayan arkadaşlar çözüm bulsunlar. Öncelikle Heroku süper bir sistem. Ancak nalet olsun ki kurulurken sıkıntı veriyor. Bunu önceden de yaşamıştım ve çözümünü bir yere kaydetmemişim. İşte şimdi saatler boşa gitti.&lt;/p&gt;
+&lt;p&gt;Öncelikle Debian tabanlı bir sistemde heroku kurmaya çalışıyor ve size bazı hatalar veriyorsa, tahminen bunun sebebi &amp;ldquo;sources.list&amp;rdquo; konusudur. Anlayacağınız üzere kaynak listesi olarak adlandırılan bu dosya, anlam veremediğim bir şekilde çakışıyor veya başka bir şey oluyor. Bazen Google Chrome yüklerken veya Sublime Text yüklerken bu sorun ile karşılaşmıştım. Çözüm ise, hata veren listeyi silerek hallediyordum. Heroku toolbelt kurarken daha büyük çaplı bir sorun ile karşılaştım.&lt;/p&gt;
+&lt;h4 id=&#34;mint-heroku-kurulumu--ubuntu-heroku-kurulumu&#34;&gt;Mint Heroku Kurulumu | Ubuntu Heroku Kurulumu&lt;/h4&gt;
+&lt;p&gt;İlk denemeniz gereken kod aşağıdaki gibi; sitesinde verilen .sh scriptidir.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget -O- &amp;lt;https://toolbelt.heroku.com/install-ubuntu.sh&amp;gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Sizde benim gibi bu kod&amp;rsquo;da sorun yaşıyorsanız, http olarak çağırmayı denemeniz veya alt taraftaki adımları yapmanız olacaktır.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-add-repository ‘deb http://toolbelt.herokuapp.com/ubuntu ./’
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl https://toolbelt.herokuapp.com/apt/release.key &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo apt-key add –
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install heroku-toolbelt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Öncelikle bu makale 12.07.2016 tarihi için geçerlidir. Yani bundan 2 sene sonra bunu okuyorsanız; muhtemelen &amp;ldquo;deb&amp;rdquo; paketinin linki değişmiş olabilir.&lt;/p&gt;
+&lt;p&gt;Nalet olasıca Heroku yüzünden django derslerine şu anlık başlayamadım. Öncelikle kafamda bir proje var. Onu yaparsam, derslere o proje üzerinden devam edebilirim. Ders, ders diye duruyorum. Aslında bende çok birşey bilmiyorum. Ama birşeyler anlatma hevesim; araştırmamı ve daha fazla öğrenmemi sağlıyor. Bunu da söyleyeyim dedim.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Python Paket Yönetim Sistemi - PİP Kurulumu</title>
+        <link>http://tolgahanuzun.com/python-paket-yonetimi-pip-kurulumu/</link>
+        <pubDate>Mon, 11 Jul 2016 01:18:19 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/python-paket-yonetimi-pip-kurulumu/</guid>
+        <description>&lt;p&gt;Canını yediğim Python dilinin en güzel şeylerinden birisi bence PİP. &lt;em&gt;Nedir bu pip?&lt;/em&gt; Başlıktan da anlaşılacağı üzerine paket yönetim sistemi. Burada birçok paket, güzel dökümantasyonlarıyla birlikte sunulmuş ve büyük topluluklar tarafından desteklenen bir yönetim sistemi olduğunu söyleyebilirim.&lt;/p&gt;
+&lt;h2 id=&#34;pip-kurulumu-nasıl-yapılır&#34;&gt;Pip kurulumu nasıl yapılır?&lt;/h2&gt;
+&lt;p&gt;Öncelikle bunun için bilgisayarınızda tabi ki python yüklü olması gerekiyor. Aşağıdaki adımları izleyerek hızlı bir şekilde &lt;strong&gt;PİP kurulumu&lt;/strong&gt;nu gerçekleştirebilirsiniz.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Konsolda &amp;ldquo;Python&amp;rdquo; komutunu çalıştırın.&lt;/li&gt;
+&lt;li&gt;Eğer python yüklü ise bu &lt;a class=&#34;link&#34; href=&#34;https://bootstrap.pypa.io/get-pip.py&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;dosyayı&lt;/a&gt; indirin.&lt;/li&gt;
+&lt;li&gt;Shell&amp;rsquo;de exit() komutu ile Python Shell&amp;rsquo;ini kapatın.&lt;/li&gt;
+&lt;li&gt;İndirdiğiniz dosya dizinine terminal üzerinde gidin.&lt;/li&gt;
+&lt;li&gt;Son olarak terminalde &amp;ldquo;sudo python get-pip.py&amp;rdquo; komutunu çalıştırın.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ben pip kullanımını çok seviyorum. İhtiyacım olan bir şeyi çok rahatlıkla bulabiliyorum. Örnek verecek olursam, &lt;strong&gt;django modülü&lt;/strong&gt;nü yüklemem gerekiyor. Siteye girmeden direk şu şekilde Pip komutlarını çalıştırarak &lt;strong&gt;django&lt;/strong&gt; modülünü yükleyebiliyorum.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install Django //Bu paketin son versiyonunu kurmamı sağlar.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install &lt;span class=&#34;nv&#34;&gt;Django&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;1.7.0 // belirli bir paket sürümünü kurmam sağlar.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip uninstall Django // Yüklediğim pakete güle güle demek için. 😀
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip show Django // Paket hakkında detaylara erişmek için.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip search “Flask” // Anlaşıldığı gibi paket aramak için.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo pip uninstall pip // Niyedir bilinmez ama, hani pip’i silmek isterseniz diye bunu da buraya ekleyeyim dedim
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;neden-pip-yükledim-ki-ben&#34;&gt;Neden Pip Yükledim ki Ben?&lt;/h3&gt;
+&lt;p&gt;Mint işletim sisteminde pip yok. Normalde ubuntu da var diye hatırlıyorum, hayırlısı! Django derslerine devam etmek istiyorum. Öncelikle ortamı hazırlayayım. Sonra Videolar ve Yazılı derslere devam edeyim diyorum. İnsallah patlak vermeden devam edebilirim.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Arduino DHT11 Isı Sensörü ve 16x2 LCD Ekran Kullanımı</title>
+        <link>http://tolgahanuzun.com/arduino-dht11-isi-sensoru-ve-16x2-lcd-ekran-kullanimi/</link>
+        <pubDate>Sat, 09 Jul 2016 19:20:25 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/arduino-dht11-isi-sensoru-ve-16x2-lcd-ekran-kullanimi/</guid>
+        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/lcd.jpg" alt="Featured image of post Arduino DHT11 Isı Sensörü ve 16x2 LCD Ekran Kullanımı" /&gt;&lt;p&gt;Hız kesmeden devam! Bugün &lt;a class=&#34;link&#34; href=&#34;http://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi.html&#34; &gt;Linux Ortamında Arduino Kurulumu&lt;/a&gt; ile ilgili yazımdan hemen sonra yapmayı düşündüğüm bir projeyi hayata geçirdim. Öncelikle elimdeki malzemelerin eksikliği sebebiyle şuan yarım yamalak bir şekilde çalıştığını söylemem gerekiyor.&lt;/p&gt;
+&lt;p&gt;Yaklaşık 2 hafta önce yayınladığım &lt;a class=&#34;link&#34; href=&#34;http://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi.html&#34; &gt;Son 1 ay neler yaptım&lt;/a&gt; konusunda yeni bir bilgisayar topladığımı ve özelliklerini söylemiştim. Tabi ben dururmuyum, 1 hafta boyunca bilgisayarı iyi yordum. Öyle böyle değil. Şimdi normale dönse de bilgisayarın içi ne kadar sıcaklıkta, oyun oynarken veya kendimi kaptırırken ne kadar ısınıyor diye aklıma fikir geldi. Elimdeki malzemelerle bunu ölçen bir küçük uygulama yaptım. Şimdi aşamalardan bahsetmek istiyorum.&lt;/p&gt;
+&lt;h2 id=&#34;dht11-isı-sensörü-ve-16x2-lcd-ekran-kullanımı&#34;&gt;DHT11 Isı Sensörü ve 16x2 LCD Ekran Kullanımı&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;http://tolgahanuzun.com/theme/images/wp/lcd.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;IMG_20160622_223454&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Yukarıdaki bağlantıları birebir gerçekleştirdim. Burada sorun oluşabilecek tek şey 16×2 LCD şeklinizin ve pinlerinin doğru olduğuna dikkat etmeniz. Çünkü benim ekranım, İnternet üzerinde bulunan popüler kaynaklara göre tam ters yerde idi.&lt;/p&gt;
+&lt;p&gt;Bir diğer nokta ise arduino potsuz 16×2 Lcd kullanımını gerçekleştirmekti. Çünkü potansiyometre’mi ve birçok malzememi okulda kaybettim. :(  Elimdeki Güç kaynağına göre ise çözüm basit; direnç koymak!&lt;/p&gt;
+&lt;p&gt;Bilgisayara taktığımda 1k direnç yeterli oldu. Ancak devreyi pil ile beslediğim de bu yeterli olmadı. Bende 3 tane 16k direnci paralel  bağlayarak orta yolu buldum. Ama tabi ki devamlı bir kaynak ile beslemek gerekiyor. Şimdilik pil ile deneme yaptım diyebilirim.&lt;/p&gt;
+&lt;h3 id=&#34;arduino-162-lcd-örnek-kod&#34;&gt;Arduino 16×2 LCD Örnek Kod&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;LiquidCrystal.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LiquidCrystal&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;lcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;setup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;lcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;begin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;loop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;lcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;“&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Ohh&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Miiss&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;”&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;lcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;setCursor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;lcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;“&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;Sicaklik&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;“&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Şimdi de sıra ısı sensörünü çalıştırmaya geldi! Aslıdan yapboz gibi birşey. DHT11 adı altında elime bulunan sensör, normalde 4 pin’e sahip ama kolaylık olsun diye 3 pin şeklinde yapmışlar. Tabi internetteki kaynaklar 4 pine göre hazırlanmış! Bende burada tökezledim. Çünkü VCC – GND ve Sinyal pini yerleri değişmiş oluyor.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tolgahanuzun.com/theme/images/wp/arduino-dht11-3-pin.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;IMG_20160622_223454&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Yukarıdaki şekilde bağlantılar tamamlandıktan sonra, bu iki yapıyı birleştirmek kalıyor. Zaten çok basit; ısı sensörü için 2 değilde 1. pin’i kullanmanız yeterli!&lt;/p&gt;
+&lt;h2 id=&#34;arduino-dht11-isı-sensörü-kullanımı&#34;&gt;Arduino DHT11 Isı Sensörü Kullanımı&lt;/h2&gt;
+&lt;p&gt;İlk önce Canım Github üzerinden DHT11 Kütüphanesini, DHT11 ve 16×2 LCD Kullanımı reposunu indirin ve içerisindeki kütüphaneyi Arduino ekleyin. Daha fazla laf kalabalığı yapmadan LCD ve Isı sensörünü birlikte çalıştırdığım kodu alt tarafda veriyorum.&lt;/p&gt;
+&lt;h3 id=&#34;dht11-ve-162-lcd-ekran-kullanımı&#34;&gt;DHT11 ve 16×2 LCD Ekran kullanımı&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;DHT.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;LiquidCrystal.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#define DHTPIN 1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#define DHTTYPE DHT11
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;DHT&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dht&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DHTPIN&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DHTTYPE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;LiquidCrystal&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;lcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;setup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dht&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;begin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;lcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;begin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;loop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nem&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dht&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;readHumidity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sicaklik&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dht&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;readTemperature&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// ‘C cinsinden.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sicaklik&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;lcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;“&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Ohh&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Miiss&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;”&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sicaklik&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;lcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;“&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Ohh&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Firin&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Gibi&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;”&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sicaklik&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;40&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;lcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;“&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Yaniyorum&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Usta&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;”&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sicaklik&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;lcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;“&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Atesim&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Var&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;”&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;lcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;setCursor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;lcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;“&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;Sicaklik&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;“&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;lcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sicaklik&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;delay&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;500&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;lcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;setCursor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;İşte Bu Kadar!&lt;/p&gt;
+&lt;p&gt;Son olarak devreyi pil ile besledim ve kasa içerisine koydum. Birkaç gün içinde elektronik malzeme siparişi vereceğim. Elime yeni malzemeler geçince, direk telefon ile haberleştirme vb. şeyler yapma planım var. Ama şimdilik bu kadar.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Linux Ortamında Arduino Kurulumu ve Kullanımı</title>
+        <link>http://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi/</link>
+        <pubDate>Sat, 09 Jul 2016 15:18:50 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi/</guid>
+        <description>&lt;p&gt;Birkaç aydır Win7 + Ubuntu şeklinde işletim sistemi tercihim bulunuyordu. Şimdi ise artık full Linux kullanıcısı oldum diyebilirim. Bu durum da beni kullandığım programları linux ortamına taşımaya itti. İlk olarak Arduino programını çalışır bir hale getirmem gerekiyor.&lt;/p&gt;
+&lt;h2 id=&#34;linux-arduino-kurulumu-nasıl-olur&#34;&gt;Linux Arduino Kurulumu nasıl olur?&lt;/h2&gt;
+&lt;p&gt;Öncelikle ben şuan Linux dağıtımlarından Mint adı altında olan, tabanı ubuntu üzerine kurulmuş 64 bit&amp;rsquo;lik işletim sistemini kullanıyorum. Yapmanız gereken şey çok basit; kendi sitesi üzerinden size uygun olan 32-64bit sürümünü indirmeniz olacaktır.İndirdiğinizde dosyayı bulunduğu konuma çıkarmalısınız. Sonra CTRL+ALT+T komutlarıyla Terminali çağırın.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; arduino-1.6.9
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo sh install.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;komutları yeterli olacaktır. Burada yaptığımız şey, Windows işletim sisteminde, kuracağınız uygulamanın install.exe&amp;rsquo;sine çift tıklamak ile aynı işlevde olacaktır. Biraz daha metin tabanlısı. :)&lt;/p&gt;
+&lt;h3 id=&#34;arduino-linux-port-hatası&#34;&gt;Arduino Linux Port Hatası&lt;/h3&gt;
+&lt;p&gt;Aslında bu yazıyı yazma sebebim bu başlıktaki sorunu yaşamam oldu. 2 gün önce çalıştırdığım Arduino Unu clone ürünü; şimdi çalışmıyor! Hata mesajı olarak ise; &amp;ldquo;Ben senin söylediğin portu bulamıyorum hocam!!&amp;rdquo; diyor. E haklı, çünkü ben ona port söylemedim. Linux biraz sizden bilgi ister. Ona bağladığınız cihazı söylemeniz gerekir. Güvenli ve sevilmesinin sebebi de bize söz hakkı tanımasıdır aslında. Çözüm çok basit. CTRL+ALT+T ile terminali yine çağıralım.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chmod a+rw /dev/ttyACM0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Burada söylediğimiz şey aslında çok çok basit. Bak bu benim cihazım ve buna yazma / okuma yetkisi vereceksin. Şimdi denediğimde artık arduino uno cihazım port sorunu olmadan çalışır hale gelmiş oldu. Birkaç küçük projem var. Onları başarırsam, buraya eklemeyi planlıyorum.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>İşleyen demir pas tutmaz!</title>
+        <link>http://tolgahanuzun.com/isleyen-demir-pas-tutmaz/</link>
+        <pubDate>Tue, 17 May 2016 00:00:24 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/isleyen-demir-pas-tutmaz/</guid>
+        <description>&lt;p&gt;Bu sene bir şeyleri tecrübe ettim. İyisiyle kötüsüyle. Bunun için uzun soluklu bir yazı yazmak istiyorum ama şimdilik 1 konu üzerinde değinerek geçeceğim. İşleyen demir pas tutmaz! Bu sene bu konuda bazı eksikliklerden ders çıkardım. Bu eksikliklerden kısaca bahsetmek istiyorum.&lt;/p&gt;
+&lt;p&gt;Bu sene çok yoğun ve yorucu oldu benim için. Okul 3. sınıfın yoğunluğuyla beni çok yordu. Ayrıca kulüp işlerine hayli bir sardım. Her türlü işe el atarak yardım etmeyi ve ortama ayak uydurmayı sağladım. Eve gecenin son otobüsüyle gitmeye başladım. Kodla ve THS ile düzenli ilgilenmeye başladım. İnsanlar çoğaldı onlarla ilgilenmeye başladım. Ankara&amp;rsquo;ya yarışmalara, Karabük&amp;rsquo;e etkinliğe gittim. Daha sayamayacağım çok şey oldu. Ama bir tek kendimle ilgilenemedim.&lt;/p&gt;
+&lt;p&gt;Bir şeyler öğrenmek için bu sene hayliyle fazla şeye baktım. Ama sadece fikir sahibi olmakla yetindim. Çünkü kendimle ilgilenmedim ve bu öğrendiğim şeylerde genelde 2. kez bakmaya fırsat bulamadım. Geçtiğim yıllardaki yaşantım ve yaptıklarım aklıma geldi. Para kazanmak uğruna veya bir şeyler öğrenmek uğruna bir iş aldığımda veya bir projeye dahil olduğumda, o şeyi devamlılıkla öğrendiğimi ve kullandığımı fark ettim. Yani biraz pas tutmuşum.&lt;/p&gt;
+&lt;p&gt;Bunu fark edeli 2 haftaya yakın bir süre oldu. Bende etrafımdaki bazı kişilerin bana köstek olduklarını görünce, R10 üzerinden belirli işler aramaya başladım. Aradığım gibi de buldum. Bunlar devamlı ve çok kazançlı işler değil belki ama benim pasımı çözecek ve Pc kullanma amacımı düzeltecek işler. Şimdi günümün 2-3 saatini bu işlere ayırıyorum ve birşeyleri yanlış yaptığımı fark ediyorum. Bunları bu şekilde düzeltmeye başlayacağım.&lt;/p&gt;
+&lt;p&gt;Demem o ki &amp;ldquo;Öğrenmek için değil de kazanmak için yapınca bir şeyleri tam öğreniyorsun ve sonuca ulaşıyorsun. Diğer türlü sadece fikir sahibi oluyorsun!!&amp;rdquo;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>İnsanlar bencildir!</title>
+        <link>http://tolgahanuzun.com/insanlar-bencildir!/</link>
+        <pubDate>Sat, 07 May 2016 19:37:42 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/insanlar-bencildir!/</guid>
+        <description>&lt;p&gt;İnsan kelimesinin içerisinde birden çok anlam var bence. Bu anlamlardan biriside bencillik! Bu tamamen kişisel bir görüş olduğunun altını çizmem gerek. İnsan denilen varlık bir şeyleri kendisine mâl etmeyi çok seviyor. Kendisi yapmış olsun veya olmasın; ne önemi var ki iki kelam yalan kelimeyi yan yana getirmekte!&lt;/p&gt;
+&lt;p&gt;Bizim sektör çok nankör. Ben bu sektörde daha çok yeniyim ve belki karın ağrım da bu yüzden ama boş konuşan, çok konuşan yani kısaca durmadan konuşan insanlardan çok rahatsızım. Yapmadıkları şeyleri göz göre göre yaptığını lansman etmek veya başka birisinin aldığı/yaptığı şeyi kendisi yapmış&amp;rsquo;ta benim haberim yokmuş gibi anlatması; bu kadar mı ikiyüzlülük olur dedirten cinsten.&lt;/p&gt;
+&lt;p&gt;Bazı insanlar arkadaş gruplarıyla beraber topluluk şeklinde yalan söylüyorlar; ben şok! Hayır kendini övdüğün veya yaptığını lansman ettiğin kitle belli. :) Bana niye yalan söylüyorsun. Trabzon da seni el üstünde tutacak büyük bir firmada yok hani?&lt;/p&gt;
+&lt;p&gt;Hazır içimi dökmeye başladım; birde diğer sinir olduğum insan profilinden de bahsedeyim. Bir toplantı düzenlenecek veya bir olay gerçekleşecek. Herkese uyuyor ama 1-2 kişi kendisi için o zamanın bize ayıracak kadar değerli olmadığını ve katılamayacağını son anda söylüyor. Önemli bir işi de yok! Kendi ağzıyla söylüyor.&lt;/p&gt;
+&lt;p&gt;Bu sene bu iki insan profiliyle oldukça fazla karşılaştım. Zaten genellikle birisini yapan insan; diğerini de benimsemiş o şekilde devam ediyor. Buda böyle içimi dökmeli; etrafa sataşmalı yazım olarak dursun.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Kodla 2016 Tamamladık!</title>
+        <link>http://tolgahanuzun.com/kodla-2016-tamamladik/</link>
+        <pubDate>Fri, 06 May 2016 10:47:02 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/kodla-2016-tamamladik/</guid>
+        <description>&lt;img src="https://cdn-images-1.medium.com/max/800/1*e_Brw-vcnbleX3ia-tsCfw.jpeg" alt="Featured image of post Kodla 2016 Tamamladık!" /&gt;&lt;p&gt;Kodla etkinliği samimiyet ortamında gerçekleşen bir etkinlik oldu. Belki de benim için diğer etkinliklerden farklı olmasının ana sebebi de budur. Bende Kodla markasının samimiyetini buraya yani bu yazıya taşımak istiyorum. Kodla, Karadeniz bölgesinin en büyük bilişim etkinliği olarak yorumlamak doğru olur galiba.&lt;/p&gt;
+&lt;h3 id=&#34;kodla-markası&#34;&gt;Kodla Markası&lt;/h3&gt;
+&lt;p&gt;Kodla geçen sene bir TrabzonHackerspace toplantısı sırasında ortaya atılmış bir etkinlik olup, fikir ve isim babası olarak Ümit Dincel ve Bora Ezer isimlerini bence bu yazıda geçirmem gerektiğini düşünüyorum.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/800/1*F0N7ZTcNyyYIbsJcx5zQlQ.jpeg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;resim&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Neden bütün güzel etkinlikler İstanbul ilinde veya diğer batı illerinde gerçekleşiyor? Bunu kırmanın bir yolu yok mu? Doğu taraflarında iş yapan, küçük ufuklara yol açan etkinlikler olsa güzel olmaz mı? Galiba bu soruların tamamını ve daha fazlasını düşünen öncü abilerimiz; Kodla 2015 etkinliği için taşın altına elini koymayı ve kendilerinden çok biz aklı havada olan bilgisayar mühendisi arkadaşlara ve bu alana ilgili olanlara yararlı olmayı başardılar.&lt;/p&gt;
+&lt;h3 id=&#34;kodla-2016-ve-bomba-etkisi&#34;&gt;Kodla 2016 ve Bomba etkisi&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/800/1*HXcvP7LkFu6ep2B5Yl3R2Q.jpeg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;resim&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Kodla 2016, bu sefer Vngrs katkılarıyla daha profesyonel bir ortamda ve kalitede sunum imkanı buldu. Tabi ki diğer sponsorların hakkını da yememek lazım. Gerekli hazırlıklar yapıldıktan sonra değerli katılımcıları rahat olmaları için elimizden geleni yaptık. Çünkü onlarla gün içerisinde oldukça yoğun ve baş ağrıtıcı sohbetler içerisine girdik. :) Tam anlamıyla onları bilgi anlamıyla sömürdük. Dipnot olarak geçen sene bana vizyonumu veren “Fatih Arslan” abimede teşekkür etmeyi unutmak istemem :)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/800/1*e_Brw-vcnbleX3ia-tsCfw.jpeg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;resim&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;çılgın-sohbet-zincirleri&#34;&gt;Çılgın Sohbet Zincirleri&lt;/h4&gt;
+&lt;p&gt;Kodla 2016 ve 2015 etkinliğinin bizim için en önemli katkılarından birisi ise bu sohbet zincirleri oldu. O kadar harika konulardan ve anılardan söz ediliyor ki hayatınızda o konuları bu insanlar olmadan belki de hiç duymayabilirsiniz!!&lt;/p&gt;
+&lt;p&gt;Serdar Doğruyol ile etkinlik sonrasında yaptığımız 30–45 dk’lık bir sohbet içerisinde o kadar çok konu içerisinde konuştuk ki ben o an maximum feyiz noktasına ulaşmıştım. Aynı şekilde Adem İlter ve Burak Can ile yaptığımız o güzel sohbetler benim yorgunluğumu yok etmeye yetmişti.&lt;/p&gt;
+&lt;h4 id=&#34;son-olarak-abdullah-uğraşkan&#34;&gt;Son olarak Abdullah Uğraşkan&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/800/1*t-CPJhbJbDzY9BMm7rtM2w.jpeg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;resim&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Kodla ve TrabzonHs içerisinde bize desteklerini sunan Abdullah abiden bahsetmesem ayıp olur düşüncesindeyim. Abdullah Uğraşkan etkinlik sırasında veya öncesinde maddi ve manevi olarak bizi destekleyen ve birçok meşguliyeti olmasına rağmen bizi dinleyen ve her hafta bize 3 saatini fazlasıyla ayıran çok kaliteli bir abimiz. Yazılım sektörüne beni yönlendiren Gürkan Yarar arkadaşımın yanı sıra bu sektörde eğlenceyi ve samimiyeti bize gösteren Abdullah abi; Trabzon’da yaşanabilirlik seviyesini yükselten etkenlerden birisi olduğunu söylemek bence yalan olmaz.&lt;/p&gt;
+&lt;p&gt;Etkinlik ile ilgili unutulmayacak şey Adem ilter’ in sahneden Abdullah Uğraşkan’a teşekkür edip “ Ben buralardaysam Abdullah sayesinde” demesi de neden Adem abiye karşı bir sempatiklik duyduğum konusunda da bana açıklayıcı bir durum oldu.&lt;/p&gt;
+&lt;p&gt;Tüm konuşmacılara, organizatörlere ve katılımcı arkadaşlara ayrı ayrı teşekkür ederim. Dolmuş uzaklığında olup gelmeyen Ktü Bilgisayar(çakma) Mühendisi öğrencileri yerine, kilometrelerce uzaklardan gelen Karabük ekibine ayrıca teşekkür etmek istiyorum.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=T-7roo-HPyE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.youtube.com/vi/T-7roo-HPyE/0.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Nodejs-Npm Versiyon uyuşmazlığı</title>
+        <link>http://tolgahanuzun.com/nodejs-npm-versiyon-uyusmazligi/</link>
+        <pubDate>Thu, 14 Apr 2016 01:19:24 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/nodejs-npm-versiyon-uyusmazligi/</guid>
+        <description>&lt;p&gt;Bu yazım oldukça kısa ama bence oldukça işe yarar olacak diye umut ediyorum. Ben ubuntu kullanıcısıyım ve en sevdiğim yani evrensel program kütüphanesi olması. Bütün evrensel araçlar ubuntu windows vb. diye seçenek sunuluyor. Ama bugün 1 saattir bu olayın iğrençliği ile karşı karşıyayım. NPM ve NodeJs paketlerindeki uyuşmazlıklar!!!&lt;/p&gt;
+&lt;p&gt;Arkadaşlar Nodejs ve NPM paketlerini ubuntu üzerinde&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install nodejs npm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;şeklinde çok kolay bir şekilde kuruyorsunuz. Sonra&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;node -v
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm -v
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;yapıyorsunuz ama node komutu bazen hata verebilir. Yada tam tersi iterasyonda sıkıntı yaşayabilirsiniz. Çözümü google&amp;rsquo;ayınca oldukça basit.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -s /usr/bin/nodejs /usr/bin/node
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Burada aynı işlevi her iki keywords için standartlaştırıyorsunuz.&lt;/p&gt;
+&lt;h3 id=&#34;hayır-hala-hatalar-bitmedi&#34;&gt;Hayır hala hatalar bitmedi&lt;/h3&gt;
+&lt;p&gt;Şimdide NPM üzerinde login olmayı deneyin! Olmadı dimi :)Arkadaşlar sürümden dolayı sıkıntı yaşıyorsunuz ve Ubuntu yazılım merkezinde ise oldukça eski bir sürümde kaynak dosyası bulunuyor. Biraz interneti kurcaladım ama maalesef istediğim bir yöntem bulamadım. Sonra ise çok komik birşeyi fark ettim. Npm&amp;rsquo;de aslında bir npm paketi! Evet kendisini güncellemek için kendisini çağırabiliriz. Evet bencede çok saçma&amp;hellip;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install -g npm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Bu komut ile artık npm paketiniz güncel sürüme ulaştı! Gece 1&amp;rsquo;de bu yazıyı benim gibi mağdur olan arkadaşlara itafen yazıyor ve saçma yazılım merkezine güzel temennilerimi (!) sunuyorum.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Odtü robot günleri 2016 - Çatı Macerası</title>
+        <link>http://tolgahanuzun.com/odtu-robot-gunleri-2016-cati-macerasi/</link>
+        <pubDate>Sat, 12 Mar 2016 11:49:40 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/odtu-robot-gunleri-2016-cati-macerasi/</guid>
+        <description>&lt;p&gt;Programlama günleri etkinliğinden geldikten 4 gün sonra, hooop ankaraya yolculuk başladı. Resmen yerimde duramıyorum; farkındayım. :) Yaşadığım ve tecrübe ettiğim bu güzel durumları yazmak istiyorum. Öncelikle üyesi olduğum IEEE KTU ile yapılan bir etkinlik olup, çok güzel insanlarla beraber katılım gösterdik.&lt;/p&gt;
+&lt;p&gt;Trabzondan 31 kişilik otobüs ile 30 kişi yola çıktık. 11-12 saat sürecek yolculuk esnasında çok güzel sohbetler ve arkadaşlıklarla yolculuğu tamamladık. Sabah Hostel&amp;rsquo;e ve Yurt&amp;rsquo;a yerleştik. Kahvaltı faslı felan derken işlerimizi halletik ve Yasin adlı arkadaşımın ısrarı ile Konya sokağa uğradık.&lt;/p&gt;
+&lt;h4 id=&#34;konya-sokak-fulyası&#34;&gt;Konya Sokak fulyası&lt;/h4&gt;
+&lt;p&gt;Eğer zamanınız varsa ve uzun süreli bir proje yapmak istiyorsanız, kesinlikle donanımlarınızı yurt dışı üzerinden sipariş verin. Ama güven problemi yaşıyor ve Türkiye pazarından satın almak istiyorsanız, en uygun ürünleri bulacağınız yer Konya sokak olacaktır. Gözlerimle gördüm. :)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Beynimizi yiyen robot yapmışlar&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Kulüp odamızda test ettiğimiz, mis gibi çalışan tüm robotlar; Ankara da çalışmamaya başladı. Sayımız fazla ve mekan kısıtlı olması sebebiyle gece 3&amp;rsquo;e kadar ancak robotların büyük kesimi çalışmaya başladı. Tam takır donanımla gelmeseydik, işimiz yaştı. :)&lt;/p&gt;
+&lt;h3 id=&#34;odtü-çılgın-robot-yarışları&#34;&gt;Odtü çılgın robot yarışları&lt;/h3&gt;
+&lt;p&gt;Öncelikle çizgi izleyen kategorisinde yarışma hayaliniz varsa; ciddi paralar harcamanız gerekiyor. Çünkü bazı kişiler ve kuruluşlar sapıtmışlar ve aynı robotlardan 15-20 tane üretmişler.Labirent, çöp toplayan vs. gibi kategoriler ise daha hala yarışılabilir bir durumda. Yarım yamalak çalışan bir robotla ödül alma şansınız bile var. :)&lt;/p&gt;
+&lt;h3 id=&#34;rezil-serbest-kategori-yarışması&#34;&gt;Rezil Serbest Kategori yarışması&lt;/h3&gt;
+&lt;p&gt;Buraya yazmak istediğim çok şey var. Küfür vs. etmek istemediğim için kısa geçiyorum. Üst üste 2-3 yıldır Drone&amp;rsquo;a ödül vermenin mantığını anlayamıyorum. Çalışmayan veya video&amp;rsquo;su olmayan bir ürüne ödül verilmesi; hatta o ürünün muadili olan bir ürünler salonun video&amp;rsquo;su çekilmesi; ne kadar inovatif bir yarışma olmadığının kanıtıdır. Siz siz olun, amcanız veya dayınız yoksa katılmayın.&lt;/p&gt;
+&lt;h3 id=&#34;son-olarak-ise-çatı&#34;&gt;Son olarak ise Çatı&lt;/h3&gt;
+&lt;p&gt;Kilo hesabı ile satılan. Yaklaşık 40-50 çeşit yemek bulunan ve yemekleri ise oldukça lezzetli olan bir mekan. Zor yemek seçen bir kişi olma sebebiyle beynimizi yaktık. Keşke Trabzonda da böyle güzel mekanlar olsa dedik. :(&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>3. Programlama Günleri - Karabük Macerası</title>
+        <link>http://tolgahanuzun.com/3-programlama-gunleri-karabuk-macerasi/</link>
+        <pubDate>Mon, 29 Feb 2016 22:44:00 +0000</pubDate>
+        
+        <guid>http://tolgahanuzun.com/3-programlama-gunleri-karabuk-macerasi/</guid>
+        <description>&lt;p&gt;Son 1 aydır iple çektiğim, etkinliği düzenleyen Muhammet Dilmaç adlı arkadaşımın davet ettiği harika bir etkinliğe katıldım. Karabük Üniversitesinde gerçekleşen bu güzel etkinlik için ne söylesem az. Ama elimden geldiğince bu deneyimi yazıya dökmeye çalışacağım. (Umarım çok uzun olmaz.)&lt;/p&gt;
+&lt;h2 id=&#34;3-programlama-günleri-etkinliğine-kısa-bir-bakış&#34;&gt;3 Programlama günleri Etkinliğine kısa bir bakış&lt;/h2&gt;
+&lt;p&gt;Cuma sabahı Karabük otogarına varıp biraz zaman geçirdikten sonra Üniversiteye arkadaşlarla beraber geçtik. İlk izlenimim olarak bu şehre 2 beden büyük bir üniversite olduğu olacaktır. :) Yani anlayacağınız oldukça güzel bir üniversitesi ve imkanları bulunuyor. Yeni kurulmuş olması sebebiyle çalışmalar çok hızlı olduğunu gördük. Cuma günü bölüm içinde aktif ders olması sebebiyle oradaki öğrenci arkadaşlarla iç içe bir şekilde zaman geçirdik. Şunu söylemeliyim ki ortam ve insanlar oldukça güzel :)&lt;/p&gt;
+&lt;p&gt;Hemen girişte kalabalık ve yardımsever bir ekip orada duruyordu. Muhammet&amp;rsquo;i gözlerim aramadı değil. :) İçeride yerleri tuttuktan sonra etkinliğe başlandı. Kantin ve teknik ekibin bize sunduğu içecek ve yiyecek desteği ile oldukça güzel bir gün geçirdik. Tabi ki benim ve eminim ki yanımdaki arkadaşların (Yasin Karadeniz, Abdullah Velioğlu, Taha İbrahim Bayram, Ergenekon Yiğit) en çok dikkatini çeken ve mutlu eden olayı ise Fatih Arslan. :) İdol kelimesinin insan karşılığı olan Fatih abi ile 1 saat boyunca yüz yüze harika bir sohbet etme şansımız oldu. Harika bir sohbetin ardından günü tamamladık.&lt;/p&gt;
+&lt;p&gt;En güzel şeylerden birisi ise konuşmacıları ve ilgilendikleri alanların hakkında fikir sahibi olmamdı. İlk kez dinlemek ve ağzım açık bir şekilde hayret etme aşamasını Kodla etkinliğinde atlatmış ve bu sefer birebir sohbet etme şansı yanında fikirlerine yorum yapabilme seviyesine ulaşmıştım. Cumartesi günüde yoğun sunumlarla beraber bu faslı kapatmış olduk.&lt;/p&gt;
+&lt;h3 id=&#34;talihsiz-workshop-deneyimim&#34;&gt;Talihsiz Workshop deneyimim&lt;/h3&gt;
+&lt;p&gt;5 adet seçebileceğim eğitimlerin arasında ben Nodejs ve Javascript sunumuna gitmeyi tercih ettim. Ancak bu sefer biraz üzgün bir durumla karşılaştım. Sabah erken kalkıp sınıfta yer tutma çabamıza rağmen bizim konuşmacılarımızdan birisi 1 diğeri ise 1.5-2 saat geç kaldılar. Eğitim ilk 30 dk çok güzel ilerlerken birden OOP dersine dönmesi biraz beni şaşırttı. Birde Caffescript ile beraber konunun değişmesi hayal kırıklığına uğrattı! Çünkü bir dili öğrenmek için birisine ihtiyaç duymak gerekmiyor.&lt;/p&gt;
+&lt;p&gt;Npm ve Nodejs konularına ise 30-45 dk değindikten sonra eğitim sonlandı. Konuşmacıların bize ayırdıkları vakit ve anlatılış şeklindeki şikayetim oldukça yersiz olabilir. Bunları bize gönüllülükle yaptıklarını düşününce bende haksızlık yaptığıma karar veriyorum. Hatta birşeyler hakkında fikir sahibi olduğum için bana uygun bir eğitim olmadığını da söyleyebilirim.&lt;/p&gt;
+&lt;h3 id=&#34;unutulmaz-sunumlar-ve-insanlar&#34;&gt;Unutulmaz Sunumlar ve İnsanlar&lt;/h3&gt;
+&lt;p&gt;Öncelikle Muhammet Dilmaç adlı arkadaşa buradan teşekkürlerimi sunmaz isem büyük ayıp etmiş olurum. Kendisini 5 dk bir yerde sabit görmek mümkün değildi. Aynı şekilde arkadaşları da öyleydi. Bazı arkadaşlar USA başkanı koruması gibi hissederek hareket etse dahi :) oldukça yardımcı oldular.&lt;/p&gt;
+&lt;h4 id=&#34;git-eğitimi---lemi-orhan-ergin&#34;&gt;Git Eğitimi - Lemi Orhan Ergin&lt;/h4&gt;
+&lt;p&gt;Bildiğimi sandığım ama aslında sadece ezberlediğim bir alanı bize ve hatta konuşmacılara öğreten o muhteşem insan. :) Ağzımız açık bir şekilde ve oldukça anlaşılır bir git eğitimi verdi. Konuşma bitince ilk işimiz koşarak ona teşekkür etmek oldu.&lt;/p&gt;
+&lt;h4 id=&#34;romete-nasıl-çalışılır---fatih-arslan&#34;&gt;Romete Nasıl Çalışılır - Fatih Arslan&lt;/h4&gt;
+&lt;p&gt;Pek fazla yorum yapmaya gerek yok. Fatih abi ağzımızı açık bırakacak harika bir sunum yaptı. Keşke ayrılan süre daha fazla olsa idi. Parti kursa milletvekili yaptırırız o adamı. :)&lt;/p&gt;
+&lt;p&gt;Daha yazılacak o kadar çok şey var ki ama bu kadarı kafi olacaktır diye düşünüyorum. :) Varsa sorularınız, yorumlarda sorabilirsiniz, kısa sürede cevap veririm.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Atom parçalamayacaklar için: Micro Framework Flask</title>
+        <link>http://tolgahanuzun.com/atom-parcalamayacaklar-icin-micro-framework-flask/</link>
+        <pubDate>Sat, 30 Jan 2016 22:13:40 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/atom-parcalamayacaklar-icin-micro-framework-flask/</guid>
+        <description>&lt;p&gt;Uzun süredir içerik girmediğim kanısına vardım. Gerek sınavlar gerek kendi tembelliğim ile bazı işlerim yarıda kesilmek zorunda kaldı. Bunlardan bir tanesi ise çektiğim dersler örnek verebilirim. Ancak yarıyıl tatili ile bir şeylerle ilgilenmeye geri döndüm.&lt;/p&gt;
+&lt;h2 id=&#34;flask-ile-basit-dokunuşlar&#34;&gt;Flask ile basit dokunuşlar&lt;/h2&gt;
+&lt;p&gt;Django derslerini yarıda bırakmışken bir başka kütüphane ile uğraşmam ne kadar doğru tartışılır ama ihtiyaç duyduğum bir araç olduğu için Flask ile haşır neşir olmaya başladım. Bir projem için django&amp;rsquo;nun gereksiz olacağını, fazla kaçacağını düşünüyordum ki gerçekten de öyle. Projelerimde kullandığım bir sitenin altında Flask ile yapıldığını görünce hemen araştırdım. Önceden duyduğum bu micro framework tam aradığım araç olduğunu düşünüyorum.&lt;/p&gt;
+&lt;h3 id=&#34;tabiki-türkçe-kaynak-yok&#34;&gt;Tabiki Türkçe kaynak yok&lt;/h3&gt;
+&lt;p&gt;Bu sizi şaşırttı mı? Beni şaşırtmadı. :) Üzdü mü? Hayır üzmedi.
+İngilizce yazılım sektörünün vazgeçilmez bir argümanı. Maalesef ingilizce olmadan yazılıma hakim olmak pek mümkün değil. Projemi eğer tamamlarsam; ki öyle bir durumda flask öğrenmiş oluyorum, blog&amp;rsquo;umuda bu alt yapıya taşımayı düşünüyorum.&lt;/p&gt;
+&lt;p&gt;Umarım kısa sürede hedeflediğim derslere devam eder ve yeni alanlarda yazılar paylaşmaya başlarım.&lt;/p&gt;
+&lt;h3 id=&#34;nedir-bu-flask&#34;&gt;Nedir bu Flask?&lt;/h3&gt;
+&lt;p&gt;Oldukça basit, sadece indirerek ve basit bir .py dosyası oluşturarak server ayağa kaldırabileceğiniz bir araç. İhtiyacınız doğrultusunda yavaş yavaş inşa edebildiğiniz bir yapı. Küçük bir amaca yönelik bir web site fikriniz varsa kesinlikte doğru bir araç olacaktır.&lt;/p&gt;
+&lt;p&gt;Blog yapmak isteyen ve hazıra kaçmak istemeyenler için ise bence güzel bir araç olacaktır. Öğrendiğimde kendi blogumu buraya taşımayı da düşündüğümü belirteyim.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Treeage</title>
+        <link>http://tolgahanuzun.com/p/treeage/</link>
+        <pubDate>Fri, 27 Nov 2015 16:10:15 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/p/treeage/</guid>
+        <description>&lt;p&gt;Agaç yaş hesaplama&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Böyle Mühendis Olunmaz!</title>
+        <link>http://tolgahanuzun.com/boyle-muhendis-olunmaz/</link>
+        <pubDate>Mon, 02 Nov 2015 20:07:35 +0000</pubDate>
+        
+        <guid>http://tolgahanuzun.com/boyle-muhendis-olunmaz/</guid>
+        <description>&lt;p&gt;Mühendislik hayali olan ve mühendis bölümü okuyan bazı arkadaşlara kızgınım. Kendimde dahil olmak üzere bu şekilde devam edersek bizden mühendisi bırak, tekniker bile olmaz!&lt;/p&gt;
+&lt;p&gt;Okuduğumuz okul veya şehir artık belli. Eğer imkan yoksa başka yollardan gitmeye(ki çoğumuzun yok) artık okuduğumuz bölümün farkına varmanın zamanı gelmedi mi?&lt;/p&gt;
+&lt;p&gt;Hele 2. ve 3. sınıf arkadaşlarıma çok daha kızgınım. Eğer mühendis olmak istemiyorsanız buna saygım sonsuz, ancak ben mühendis olmak istiyorum diyorsanız; bu sadece dersleri geçmekle mümkün birşey değil! Hele hele bilgisayar mühendisliği bölümünde hiç değil.&lt;/p&gt;
+&lt;p&gt;Kod yazmaktan korkmanızı anlarım. Ama zamanım yok, altdan derslerim çok bahanesine sığınmakta çok büyük bir &lt;strong&gt;yalandan&lt;/strong&gt; başka birşey değil.&lt;/p&gt;
+&lt;p&gt;Kendim de dahil olmak üzere, zamanımız olmadığını söylesek de; &lt;strong&gt;yer bildirimleri&lt;/strong&gt;ni sıralamaktan, yada &lt;strong&gt;fanatikliğimizi&lt;/strong&gt; konuşturmaktan başka ne yapıyoruz? Yada saatlerce &lt;strong&gt;oyun&lt;/strong&gt; veya &lt;strong&gt;dizi&lt;/strong&gt; izlemekten. Gerçekten üniversite bitince kendinizi geliştireceğiniz zamana sahip olacak mısınız?&lt;/p&gt;
+&lt;p&gt;Peki ya yardıma?&lt;/p&gt;
+&lt;p&gt;Üniversitede o kadar güzel imkanlar var ki tek yapmanız gereken etrafınıza bakmanız. Eğer sevdalıysanız ve bu mesleği yapmak istiyorsanız birşeylerin ucundan tutmanın vakti gelmedi mi? Yada &lt;strong&gt;çok bilmişlikten&lt;/strong&gt; kaçınmanın?
+Bana ne ki bunlar? Beni niye ilgilendiriyor?&lt;/p&gt;
+&lt;p&gt;Beni üzüyor. İlgisizlik ve bilgiye doygunluk çok kötü birşey. İnsanlar o kadar güzel imkanlara sahip ki kullanmamaları beni üzüyor.&lt;/p&gt;
+&lt;p&gt;En çokta yardım etmek istediğimde aldığım tepkiler üzüyor. Kendime yardım etmek istiyorum bazen bazı arkadaşlara yardım ederek. Yönlendirmek veya beni yönlendirmelerini sağlamak.&lt;/p&gt;
+&lt;p&gt;Şikayet edilecek o kadar çok konu var ki, rahatsız edici o kadar fazla durum! En başta kendimde bulmuyor da değilim bu hataları.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Dev-C&#43;&#43; Kurulumu</title>
+        <link>http://tolgahanuzun.com/dev-c-kurulumu/</link>
+        <pubDate>Thu, 08 Oct 2015 04:31:28 +0000</pubDate>
+        
+        <guid>http://tolgahanuzun.com/dev-c-kurulumu/</guid>
+        <description>&lt;p&gt;Eğer Qt kurulumunu yapmak istemiyor veya kullanmayı tercih etmiyorsanız, bu İde&amp;rsquo;yi kullanmanızı tavsiye ederim. Diğer arayüzler bence giriş aşaması için hiç gerekli değil. İlk başta &lt;a class=&#34;link&#34; href=&#34;http://www.bloodshed.net/dev/devcpp.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.bloodshed.net/dev/devcpp.html&lt;/a&gt; adresine girerek Alt tarafta bulunan &lt;strong&gt;Download&lt;/strong&gt; başlığını bularak kurulum dosyasını indirmeniz olacaktır.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dosyayı indirin.&lt;/li&gt;
+&lt;li&gt;Basit kurulum (next&amp;rsquo;le abi) yapın.&lt;/li&gt;
+&lt;li&gt;Kurulum bitince; default ayarları belirleyin ( Türkçe, Tema vs.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Gördüğünüz gibi kısa sürede kurulum tamamlandı. Şimdi proje açarak devam edelim.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dosyaya tıklayın ve Yeni sekmesine tıklayıp projeye basın.&lt;/li&gt;
+&lt;li&gt;Karşınıza çıkan tabloda Basic tablosunda &lt;strong&gt;Console Application&lt;/strong&gt; seçeneğine tıklayın ve alt tarafta C projesi olduğunu tanımlayın&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://tolgahanuzun.com/theme/images/wp/Screenshot_2.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot_2&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Bu platform içinde artık proje oluşturma işlemini tamamladınız. Şimdi yapmanız gereken şey, derslere devam ederek C Dilini öğrenmek için basit adımları takip etmek olacaktır. Olabildiğince herkesin anlayabileceği ve anladığını geliştirebileceği şekilde sizlere yardımcı olacağım.&lt;/p&gt;
+&lt;p&gt;Bu eğitimler; basit console uygulamaları, robotik alanda ilerlemeler ve C++ alt yapısı oluşturmak adına ilerleyecek yapıda olmasını umut ederek yazıyorum.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Qt Kullanımı</title>
+        <link>http://tolgahanuzun.com/qt-kullanimi/</link>
+        <pubDate>Thu, 08 Oct 2015 04:17:09 +0000</pubDate>
+        
+        <guid>http://tolgahanuzun.com/qt-kullanimi/</guid>
+        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/Screenshot_1.jpg" alt="Featured image of post Qt Kullanımı" /&gt;&lt;p&gt;C dersleri için giriş ihtiyacımız olan program seçeneklerinden olan QT programı; oldukça kullanışlı ve geniş amaçlar ile çalışabilecek bir yapıda olduğu için tercih etmenizi önereceğim bir araç olacaktır.&lt;/p&gt;
+&lt;p&gt;İlk önce &lt;a class=&#34;link&#34; href=&#34;http://www.qt.io/download/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.qt.io/download/&lt;/a&gt; adresi üzerinde gerekli paremetreleri takip ederek istediğimiz türden dosyayı indirme işlemini başlatıyoruz.&lt;/p&gt;
+&lt;p&gt;UYARI!!! kendi kütüphaneleri bulunan sürümleri indirirseniz, yüksek boyutta bir dosyayı indirmeyi kabul ettiğinizi unutmamanızı gerekir! Eğer sadece giriş seviyesinde ve basit düzeyde bir İDE&amp;rsquo;ye ihtiyacınız varsa&lt;a class=&#34;link&#34; href=&#34;http://tolgahanuzun.com/dev-c-kurulumu.html&#34; &gt; Dev-C++ kurulumu&lt;/a&gt; yazımı incelemenizi öneririm.Gerekli dosyaları indirdikten sonra klasikleşmiş kurulum dosyası paremetrelerini izleyerek ( Yani Next&amp;rsquo;leyerek) kurulumu tamamlamanız gerekiyor. Gördüğünüz gibi oldukça basit ve kolay bir şekilde kurulum gerçekleşiyor.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;QT ile C Derlemek&lt;/li&gt;
+&lt;li&gt;Şimdi ise asıl çalışma mantığına bakalım.&lt;/li&gt;
+&lt;li&gt;QT Creator açalım.&lt;/li&gt;
+&lt;li&gt;New Project tıklayalım.&lt;/li&gt;
+&lt;li&gt;Karşımıza gelen pencerede Non-qt Project tablosunu açarak sağ tarafta &lt;strong&gt;Plan C &amp;hellip;&lt;/strong&gt; şeklinde olan paketi aktif ederek çalıştıralım. Aynı Next mantığıyla bu paketin kurulumunu bitirelim.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://tolgahanuzun.com/theme/images/wp/Screenshot_1.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot_1&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Yukarıda görüldüğü gibi bir klasör yapısı ve kod penceresi ile karşılaşacaksınız. Artık kodlarınızı yazmak için herşey tamam. Sadece geriye fikirler ve tecrübeler kalıyor.Tecrübeleri birlikte halledeceğiz ama fikirler sizle alakalı bir konu olduğunu unutmayın!&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>KTÜ IEEE Computer Society Başkanlığı ve Yeni Dönem</title>
+        <link>http://tolgahanuzun.com/ktu-ieee-computer-society-baskanligi-ve-yeni-donem/</link>
+        <pubDate>Tue, 29 Sep 2015 19:47:37 +0000</pubDate>
+        
+        <guid>http://tolgahanuzun.com/ktu-ieee-computer-society-baskanligi-ve-yeni-donem/</guid>
+        <description>&lt;p&gt;Bu sefer kişisel bir konu hakkında paylaşım yapmaya karar verdim. Bilgisayar mühendisliği gibi bölümlerde, etrafınızdaki topluluklar kadar güçlü olduğunuzu, bilgiye sahip olduğunuzu fark etmişsinizdir. Benim etrafımdaki topluluklar oldukça güçsüz ve hatta neredeyse yok denecek kadar az!&lt;/p&gt;
+&lt;p&gt;Geçen sene bu topluluk arayışı ile birlikte IEEE kulübü ile tanıştım ve etkinliklere katıldım. Etkinliklerde aktif olarak rol almaya çalıştım, birşeyler çabaladım. Son olarak KODLA gibi bir etkinliği yaparak dönemin önemli etkinliklerine imzayı attık. Burada Abdullah Uğraşkan, Emre Efendioğlu ve Gürkan Yarar gibi isimlerin başta olmak üzere aktif olarak rol aldığını söylemeden geçemeyeceğim. Bu etkinliklerden sonra 2015-2016 tarihleri arasında IEEE Kulübünün computer society Başkanlığını alarak aktif olarak rol almayı planlıyorum.&lt;/p&gt;
+&lt;p&gt;En büyük amacım bilinçli insan sayısını arttırmak olacak gibi görünüyor. Bunun yanında yazılım dillerine bakış açıların değiştirmek ve çeşitli kulvarda bireyler yetiştirmek gibi isteklerimde bulunuyor. AMA en önemlisi; oyun yazabilecek bir kaç takım arkadaşı edinmek en önemli isteklerimden geliyor.Yakın zamanda gerçekleşecek Tanışma toplantısından sonra Aktif olarak etkinlikler yapmayı planlıyorum.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Windowsta Python Django Kurulumu</title>
+        <link>http://tolgahanuzun.com/windowsta-python-django-kurulumu/</link>
+        <pubDate>Sun, 27 Sep 2015 16:44:44 +0000</pubDate>
+        
+        <guid>http://tolgahanuzun.com/windowsta-python-django-kurulumu/</guid>
+        <description>&lt;p&gt;Django hakkında bilgilendirmeler yaptıktan sonra artık bir şeyler kurmaya başlayalım değil mi? :) Şimdi Windows için Django kurulumu hakkında sizlere bilgilendirmeler yapacağız. Bundan sonra elimden geldikçe, yazının yanında video serisi de paylaşmaya çalışacağım. Bu sayede hem dökümantasyon hem de video serisi olmuş olacak.&lt;/p&gt;
+&lt;h2 id=&#34;ilk-önce-python&#34;&gt;İlk Önce Python!&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;İlk önce &lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.python.org/downloads/&lt;/a&gt; web sitesine giriyoruz.&lt;/li&gt;
+&lt;li&gt;Tercihen 2.7 sürümünü indiriyoruz. ( size kalmış, videoda sebebinden biraz bahsettim)&lt;/li&gt;
+&lt;li&gt;Normal Exe dosya kurarcasına programı kuruyoruz.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;python-yolu-eklemek--konsolda-direk-python-yazarak-çalıştırmak&#34;&gt;Python yolu eklemek ( konsolda direk python yazarak çalıştırmak)&lt;/h3&gt;
+&lt;p&gt;Ubuntu gibi işletim sistemlerinde direk terminalden python komutu ile işlem yapmamızı sağlayan bu durum, windowsta maalesef yok. Ancak bunu yapmak bizim elimizde!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bilgisayara sağ tıklıyoruz ve özelliklere giriyoruz.&lt;/li&gt;
+&lt;li&gt;Sol taraftaki menüde gelişmiş sistem ayarlarına tıklıyoruz.&lt;/li&gt;
+&lt;li&gt;Karşımıza çıkan ekranda Ortam değişkenlerine tıklıyoruz.&lt;/li&gt;
+&lt;li&gt;Aşağıda bulunan tabloda Path değişkenini düzenleye tıklayıp, sonuna &amp;quot; ; &amp;ldquo;koyduktan sonra python dizinini yazıyoruz. ( ;C:\Python27 )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Artık CMD ekranında python komutu aktif oldu.&lt;/p&gt;
+&lt;h2 id=&#34;şimdi-ise-django-kurulumu&#34;&gt;Şimdi ise Django Kurulumu&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;İlk önce &lt;a class=&#34;link&#34; href=&#34;https://www.djangoproject.com/download/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.djangoproject.com/download/&lt;/a&gt; sitesinden sağ tarafta tar.gz dosyasını indiriyoruz.&lt;/li&gt;
+&lt;li&gt;Kararlı sürüm olduğuna dikkat etmenizde yarar var!.&lt;/li&gt;
+&lt;li&gt;Sonra C dizininde sıkıştırılmış dosyayı çıkartıyoruz.&lt;/li&gt;
+&lt;li&gt;CMD ekranını açıyor ve aşağıdaki kodları yazıyoruz.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;python&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;django&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;django&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;VERSION&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Yüklediğiniz versiyonu görüyorsanız, windows ortamında çalışan python terminali ve django kütüphanesine sahipsiniz.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>M-V-C Nedir ? (Model-view-controller)</title>
+        <link>http://tolgahanuzun.com/m-v-c-nedir-model-view-controller/</link>
+        <pubDate>Sun, 20 Sep 2015 16:00:18 +0000</pubDate>
+        
+        <guid>http://tolgahanuzun.com/m-v-c-nedir-model-view-controller/</guid>
+        <description>&lt;p&gt;Django nedir ? yazımda da bahsettiğim gibi son sözel / tanım ağırlıklı yazımı yazıyor ve teknik eğitimler için önümüzdeki sözel engelleri kaldırmak istiyorum.&lt;/p&gt;
+&lt;h2 id=&#34;model-view-controller-nedir&#34;&gt;Model-View-Controller Nedir?&lt;/h2&gt;
+&lt;p&gt;İsminden fark ettiğiniz gibi 3 farklı sekmede çalışan bir sistem olduğunu söylemek mümkün. Bu sistem. Parça parça çalışıp bir bütün olarak hareket etmektedir. Şöyle 3 madde ile bunun amacını anlatmaya çalışayım:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;İlk olarak sitemizdeki verilerin &lt;strong&gt;veri tiplerini&lt;/strong&gt;, yani veri modellerini belirlememiz gerekiyor. Yani yazı yazacağımız zaman bunun TextField olmasını söylemezsek, sonrada görünüşte saçmalamalar olacaktır. Veriler tutulamayacaktır.&lt;/li&gt;
+&lt;li&gt;Eğer yukarıdaki verileri doğru tipte kaydetmeyi başardıysak, sırada kullanıcıya göstereceğimiz verilerin doğru olarak gönderilmesi aşamasıyla karşılaşıyoruz. Kullanıcıya kendi ismini veya yapacağı işlemleri, sayfa üzerinde görüntülemesini sağlamamız gerekiyor.&lt;/li&gt;
+&lt;li&gt;Son olarak bu işlemlerin yanı sıra, tarayıcıdan yapılacak değişiklikler, yani veri akışı diyebileceğimiz Form kontrollerine &lt;strong&gt;veri tabanının ve sayfa görüntüleme aracısı&lt;/strong&gt;nın doğru cevaplar vermesini sağlamamız gerekiyor.
+Yukarıda bahsettiğim olayları, herhangi bir dilde yapmanız mümkün. Ancak anlayacağınız gibi oldukça meşakkatli bir yol&amp;hellip; İşte M-V-C frameworkleri bize bu durumda oldukça kolaylık sağlamayı başarıyor.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;m-v-c-biraz-açalım&#34;&gt;M-V-C Biraz açalım&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;MODEL&lt;/strong&gt;: Veri tabanı ile ilgili emirlerin, işlemlerin yapılacağı kısımdır.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VİEW&lt;/strong&gt;: Controllerden alacağımız verilerin sayfa tasarımına yapacağı etkilerin olduğu kısımdır.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CONTROLLER&lt;/strong&gt;: Model ve View arasında işlemlerin doğruluğunu kontrol eden ve form yapılarını şekillendirmemizi sağlayan bir yapıdır.
+Bir sonraki derste Django kurulumu hakkında sizleri bilgilendireceğim. İyi günler dilerim.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Django Nedir? Neyin nesidir?</title>
+        <link>http://tolgahanuzun.com/django-nedir-neyin-nesidir/</link>
+        <pubDate>Sun, 20 Sep 2015 14:28:10 +0000</pubDate>
+        
+        <guid>http://tolgahanuzun.com/django-nedir-neyin-nesidir/</guid>
+        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/django.png" alt="Featured image of post Django Nedir? Neyin nesidir?" /&gt;&lt;h2 id=&#34;django-nedir&#34;&gt;Django nedir?&lt;/h2&gt;
+&lt;p&gt;Arkadaşlar Django bir Web framework’u olarak tanımlayabiliriz. Eğer yazılımla ilgiliyseniz bunun ne olduğunu anlayacaksınız. Ancak ilginiz yoksa size şöyle söyleyebilirim:&lt;/p&gt;
+&lt;p&gt;Marangoza gidip istediğiniz tahtaları hazırlatmayı istemek; normal bir web tasarım olarak görebilirsiniz.&lt;/p&gt;
+&lt;p&gt;Bunun aksine Framework ise istediğiniz malzemelerin hazır hallerini daha uyguna ve daha sağlam ( Destek ) bir şekilde elde etmenizi sağlayacak yoldur.&lt;/p&gt;
+&lt;h2 id=&#34;tamam-tamam-sus-djangodan-bahset&#34;&gt;Tamam tamam sus Django’dan bahset&lt;/h2&gt;
+&lt;p&gt;Tamam gevezeliği bırakıyorum. Django M-V-C ( Model-View-Controller ) Sistemine bağlı bir prensipte çalışır. Bu prensip için başka bir yazı yazmam gerektiği için burada tanıtımını yapmıyorum. ( Hadi iyisiniz gevezelikten kurtuldunuz)&lt;/p&gt;
+&lt;h3 id=&#34;ben-hala-anlamadım&#34;&gt;Ben hala Anlamadım?&lt;/h3&gt;
+&lt;p&gt;Arkadaşım anlamadıysan, Bana Mail at, yorum at anlamanı sağlayalım. Ama senin için bir kez daha açıklamaya çalışayım;&lt;/p&gt;
+&lt;p&gt;Django, veri tabanı gibi ağır işleri ve sitenin arka tabanını kolay olarak yönetmen için geliştirilen bir Python dili ile yazılmış web kütüphanesidir. Kullanıcı sayısı oldukça fazladır ve birçok büyük web sitesi kullanmaktadır.&lt;/p&gt;
+&lt;p&gt;Kısa süre içerisinde alt yapısı sağlam bir web sitesi yapmanı sağlayabileceği gibi, aklında ki projeleri;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Veri atamaları&lt;/li&gt;
+&lt;li&gt;if else&lt;/li&gt;
+&lt;li&gt;for&lt;/li&gt;
+&lt;li&gt;fonksiyon kullanımı ile gerçekten basit şekilde gerçekleştirmen mümkün.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Şimdilik Django için giriş yazımı sonlandırmış bulunuyorum. Son olarak MVC’den bahseder ve teknik eğitimlere geçerim sayın arkadaşım. İyi günler.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>http://tolgahanuzun.com/pages/about/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://tolgahanuzun.com/pages/about/</guid>
+        <description>&lt;p&gt;title: Benim Hakkimda
+date: 2017/02/11 23:10:23&lt;/p&gt;
+&lt;br&gt;
+## Ben Kimim - Tolgahan ÜZÜN ?
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;Karadeniz Teknik Üniversitesi Bilgisayar Mühendisliği Öğrencisiyim. Şuan bu yazıyı yazdığım sırada 4. sınıf olarak eğitim görmeye devam ediyorum. Yazılım ve bilgisayar alanında hevesli ve birazda alaylı bir yazılım geliştiriciyim.&lt;/p&gt;
+&lt;p&gt;Yakında bu sayfayı tekrar güncelleyeceğim.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>http://tolgahanuzun.com/p/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://tolgahanuzun.com/p/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Search</title>
+        <link>http://tolgahanuzun.com/pages/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://tolgahanuzun.com/pages/search/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

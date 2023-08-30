@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>micro framework on Tolgahan Üzün</title>
+        <link>http://tolgahanuzun.com/tags/micro-framework/</link>
+        <description>Recent content in micro framework on Tolgahan Üzün</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>tr</language>
+        <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
+        <lastBuildDate>Sat, 30 Jan 2016 22:13:40 +0300</lastBuildDate><atom:link href="http://tolgahanuzun.com/tags/micro-framework/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Atom parçalamayacaklar için: Micro Framework Flask</title>
+        <link>http://tolgahanuzun.com/atom-parcalamayacaklar-icin-micro-framework-flask/</link>
+        <pubDate>Sat, 30 Jan 2016 22:13:40 +0300</pubDate>
+        
+        <guid>http://tolgahanuzun.com/atom-parcalamayacaklar-icin-micro-framework-flask/</guid>
+        <description>&lt;p&gt;Uzun süredir içerik girmediğim kanısına vardım. Gerek sınavlar gerek kendi tembelliğim ile bazı işlerim yarıda kesilmek zorunda kaldı. Bunlardan bir tanesi ise çektiğim dersler örnek verebilirim. Ancak yarıyıl tatili ile bir şeylerle ilgilenmeye geri döndüm.&lt;/p&gt;
+&lt;h2 id=&#34;flask-ile-basit-dokunuşlar&#34;&gt;Flask ile basit dokunuşlar&lt;/h2&gt;
+&lt;p&gt;Django derslerini yarıda bırakmışken bir başka kütüphane ile uğraşmam ne kadar doğru tartışılır ama ihtiyaç duyduğum bir araç olduğu için Flask ile haşır neşir olmaya başladım. Bir projem için django&amp;rsquo;nun gereksiz olacağını, fazla kaçacağını düşünüyordum ki gerçekten de öyle. Projelerimde kullandığım bir sitenin altında Flask ile yapıldığını görünce hemen araştırdım. Önceden duyduğum bu micro framework tam aradığım araç olduğunu düşünüyorum.&lt;/p&gt;
+&lt;h3 id=&#34;tabiki-türkçe-kaynak-yok&#34;&gt;Tabiki Türkçe kaynak yok&lt;/h3&gt;
+&lt;p&gt;Bu sizi şaşırttı mı? Beni şaşırtmadı. :) Üzdü mü? Hayır üzmedi.
+İngilizce yazılım sektörünün vazgeçilmez bir argümanı. Maalesef ingilizce olmadan yazılıma hakim olmak pek mümkün değil. Projemi eğer tamamlarsam; ki öyle bir durumda flask öğrenmiş oluyorum, blog&amp;rsquo;umuda bu alt yapıya taşımayı düşünüyorum.&lt;/p&gt;
+&lt;p&gt;Umarım kısa sürede hedeflediğim derslere devam eder ve yeni alanlarda yazılar paylaşmaya başlarım.&lt;/p&gt;
+&lt;h3 id=&#34;nedir-bu-flask&#34;&gt;Nedir bu Flask?&lt;/h3&gt;
+&lt;p&gt;Oldukça basit, sadece indirerek ve basit bir .py dosyası oluşturarak server ayağa kaldırabileceğiniz bir araç. İhtiyacınız doğrultusunda yavaş yavaş inşa edebildiğiniz bir yapı. Küçük bir amaca yönelik bir web site fikriniz varsa kesinlikte doğru bir araç olacaktır.&lt;/p&gt;
+&lt;p&gt;Blog yapmak isteyen ve hazıra kaçmak istemeyenler için ise bence güzel bir araç olacaktır. Öğrendiğimde kendi blogumu buraya taşımayı da düşündüğümü belirteyim.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
