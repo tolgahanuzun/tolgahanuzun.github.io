@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on Tolgahan Üzün</title>
-        <link>http://tolgahanuzun.com/post/</link>
+        <link>https://tolgahanuzun.com/post/</link>
         <description>Recent content in Posts on Tolgahan Üzün</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>tr</language>
         <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
-        <lastBuildDate>Thu, 11 Jan 2018 23:28:10 +0000</lastBuildDate><atom:link href="http://tolgahanuzun.com/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 11 Jan 2018 23:28:10 +0000</lastBuildDate><atom:link href="https://tolgahanuzun.com/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Python paket oluşturma - PyPi</title>
-        <link>http://tolgahanuzun.com/pypi-ile-paket-olusturmak/</link>
+        <link>https://tolgahanuzun.com/pypi-ile-paket-olusturmak/</link>
         <pubDate>Thu, 11 Jan 2018 23:28:10 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/pypi-ile-paket-olusturmak/</guid>
-        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/pypi.png" alt="Featured image of post Python paket oluşturma - PyPi" /&gt;&lt;h2 id=&#34;pypi-nedir&#34;&gt;PYPI nedir?&lt;/h2&gt;
+        <guid>https://tolgahanuzun.com/pypi-ile-paket-olusturmak/</guid>
+        <description>&lt;img src="https://tolgahanuzun.com/theme/images/wp/pypi.png" alt="Featured image of post Python paket oluşturma - PyPi" /&gt;&lt;h2 id=&#34;pypi-nedir&#34;&gt;PYPI nedir?&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;PyPI — The Python Package Index&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Yazdığımız projeleri buraya ekleyerek &lt;code&gt;pip install paket&lt;/code&gt; seklinde çalışma dizinimize indirerek kullanmaya çalışacağız.&lt;/p&gt;
 &lt;h3 id=&#34;hadi-paket-olusturalım&#34;&gt;Hadi paket olusturalım.&lt;/h3&gt;
@@ -153,11 +153,11 @@ Standart bir sekilde github&amp;rsquo;a push yapma islemini yaptiktan sonra şu 
         </item>
         <item>
         <title>Markov zinciri ve Stokastik Süreçler</title>
-        <link>http://tolgahanuzun.com/markov-zinciri-projesi/</link>
+        <link>https://tolgahanuzun.com/markov-zinciri-projesi/</link>
         <pubDate>Tue, 26 Dec 2017 14:28:10 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/markov-zinciri-projesi/</guid>
-        <description>&lt;img src="http://tolgahanuzun.com/theme/images/markov-zinciri.png" alt="Featured image of post Markov zinciri ve Stokastik Süreçler" /&gt;&lt;h2 id=&#34;markov-zinciri-nedir&#34;&gt;Markov Zinciri Nedir?&lt;/h2&gt;
+        <guid>https://tolgahanuzun.com/markov-zinciri-projesi/</guid>
+        <description>&lt;img src="https://tolgahanuzun.com/theme/images/markov-zinciri.png" alt="Featured image of post Markov zinciri ve Stokastik Süreçler" /&gt;&lt;h2 id=&#34;markov-zinciri-nedir&#34;&gt;Markov Zinciri Nedir?&lt;/h2&gt;
 &lt;p&gt;Lisede kısmen; üniversitede ilgili bölümlerde (Mühendislik, yazılım veya matematik) iseniz Markov zincirini veya Stokastik süreçler kelime grubunu kesinlikle duymuşsunuzdur. Olasılık-Matematik ile ilgili olan bu kelime grubu; Andrey Markov adli Rus Matematikçi tarafından geliyor. Ancak etkilediği konular ise tam olarak bizi yani yazılım ile uğraşan insanlari ilgilendiriyor.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Markov zincirleri bize geçmişe bakmaksızın bir durum üzerinden bir başka bir duruma geçiş kurallarını olasılıksal olarak belirleyebildiğimiz bir model sunuyor. Bu sürecin en önemli özelliği hafızasız olması.
@@ -179,7 +179,7 @@ Ancak belleksizlik kavramıyla sadece o anki veriyi dikkate almamiz gerektiğini
 Yani bizim o anki verimiz sadece &lt;code&gt;günaydın&lt;/code&gt; ve bu veriyle bir sonraki gelecek olan kelime %50 ihtimal ile &lt;code&gt;okula&lt;/code&gt; ya da %50 ihtimal ile &lt;code&gt;işler&lt;/code&gt; kelimesi olacak.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Yukarıdaki örnek ile markov zincirini çalıştırdıgımda aşağıdaki veri ortaya çıkıyor.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://tolgahanuzun.com/theme/images/markov.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://tolgahanuzun.com/theme/images/markov.png&#34;
 	
 	
 	
@@ -207,11 +207,11 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
         </item>
         <item>
         <title>Flask Hayat Kurtarir</title>
-        <link>http://tolgahanuzun.com/flask-hayat-kurtarir/</link>
+        <link>https://tolgahanuzun.com/flask-hayat-kurtarir/</link>
         <pubDate>Sat, 18 Feb 2017 17:50:58 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/flask-hayat-kurtarir/</guid>
-        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/flask.png" alt="Featured image of post Flask Hayat Kurtarir" /&gt;&lt;center&gt;
+        <guid>https://tolgahanuzun.com/flask-hayat-kurtarir/</guid>
+        <description>&lt;img src="https://tolgahanuzun.com/theme/images/wp/flask.png" alt="Featured image of post Flask Hayat Kurtarir" /&gt;&lt;center&gt;
 ![Flask](http://www.unixstickers.com/image/cache/data/stickers/flask/Flask.sh-600x600.png){:height=&#34;400px&#34; width=&#34;400px&#34;}
 &lt;/center&gt;
 ## Flask Micro Framework Web Catisi
@@ -282,15 +282,15 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
         </item>
         <item>
         <title>Kişisel Deneyimlerimle Xiaomi Mi Band</title>
-        <link>http://tolgahanuzun.com/kisisel-xiaomi-mi-band-deneyimlerim/</link>
+        <link>https://tolgahanuzun.com/kisisel-xiaomi-mi-band-deneyimlerim/</link>
         <pubDate>Sun, 04 Sep 2016 17:20:38 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/kisisel-xiaomi-mi-band-deneyimlerim/</guid>
-        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/fd562ce1f9484d2f90410ec3ccf29201.jpg" alt="Featured image of post Kişisel Deneyimlerimle Xiaomi Mi Band" /&gt;&lt;p&gt;Bu yaz yapmayı planladığım spor aktiviteleri için beni teşvik etmesi amacıyla aldığım Xiaomi Mi Band ürünü, beklediğimden de kaliteli ve uzun ömürlü çıktı. Normalde saat ve benzeri türden takılar kullanan birisi değilim. Ancak hafifliği ve sadeliği beğenimi kazandırdığını da inkar edemem. Sizlere aldığım günden beri kullandığı Xiaomi Mi Band hakkında birkaç şey söylemek istiyorum.&lt;/p&gt;
+        <guid>https://tolgahanuzun.com/kisisel-xiaomi-mi-band-deneyimlerim/</guid>
+        <description>&lt;img src="https://tolgahanuzun.com/theme/images/wp/fd562ce1f9484d2f90410ec3ccf29201.jpg" alt="Featured image of post Kişisel Deneyimlerimle Xiaomi Mi Band" /&gt;&lt;p&gt;Bu yaz yapmayı planladığım spor aktiviteleri için beni teşvik etmesi amacıyla aldığım Xiaomi Mi Band ürünü, beklediğimden de kaliteli ve uzun ömürlü çıktı. Normalde saat ve benzeri türden takılar kullanan birisi değilim. Ancak hafifliği ve sadeliği beğenimi kazandırdığını da inkar edemem. Sizlere aldığım günden beri kullandığı Xiaomi Mi Band hakkında birkaç şey söylemek istiyorum.&lt;/p&gt;
 &lt;p&gt;Öncelikle 21/07/2016 tarihinde ürünü satın aldım ve birkaç gün içinde cihaz elime ulaştı. Cihazın hafifliği ve sadeliği oldukça güzel ayarlanmış. Asıl donanımı bilekliğe geçirmekte biraz zorlandığımı inkar edemem. Ayrıca bilekliğe takılan düğmelerde biraz sert ve zor yerine oturuyor. Ancak bu kullandıkça daha rahat bir hale geldiğini de geçtiğim süre içerisinde gördüm. Bu cihazı günlük aktivitelerde ve yapabilirsem koşularımda analiz yapması için almıştım. Cihazı aldığım günler bir hevesle (Töbe yalan pokemon haftasına denk geliyordu) baya yürüdüğümü ve kullandığımı söylemeliyim. Sonra ise standart bir şekilde kullanmaya devam ettim.&lt;/p&gt;
 &lt;h2 id=&#34;gündelik-hayatta-akıllı-bileklik-kullanımı&#34;&gt;Gündelik hayatta akıllı bileklik kullanımı&lt;/h2&gt;
 &lt;p&gt;Öncelikle ben telefonu tamamen sessize alarak kullanan bir kullanıcıyım. Ancak bazı zamanlar; aramalarda, Telegram veya Slack gibi platformlarda veya twitter uygulamasında** bildirim almak** isteyebiliyorum. Böyle durumlarda cihaz için geliştirilmiş çeşitli uygulamalardan birisini kullanarak bu tarz bir iletişi ağı oluşturdum. Dışarıda gezerken telefonumun Bluetooth 4.0 desteği ile cihazımın titreşimleriyle bildirimlerden haberdar olmak beni gayet memnun etti.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://tolgahanuzun.com/theme/images/wp/fd562ce1f9484d2f90410ec3ccf29201.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://tolgahanuzun.com/theme/images/wp/fd562ce1f9484d2f90410ec3ccf29201.jpg&#34;
 	
 	
 	
@@ -305,7 +305,7 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
 &lt;p&gt;Uyku konusunda hassas olduğum için her zaman kullanmadığım ama arada test ettiğim uyku takibi sisteminden bahsedeyim. Uyku takibi sistemi sizin uyuduğunuzu ve uyandığınızı anlayarak o ara süreçteki hassas hareketlerinizi analiz ediyor. Derin uykuyu ve hafif uykuyu analiz edebiliyor.&lt;/p&gt;
 &lt;p&gt;Şuan bu cihazı yaklaşık 40 gündür kullanıyorum. Aldığım gün şarjını tamamen doldurup kullanmaya başladığımdan beri daha hiç şarj etmedim. Bu şekilde cihaz bana %65 şarj ile 40 gün yetti. Şuan batarya seviyesi %34 olarak görünen cihaz, benim kullanım oranıma bağlı olarak 2 ay dayanabiliyor.&lt;/p&gt;
 &lt;p&gt;Teknik özellikleri vb konularda bilgi vermekten çok, Xiaomi Mi Band kişisel deneyimim**i sunmaya çalıştım. Akıllı bileklik veya akıllı saat almak isteyenlere umarım iyi bir öneri niteliği taşır.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://tolgahanuzun.com/theme/images/wp/853af97446b6bbf20b6129c9db02131aa3c7b265-e1472999044992.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://tolgahanuzun.com/theme/images/wp/853af97446b6bbf20b6129c9db02131aa3c7b265-e1472999044992.jpg&#34;
 	
 	
 	
@@ -319,11 +319,11 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
         </item>
         <item>
         <title>Github Neden Candır?</title>
-        <link>http://tolgahanuzun.com/github-neden-candir/</link>
+        <link>https://tolgahanuzun.com/github-neden-candir/</link>
         <pubDate>Mon, 08 Aug 2016 13:37:26 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/github-neden-candir/</guid>
-        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/github.png" alt="Featured image of post Github Neden Candır?" /&gt;&lt;p&gt;Github ile ilgili reel hayatta her zaman kullandığım bir tabir vardır: &amp;ldquo;Github candır!&amp;rdquo;. Bunun sebebi ise birçok kez karşılaştığım güzel imkanlar ve insanlar olduğunu söyleyebilirim.&lt;/p&gt;
+        <guid>https://tolgahanuzun.com/github-neden-candir/</guid>
+        <description>&lt;img src="https://tolgahanuzun.com/theme/images/wp/github.png" alt="Featured image of post Github Neden Candır?" /&gt;&lt;p&gt;Github ile ilgili reel hayatta her zaman kullandığım bir tabir vardır: &amp;ldquo;Github candır!&amp;rdquo;. Bunun sebebi ise birçok kez karşılaştığım güzel imkanlar ve insanlar olduğunu söyleyebilirim.&lt;/p&gt;
 &lt;p&gt;Konu başlığı kadar içeriğinde biraz farklı olacağını şimdiden söyleyeyim. Ben blog&amp;rsquo;larımı biraz bu şekilde, absürt tutmayı seven birisiyim. Neyse, asıl konuya gelelim. 2 Yıl önce aldığım github hesabım, son 1 yıldır aktif bir şekilde kullanılmakta olduğunu; bazen proje üretmesem de oradaki repolarımdan veya başka kişilerin repolarından yararlandığım oluyor.&lt;/p&gt;
 &lt;p&gt;Bu yararlanma, projelerin nasıl ortaya çıktığı veya bir api&amp;rsquo;nin kullanım örneği olabileceği gibi, kendi yazdığım kodlara bakarak hatalarımı ve yazım şeklimde ki sorunları da görmeme sebep oluyor. Bunun yanında yaptığım, daha doğrusu yapmaya çalıştığım projeler ve PR&amp;rsquo;ler ile insanların ilgisini çekebiliyorsunuz.&lt;/p&gt;
 &lt;p&gt;Şu ana kadar yazılım anlamında &lt;em&gt;profesyonel düzeyde&lt;/em&gt; (Kendimin profesyonel olduğunu söylemiyorum, ki de değilim. Sadece bu işi icra ederken daha profesyonel bir bakış açısında uğraşma gayretinde olduğunu düşünerek bu kelimeyi kullanıyorum.) geçirdiğim 1 yıl boyunca, son** 6 ay içinde** 2 tanesi yurt dışı odaklı olmasıyla beraber toplam 5 iş teklifi geldi. Bunlardan 1 tanesi tanıdığım bir kişi aracılığıyla olduğunu da söylemeliyim.&lt;/p&gt;
@@ -336,10 +336,10 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
         </item>
         <item>
         <title>Debian (Ubuntu &#43; Mint ) Heroku Kurulum Sorunu</title>
-        <link>http://tolgahanuzun.com/debian-ubuntu-mint-heroku-kurulum-sorunu/</link>
+        <link>https://tolgahanuzun.com/debian-ubuntu-mint-heroku-kurulum-sorunu/</link>
         <pubDate>Tue, 12 Jul 2016 03:21:05 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/debian-ubuntu-mint-heroku-kurulum-sorunu/</guid>
+        <guid>https://tolgahanuzun.com/debian-ubuntu-mint-heroku-kurulum-sorunu/</guid>
         <description>&lt;p&gt;Gece saat 3 ve ben pervasızca Heroku kurmaya çalışıyorum. Deli oldum resmen! Buraya bu yazıyı yazmalıyım ki benim gibi sorun yaşayan arkadaşlar çözüm bulsunlar. Öncelikle Heroku süper bir sistem. Ancak nalet olsun ki kurulurken sıkıntı veriyor. Bunu önceden de yaşamıştım ve çözümünü bir yere kaydetmemişim. İşte şimdi saatler boşa gitti.&lt;/p&gt;
 &lt;p&gt;Öncelikle Debian tabanlı bir sistemde heroku kurmaya çalışıyor ve size bazı hatalar veriyorsa, tahminen bunun sebebi &amp;ldquo;sources.list&amp;rdquo; konusudur. Anlayacağınız üzere kaynak listesi olarak adlandırılan bu dosya, anlam veremediğim bir şekilde çakışıyor veya başka bir şey oluyor. Bazen Google Chrome yüklerken veya Sublime Text yüklerken bu sorun ile karşılaşmıştım. Çözüm ise, hata veren listeyi silerek hallediyordum. Heroku toolbelt kurarken daha büyük çaplı bir sorun ile karşılaştım.&lt;/p&gt;
 &lt;h4 id=&#34;mint-heroku-kurulumu--ubuntu-heroku-kurulumu&#34;&gt;Mint Heroku Kurulumu | Ubuntu Heroku Kurulumu&lt;/h4&gt;
@@ -373,10 +373,10 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
         </item>
         <item>
         <title>Python Paket Yönetim Sistemi - PİP Kurulumu</title>
-        <link>http://tolgahanuzun.com/python-paket-yonetimi-pip-kurulumu/</link>
+        <link>https://tolgahanuzun.com/python-paket-yonetimi-pip-kurulumu/</link>
         <pubDate>Mon, 11 Jul 2016 01:18:19 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/python-paket-yonetimi-pip-kurulumu/</guid>
+        <guid>https://tolgahanuzun.com/python-paket-yonetimi-pip-kurulumu/</guid>
         <description>&lt;p&gt;Canını yediğim Python dilinin en güzel şeylerinden birisi bence PİP. &lt;em&gt;Nedir bu pip?&lt;/em&gt; Başlıktan da anlaşılacağı üzerine paket yönetim sistemi. Burada birçok paket, güzel dökümantasyonlarıyla birlikte sunulmuş ve büyük topluluklar tarafından desteklenen bir yönetim sistemi olduğunu söyleyebilirim.&lt;/p&gt;
 &lt;h2 id=&#34;pip-kurulumu-nasıl-yapılır&#34;&gt;Pip kurulumu nasıl yapılır?&lt;/h2&gt;
 &lt;p&gt;Öncelikle bunun için bilgisayarınızda tabi ki python yüklü olması gerekiyor. Aşağıdaki adımları izleyerek hızlı bir şekilde &lt;strong&gt;PİP kurulumu&lt;/strong&gt;nu gerçekleştirebilirsiniz.&lt;/p&gt;
@@ -423,14 +423,14 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
         </item>
         <item>
         <title>Arduino DHT11 Isı Sensörü ve 16x2 LCD Ekran Kullanımı</title>
-        <link>http://tolgahanuzun.com/arduino-dht11-isi-sensoru-ve-16x2-lcd-ekran-kullanimi/</link>
+        <link>https://tolgahanuzun.com/arduino-dht11-isi-sensoru-ve-16x2-lcd-ekran-kullanimi/</link>
         <pubDate>Sat, 09 Jul 2016 19:20:25 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/arduino-dht11-isi-sensoru-ve-16x2-lcd-ekran-kullanimi/</guid>
-        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/lcd.jpg" alt="Featured image of post Arduino DHT11 Isı Sensörü ve 16x2 LCD Ekran Kullanımı" /&gt;&lt;p&gt;Hız kesmeden devam! Bugün &lt;a class=&#34;link&#34; href=&#34;http://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi.html&#34; &gt;Linux Ortamında Arduino Kurulumu&lt;/a&gt; ile ilgili yazımdan hemen sonra yapmayı düşündüğüm bir projeyi hayata geçirdim. Öncelikle elimdeki malzemelerin eksikliği sebebiyle şuan yarım yamalak bir şekilde çalıştığını söylemem gerekiyor.&lt;/p&gt;
-&lt;p&gt;Yaklaşık 2 hafta önce yayınladığım &lt;a class=&#34;link&#34; href=&#34;http://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi.html&#34; &gt;Son 1 ay neler yaptım&lt;/a&gt; konusunda yeni bir bilgisayar topladığımı ve özelliklerini söylemiştim. Tabi ben dururmuyum, 1 hafta boyunca bilgisayarı iyi yordum. Öyle böyle değil. Şimdi normale dönse de bilgisayarın içi ne kadar sıcaklıkta, oyun oynarken veya kendimi kaptırırken ne kadar ısınıyor diye aklıma fikir geldi. Elimdeki malzemelerle bunu ölçen bir küçük uygulama yaptım. Şimdi aşamalardan bahsetmek istiyorum.&lt;/p&gt;
+        <guid>https://tolgahanuzun.com/arduino-dht11-isi-sensoru-ve-16x2-lcd-ekran-kullanimi/</guid>
+        <description>&lt;img src="https://tolgahanuzun.com/theme/images/wp/lcd.jpg" alt="Featured image of post Arduino DHT11 Isı Sensörü ve 16x2 LCD Ekran Kullanımı" /&gt;&lt;p&gt;Hız kesmeden devam! Bugün &lt;a class=&#34;link&#34; href=&#34;https://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi.html&#34; &gt;Linux Ortamında Arduino Kurulumu&lt;/a&gt; ile ilgili yazımdan hemen sonra yapmayı düşündüğüm bir projeyi hayata geçirdim. Öncelikle elimdeki malzemelerin eksikliği sebebiyle şuan yarım yamalak bir şekilde çalıştığını söylemem gerekiyor.&lt;/p&gt;
+&lt;p&gt;Yaklaşık 2 hafta önce yayınladığım &lt;a class=&#34;link&#34; href=&#34;https://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi.html&#34; &gt;Son 1 ay neler yaptım&lt;/a&gt; konusunda yeni bir bilgisayar topladığımı ve özelliklerini söylemiştim. Tabi ben dururmuyum, 1 hafta boyunca bilgisayarı iyi yordum. Öyle böyle değil. Şimdi normale dönse de bilgisayarın içi ne kadar sıcaklıkta, oyun oynarken veya kendimi kaptırırken ne kadar ısınıyor diye aklıma fikir geldi. Elimdeki malzemelerle bunu ölçen bir küçük uygulama yaptım. Şimdi aşamalardan bahsetmek istiyorum.&lt;/p&gt;
 &lt;h2 id=&#34;dht11-isı-sensörü-ve-16x2-lcd-ekran-kullanımı&#34;&gt;DHT11 Isı Sensörü ve 16x2 LCD Ekran Kullanımı&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;http://tolgahanuzun.com/theme/images/wp/lcd.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://tolgahanuzun.com/theme/images/wp/lcd.jpg&#34;
 	
 	
 	
@@ -473,7 +473,7 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Şimdi de sıra ısı sensörünü çalıştırmaya geldi! Aslıdan yapboz gibi birşey. DHT11 adı altında elime bulunan sensör, normalde 4 pin’e sahip ama kolaylık olsun diye 3 pin şeklinde yapmışlar. Tabi internetteki kaynaklar 4 pine göre hazırlanmış! Bende burada tökezledim. Çünkü VCC – GND ve Sinyal pini yerleri değişmiş oluyor.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://tolgahanuzun.com/theme/images/wp/arduino-dht11-3-pin.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://tolgahanuzun.com/theme/images/wp/arduino-dht11-3-pin.png&#34;
 	
 	
 	
@@ -565,10 +565,10 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
         </item>
         <item>
         <title>Linux Ortamında Arduino Kurulumu ve Kullanımı</title>
-        <link>http://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi/</link>
+        <link>https://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi/</link>
         <pubDate>Sat, 09 Jul 2016 15:18:50 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi/</guid>
+        <guid>https://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi/</guid>
         <description>&lt;p&gt;Birkaç aydır Win7 + Ubuntu şeklinde işletim sistemi tercihim bulunuyordu. Şimdi ise artık full Linux kullanıcısı oldum diyebilirim. Bu durum da beni kullandığım programları linux ortamına taşımaya itti. İlk olarak Arduino programını çalışır bir hale getirmem gerekiyor.&lt;/p&gt;
 &lt;h2 id=&#34;linux-arduino-kurulumu-nasıl-olur&#34;&gt;Linux Arduino Kurulumu nasıl olur?&lt;/h2&gt;
 &lt;p&gt;Öncelikle ben şuan Linux dağıtımlarından Mint adı altında olan, tabanı ubuntu üzerine kurulmuş 64 bit&amp;rsquo;lik işletim sistemini kullanıyorum. Yapmanız gereken şey çok basit; kendi sitesi üzerinden size uygun olan 32-64bit sürümünü indirmeniz olacaktır.İndirdiğinizde dosyayı bulunduğu konuma çıkarmalısınız. Sonra CTRL+ALT+T komutlarıyla Terminali çağırın.&lt;/p&gt;
@@ -598,10 +598,10 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
         </item>
         <item>
         <title>İşleyen demir pas tutmaz!</title>
-        <link>http://tolgahanuzun.com/isleyen-demir-pas-tutmaz/</link>
+        <link>https://tolgahanuzun.com/isleyen-demir-pas-tutmaz/</link>
         <pubDate>Tue, 17 May 2016 00:00:24 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/isleyen-demir-pas-tutmaz/</guid>
+        <guid>https://tolgahanuzun.com/isleyen-demir-pas-tutmaz/</guid>
         <description>&lt;p&gt;Bu sene bir şeyleri tecrübe ettim. İyisiyle kötüsüyle. Bunun için uzun soluklu bir yazı yazmak istiyorum ama şimdilik 1 konu üzerinde değinerek geçeceğim. İşleyen demir pas tutmaz! Bu sene bu konuda bazı eksikliklerden ders çıkardım. Bu eksikliklerden kısaca bahsetmek istiyorum.&lt;/p&gt;
 &lt;p&gt;Bu sene çok yoğun ve yorucu oldu benim için. Okul 3. sınıfın yoğunluğuyla beni çok yordu. Ayrıca kulüp işlerine hayli bir sardım. Her türlü işe el atarak yardım etmeyi ve ortama ayak uydurmayı sağladım. Eve gecenin son otobüsüyle gitmeye başladım. Kodla ve THS ile düzenli ilgilenmeye başladım. İnsanlar çoğaldı onlarla ilgilenmeye başladım. Ankara&amp;rsquo;ya yarışmalara, Karabük&amp;rsquo;e etkinliğe gittim. Daha sayamayacağım çok şey oldu. Ama bir tek kendimle ilgilenemedim.&lt;/p&gt;
 &lt;p&gt;Bir şeyler öğrenmek için bu sene hayliyle fazla şeye baktım. Ama sadece fikir sahibi olmakla yetindim. Çünkü kendimle ilgilenmedim ve bu öğrendiğim şeylerde genelde 2. kez bakmaya fırsat bulamadım. Geçtiğim yıllardaki yaşantım ve yaptıklarım aklıma geldi. Para kazanmak uğruna veya bir şeyler öğrenmek uğruna bir iş aldığımda veya bir projeye dahil olduğumda, o şeyi devamlılıkla öğrendiğimi ve kullandığımı fark ettim. Yani biraz pas tutmuşum.&lt;/p&gt;
@@ -611,10 +611,10 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
         </item>
         <item>
         <title>İnsanlar bencildir!</title>
-        <link>http://tolgahanuzun.com/insanlar-bencildir!/</link>
+        <link>https://tolgahanuzun.com/insanlar-bencildir!/</link>
         <pubDate>Sat, 07 May 2016 19:37:42 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/insanlar-bencildir!/</guid>
+        <guid>https://tolgahanuzun.com/insanlar-bencildir!/</guid>
         <description>&lt;p&gt;İnsan kelimesinin içerisinde birden çok anlam var bence. Bu anlamlardan biriside bencillik! Bu tamamen kişisel bir görüş olduğunun altını çizmem gerek. İnsan denilen varlık bir şeyleri kendisine mâl etmeyi çok seviyor. Kendisi yapmış olsun veya olmasın; ne önemi var ki iki kelam yalan kelimeyi yan yana getirmekte!&lt;/p&gt;
 &lt;p&gt;Bizim sektör çok nankör. Ben bu sektörde daha çok yeniyim ve belki karın ağrım da bu yüzden ama boş konuşan, çok konuşan yani kısaca durmadan konuşan insanlardan çok rahatsızım. Yapmadıkları şeyleri göz göre göre yaptığını lansman etmek veya başka birisinin aldığı/yaptığı şeyi kendisi yapmış&amp;rsquo;ta benim haberim yokmuş gibi anlatması; bu kadar mı ikiyüzlülük olur dedirten cinsten.&lt;/p&gt;
 &lt;p&gt;Bazı insanlar arkadaş gruplarıyla beraber topluluk şeklinde yalan söylüyorlar; ben şok! Hayır kendini övdüğün veya yaptığını lansman ettiğin kitle belli. :) Bana niye yalan söylüyorsun. Trabzon da seni el üstünde tutacak büyük bir firmada yok hani?&lt;/p&gt;
@@ -624,10 +624,10 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
         </item>
         <item>
         <title>Kodla 2016 Tamamladık!</title>
-        <link>http://tolgahanuzun.com/kodla-2016-tamamladik/</link>
+        <link>https://tolgahanuzun.com/kodla-2016-tamamladik/</link>
         <pubDate>Fri, 06 May 2016 10:47:02 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/kodla-2016-tamamladik/</guid>
+        <guid>https://tolgahanuzun.com/kodla-2016-tamamladik/</guid>
         <description>&lt;img src="https://cdn-images-1.medium.com/max/800/1*e_Brw-vcnbleX3ia-tsCfw.jpeg" alt="Featured image of post Kodla 2016 Tamamladık!" /&gt;&lt;p&gt;Kodla etkinliği samimiyet ortamında gerçekleşen bir etkinlik oldu. Belki de benim için diğer etkinliklerden farklı olmasının ana sebebi de budur. Bende Kodla markasının samimiyetini buraya yani bu yazıya taşımak istiyorum. Kodla, Karadeniz bölgesinin en büyük bilişim etkinliği olarak yorumlamak doğru olur galiba.&lt;/p&gt;
 &lt;h3 id=&#34;kodla-markası&#34;&gt;Kodla Markası&lt;/h3&gt;
 &lt;p&gt;Kodla geçen sene bir TrabzonHackerspace toplantısı sırasında ortaya atılmış bir etkinlik olup, fikir ve isim babası olarak Ümit Dincel ve Bora Ezer isimlerini bence bu yazıda geçirmem gerektiğini düşünüyorum.&lt;/p&gt;
@@ -696,10 +696,10 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
         </item>
         <item>
         <title>Nodejs-Npm Versiyon uyuşmazlığı</title>
-        <link>http://tolgahanuzun.com/nodejs-npm-versiyon-uyusmazligi/</link>
+        <link>https://tolgahanuzun.com/nodejs-npm-versiyon-uyusmazligi/</link>
         <pubDate>Thu, 14 Apr 2016 01:19:24 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/nodejs-npm-versiyon-uyusmazligi/</guid>
+        <guid>https://tolgahanuzun.com/nodejs-npm-versiyon-uyusmazligi/</guid>
         <description>&lt;p&gt;Bu yazım oldukça kısa ama bence oldukça işe yarar olacak diye umut ediyorum. Ben ubuntu kullanıcısıyım ve en sevdiğim yani evrensel program kütüphanesi olması. Bütün evrensel araçlar ubuntu windows vb. diye seçenek sunuluyor. Ama bugün 1 saattir bu olayın iğrençliği ile karşı karşıyayım. NPM ve NodeJs paketlerindeki uyuşmazlıklar!!!&lt;/p&gt;
 &lt;p&gt;Arkadaşlar Nodejs ve NPM paketlerini ubuntu üzerinde&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -746,10 +746,10 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
         </item>
         <item>
         <title>Odtü robot günleri 2016 - Çatı Macerası</title>
-        <link>http://tolgahanuzun.com/odtu-robot-gunleri-2016-cati-macerasi/</link>
+        <link>https://tolgahanuzun.com/odtu-robot-gunleri-2016-cati-macerasi/</link>
         <pubDate>Sat, 12 Mar 2016 11:49:40 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/odtu-robot-gunleri-2016-cati-macerasi/</guid>
+        <guid>https://tolgahanuzun.com/odtu-robot-gunleri-2016-cati-macerasi/</guid>
         <description>&lt;p&gt;Programlama günleri etkinliğinden geldikten 4 gün sonra, hooop ankaraya yolculuk başladı. Resmen yerimde duramıyorum; farkındayım. :) Yaşadığım ve tecrübe ettiğim bu güzel durumları yazmak istiyorum. Öncelikle üyesi olduğum IEEE KTU ile yapılan bir etkinlik olup, çok güzel insanlarla beraber katılım gösterdik.&lt;/p&gt;
 &lt;p&gt;Trabzondan 31 kişilik otobüs ile 30 kişi yola çıktık. 11-12 saat sürecek yolculuk esnasında çok güzel sohbetler ve arkadaşlıklarla yolculuğu tamamladık. Sabah Hostel&amp;rsquo;e ve Yurt&amp;rsquo;a yerleştik. Kahvaltı faslı felan derken işlerimizi halletik ve Yasin adlı arkadaşımın ısrarı ile Konya sokağa uğradık.&lt;/p&gt;
 &lt;h4 id=&#34;konya-sokak-fulyası&#34;&gt;Konya Sokak fulyası&lt;/h4&gt;
@@ -766,10 +766,10 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
         </item>
         <item>
         <title>3. Programlama Günleri - Karabük Macerası</title>
-        <link>http://tolgahanuzun.com/3-programlama-gunleri-karabuk-macerasi/</link>
+        <link>https://tolgahanuzun.com/3-programlama-gunleri-karabuk-macerasi/</link>
         <pubDate>Mon, 29 Feb 2016 22:44:00 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/3-programlama-gunleri-karabuk-macerasi/</guid>
+        <guid>https://tolgahanuzun.com/3-programlama-gunleri-karabuk-macerasi/</guid>
         <description>&lt;p&gt;Son 1 aydır iple çektiğim, etkinliği düzenleyen Muhammet Dilmaç adlı arkadaşımın davet ettiği harika bir etkinliğe katıldım. Karabük Üniversitesinde gerçekleşen bu güzel etkinlik için ne söylesem az. Ama elimden geldiğince bu deneyimi yazıya dökmeye çalışacağım. (Umarım çok uzun olmaz.)&lt;/p&gt;
 &lt;h2 id=&#34;3-programlama-günleri-etkinliğine-kısa-bir-bakış&#34;&gt;3 Programlama günleri Etkinliğine kısa bir bakış&lt;/h2&gt;
 &lt;p&gt;Cuma sabahı Karabük otogarına varıp biraz zaman geçirdikten sonra Üniversiteye arkadaşlarla beraber geçtik. İlk izlenimim olarak bu şehre 2 beden büyük bir üniversite olduğu olacaktır. :) Yani anlayacağınız oldukça güzel bir üniversitesi ve imkanları bulunuyor. Yeni kurulmuş olması sebebiyle çalışmalar çok hızlı olduğunu gördük. Cuma günü bölüm içinde aktif ders olması sebebiyle oradaki öğrenci arkadaşlarla iç içe bir şekilde zaman geçirdik. Şunu söylemeliyim ki ortam ve insanlar oldukça güzel :)&lt;/p&gt;
@@ -789,10 +789,10 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
         </item>
         <item>
         <title>Atom parçalamayacaklar için: Micro Framework Flask</title>
-        <link>http://tolgahanuzun.com/atom-parcalamayacaklar-icin-micro-framework-flask/</link>
+        <link>https://tolgahanuzun.com/atom-parcalamayacaklar-icin-micro-framework-flask/</link>
         <pubDate>Sat, 30 Jan 2016 22:13:40 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/atom-parcalamayacaklar-icin-micro-framework-flask/</guid>
+        <guid>https://tolgahanuzun.com/atom-parcalamayacaklar-icin-micro-framework-flask/</guid>
         <description>&lt;p&gt;Uzun süredir içerik girmediğim kanısına vardım. Gerek sınavlar gerek kendi tembelliğim ile bazı işlerim yarıda kesilmek zorunda kaldı. Bunlardan bir tanesi ise çektiğim dersler örnek verebilirim. Ancak yarıyıl tatili ile bir şeylerle ilgilenmeye geri döndüm.&lt;/p&gt;
 &lt;h2 id=&#34;flask-ile-basit-dokunuşlar&#34;&gt;Flask ile basit dokunuşlar&lt;/h2&gt;
 &lt;p&gt;Django derslerini yarıda bırakmışken bir başka kütüphane ile uğraşmam ne kadar doğru tartışılır ama ihtiyaç duyduğum bir araç olduğu için Flask ile haşır neşir olmaya başladım. Bir projem için django&amp;rsquo;nun gereksiz olacağını, fazla kaçacağını düşünüyordum ki gerçekten de öyle. Projelerimde kullandığım bir sitenin altında Flask ile yapıldığını görünce hemen araştırdım. Önceden duyduğum bu micro framework tam aradığım araç olduğunu düşünüyorum.&lt;/p&gt;
@@ -807,19 +807,19 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
         </item>
         <item>
         <title>Treeage</title>
-        <link>http://tolgahanuzun.com/p/treeage/</link>
+        <link>https://tolgahanuzun.com/p/treeage/</link>
         <pubDate>Fri, 27 Nov 2015 16:10:15 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/p/treeage/</guid>
+        <guid>https://tolgahanuzun.com/p/treeage/</guid>
         <description>&lt;p&gt;Agaç yaş hesaplama&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>Böyle Mühendis Olunmaz!</title>
-        <link>http://tolgahanuzun.com/boyle-muhendis-olunmaz/</link>
+        <link>https://tolgahanuzun.com/boyle-muhendis-olunmaz/</link>
         <pubDate>Mon, 02 Nov 2015 20:07:35 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/boyle-muhendis-olunmaz/</guid>
+        <guid>https://tolgahanuzun.com/boyle-muhendis-olunmaz/</guid>
         <description>&lt;p&gt;Mühendislik hayali olan ve mühendis bölümü okuyan bazı arkadaşlara kızgınım. Kendimde dahil olmak üzere bu şekilde devam edersek bizden mühendisi bırak, tekniker bile olmaz!&lt;/p&gt;
 &lt;p&gt;Okuduğumuz okul veya şehir artık belli. Eğer imkan yoksa başka yollardan gitmeye(ki çoğumuzun yok) artık okuduğumuz bölümün farkına varmanın zamanı gelmedi mi?&lt;/p&gt;
 &lt;p&gt;Hele 2. ve 3. sınıf arkadaşlarıma çok daha kızgınım. Eğer mühendis olmak istemiyorsanız buna saygım sonsuz, ancak ben mühendis olmak istiyorum diyorsanız; bu sadece dersleri geçmekle mümkün birşey değil! Hele hele bilgisayar mühendisliği bölümünde hiç değil.&lt;/p&gt;
@@ -835,10 +835,10 @@ Bana ne ki bunlar? Beni niye ilgilendiriyor?&lt;/p&gt;
         </item>
         <item>
         <title>Dev-C&#43;&#43; Kurulumu</title>
-        <link>http://tolgahanuzun.com/dev-c-kurulumu/</link>
+        <link>https://tolgahanuzun.com/dev-c-kurulumu/</link>
         <pubDate>Thu, 08 Oct 2015 04:31:28 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/dev-c-kurulumu/</guid>
+        <guid>https://tolgahanuzun.com/dev-c-kurulumu/</guid>
         <description>&lt;p&gt;Eğer Qt kurulumunu yapmak istemiyor veya kullanmayı tercih etmiyorsanız, bu İde&amp;rsquo;yi kullanmanızı tavsiye ederim. Diğer arayüzler bence giriş aşaması için hiç gerekli değil. İlk başta &lt;a class=&#34;link&#34; href=&#34;http://www.bloodshed.net/dev/devcpp.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://www.bloodshed.net/dev/devcpp.html&lt;/a&gt; adresine girerek Alt tarafta bulunan &lt;strong&gt;Download&lt;/strong&gt; başlığını bularak kurulum dosyasını indirmeniz olacaktır.&lt;/p&gt;
 &lt;ul&gt;
@@ -851,7 +851,7 @@ Bana ne ki bunlar? Beni niye ilgilendiriyor?&lt;/p&gt;
 &lt;li&gt;Dosyaya tıklayın ve Yeni sekmesine tıklayıp projeye basın.&lt;/li&gt;
 &lt;li&gt;Karşınıza çıkan tabloda Basic tablosunda &lt;strong&gt;Console Application&lt;/strong&gt; seçeneğine tıklayın ve alt tarafta C projesi olduğunu tanımlayın&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://tolgahanuzun.com/theme/images/wp/Screenshot_2.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://tolgahanuzun.com/theme/images/wp/Screenshot_2.jpg&#34;
 	
 	
 	
@@ -867,14 +867,14 @@ Bana ne ki bunlar? Beni niye ilgilendiriyor?&lt;/p&gt;
         </item>
         <item>
         <title>Qt Kullanımı</title>
-        <link>http://tolgahanuzun.com/qt-kullanimi/</link>
+        <link>https://tolgahanuzun.com/qt-kullanimi/</link>
         <pubDate>Thu, 08 Oct 2015 04:17:09 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/qt-kullanimi/</guid>
-        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/Screenshot_1.jpg" alt="Featured image of post Qt Kullanımı" /&gt;&lt;p&gt;C dersleri için giriş ihtiyacımız olan program seçeneklerinden olan QT programı; oldukça kullanışlı ve geniş amaçlar ile çalışabilecek bir yapıda olduğu için tercih etmenizi önereceğim bir araç olacaktır.&lt;/p&gt;
+        <guid>https://tolgahanuzun.com/qt-kullanimi/</guid>
+        <description>&lt;img src="https://tolgahanuzun.com/theme/images/wp/Screenshot_1.jpg" alt="Featured image of post Qt Kullanımı" /&gt;&lt;p&gt;C dersleri için giriş ihtiyacımız olan program seçeneklerinden olan QT programı; oldukça kullanışlı ve geniş amaçlar ile çalışabilecek bir yapıda olduğu için tercih etmenizi önereceğim bir araç olacaktır.&lt;/p&gt;
 &lt;p&gt;İlk önce &lt;a class=&#34;link&#34; href=&#34;http://www.qt.io/download/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://www.qt.io/download/&lt;/a&gt; adresi üzerinde gerekli paremetreleri takip ederek istediğimiz türden dosyayı indirme işlemini başlatıyoruz.&lt;/p&gt;
-&lt;p&gt;UYARI!!! kendi kütüphaneleri bulunan sürümleri indirirseniz, yüksek boyutta bir dosyayı indirmeyi kabul ettiğinizi unutmamanızı gerekir! Eğer sadece giriş seviyesinde ve basit düzeyde bir İDE&amp;rsquo;ye ihtiyacınız varsa&lt;a class=&#34;link&#34; href=&#34;http://tolgahanuzun.com/dev-c-kurulumu.html&#34; &gt; Dev-C++ kurulumu&lt;/a&gt; yazımı incelemenizi öneririm.Gerekli dosyaları indirdikten sonra klasikleşmiş kurulum dosyası paremetrelerini izleyerek ( Yani Next&amp;rsquo;leyerek) kurulumu tamamlamanız gerekiyor. Gördüğünüz gibi oldukça basit ve kolay bir şekilde kurulum gerçekleşiyor.&lt;/p&gt;
+&lt;p&gt;UYARI!!! kendi kütüphaneleri bulunan sürümleri indirirseniz, yüksek boyutta bir dosyayı indirmeyi kabul ettiğinizi unutmamanızı gerekir! Eğer sadece giriş seviyesinde ve basit düzeyde bir İDE&amp;rsquo;ye ihtiyacınız varsa&lt;a class=&#34;link&#34; href=&#34;https://tolgahanuzun.com/dev-c-kurulumu.html&#34; &gt; Dev-C++ kurulumu&lt;/a&gt; yazımı incelemenizi öneririm.Gerekli dosyaları indirdikten sonra klasikleşmiş kurulum dosyası paremetrelerini izleyerek ( Yani Next&amp;rsquo;leyerek) kurulumu tamamlamanız gerekiyor. Gördüğünüz gibi oldukça basit ve kolay bir şekilde kurulum gerçekleşiyor.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;QT ile C Derlemek&lt;/li&gt;
 &lt;li&gt;Şimdi ise asıl çalışma mantığına bakalım.&lt;/li&gt;
@@ -882,7 +882,7 @@ Bana ne ki bunlar? Beni niye ilgilendiriyor?&lt;/p&gt;
 &lt;li&gt;New Project tıklayalım.&lt;/li&gt;
 &lt;li&gt;Karşımıza gelen pencerede Non-qt Project tablosunu açarak sağ tarafta &lt;strong&gt;Plan C &amp;hellip;&lt;/strong&gt; şeklinde olan paketi aktif ederek çalıştıralım. Aynı Next mantığıyla bu paketin kurulumunu bitirelim.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://tolgahanuzun.com/theme/images/wp/Screenshot_1.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://tolgahanuzun.com/theme/images/wp/Screenshot_1.jpg&#34;
 	
 	
 	
@@ -897,10 +897,10 @@ Bana ne ki bunlar? Beni niye ilgilendiriyor?&lt;/p&gt;
         </item>
         <item>
         <title>KTÜ IEEE Computer Society Başkanlığı ve Yeni Dönem</title>
-        <link>http://tolgahanuzun.com/ktu-ieee-computer-society-baskanligi-ve-yeni-donem/</link>
+        <link>https://tolgahanuzun.com/ktu-ieee-computer-society-baskanligi-ve-yeni-donem/</link>
         <pubDate>Tue, 29 Sep 2015 19:47:37 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/ktu-ieee-computer-society-baskanligi-ve-yeni-donem/</guid>
+        <guid>https://tolgahanuzun.com/ktu-ieee-computer-society-baskanligi-ve-yeni-donem/</guid>
         <description>&lt;p&gt;Bu sefer kişisel bir konu hakkında paylaşım yapmaya karar verdim. Bilgisayar mühendisliği gibi bölümlerde, etrafınızdaki topluluklar kadar güçlü olduğunuzu, bilgiye sahip olduğunuzu fark etmişsinizdir. Benim etrafımdaki topluluklar oldukça güçsüz ve hatta neredeyse yok denecek kadar az!&lt;/p&gt;
 &lt;p&gt;Geçen sene bu topluluk arayışı ile birlikte IEEE kulübü ile tanıştım ve etkinliklere katıldım. Etkinliklerde aktif olarak rol almaya çalıştım, birşeyler çabaladım. Son olarak KODLA gibi bir etkinliği yaparak dönemin önemli etkinliklerine imzayı attık. Burada Abdullah Uğraşkan, Emre Efendioğlu ve Gürkan Yarar gibi isimlerin başta olmak üzere aktif olarak rol aldığını söylemeden geçemeyeceğim. Bu etkinliklerden sonra 2015-2016 tarihleri arasında IEEE Kulübünün computer society Başkanlığını alarak aktif olarak rol almayı planlıyorum.&lt;/p&gt;
 &lt;p&gt;En büyük amacım bilinçli insan sayısını arttırmak olacak gibi görünüyor. Bunun yanında yazılım dillerine bakış açıların değiştirmek ve çeşitli kulvarda bireyler yetiştirmek gibi isteklerimde bulunuyor. AMA en önemlisi; oyun yazabilecek bir kaç takım arkadaşı edinmek en önemli isteklerimden geliyor.Yakın zamanda gerçekleşecek Tanışma toplantısından sonra Aktif olarak etkinlikler yapmayı planlıyorum.&lt;/p&gt;
@@ -908,10 +908,10 @@ Bana ne ki bunlar? Beni niye ilgilendiriyor?&lt;/p&gt;
         </item>
         <item>
         <title>Windowsta Python Django Kurulumu</title>
-        <link>http://tolgahanuzun.com/windowsta-python-django-kurulumu/</link>
+        <link>https://tolgahanuzun.com/windowsta-python-django-kurulumu/</link>
         <pubDate>Sun, 27 Sep 2015 16:44:44 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/windowsta-python-django-kurulumu/</guid>
+        <guid>https://tolgahanuzun.com/windowsta-python-django-kurulumu/</guid>
         <description>&lt;p&gt;Django hakkında bilgilendirmeler yaptıktan sonra artık bir şeyler kurmaya başlayalım değil mi? :) Şimdi Windows için Django kurulumu hakkında sizlere bilgilendirmeler yapacağız. Bundan sonra elimden geldikçe, yazının yanında video serisi de paylaşmaya çalışacağım. Bu sayede hem dökümantasyon hem de video serisi olmuş olacak.&lt;/p&gt;
 &lt;h2 id=&#34;ilk-önce-python&#34;&gt;İlk Önce Python!&lt;/h2&gt;
 &lt;ul&gt;
@@ -954,10 +954,10 @@ Bana ne ki bunlar? Beni niye ilgilendiriyor?&lt;/p&gt;
         </item>
         <item>
         <title>M-V-C Nedir ? (Model-view-controller)</title>
-        <link>http://tolgahanuzun.com/m-v-c-nedir-model-view-controller/</link>
+        <link>https://tolgahanuzun.com/m-v-c-nedir-model-view-controller/</link>
         <pubDate>Sun, 20 Sep 2015 16:00:18 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/m-v-c-nedir-model-view-controller/</guid>
+        <guid>https://tolgahanuzun.com/m-v-c-nedir-model-view-controller/</guid>
         <description>&lt;p&gt;Django nedir ? yazımda da bahsettiğim gibi son sözel / tanım ağırlıklı yazımı yazıyor ve teknik eğitimler için önümüzdeki sözel engelleri kaldırmak istiyorum.&lt;/p&gt;
 &lt;h2 id=&#34;model-view-controller-nedir&#34;&gt;Model-View-Controller Nedir?&lt;/h2&gt;
 &lt;p&gt;İsminden fark ettiğiniz gibi 3 farklı sekmede çalışan bir sistem olduğunu söylemek mümkün. Bu sistem. Parça parça çalışıp bir bütün olarak hareket etmektedir. Şöyle 3 madde ile bunun amacını anlatmaya çalışayım:&lt;/p&gt;
@@ -978,11 +978,11 @@ Bir sonraki derste Django kurulumu hakkında sizleri bilgilendireceğim. İyi g�
         </item>
         <item>
         <title>Django Nedir? Neyin nesidir?</title>
-        <link>http://tolgahanuzun.com/django-nedir-neyin-nesidir/</link>
+        <link>https://tolgahanuzun.com/django-nedir-neyin-nesidir/</link>
         <pubDate>Sun, 20 Sep 2015 14:28:10 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/django-nedir-neyin-nesidir/</guid>
-        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/django.png" alt="Featured image of post Django Nedir? Neyin nesidir?" /&gt;&lt;h2 id=&#34;django-nedir&#34;&gt;Django nedir?&lt;/h2&gt;
+        <guid>https://tolgahanuzun.com/django-nedir-neyin-nesidir/</guid>
+        <description>&lt;img src="https://tolgahanuzun.com/theme/images/wp/django.png" alt="Featured image of post Django Nedir? Neyin nesidir?" /&gt;&lt;h2 id=&#34;django-nedir&#34;&gt;Django nedir?&lt;/h2&gt;
 &lt;p&gt;Arkadaşlar Django bir Web framework’u olarak tanımlayabiliriz. Eğer yazılımla ilgiliyseniz bunun ne olduğunu anlayacaksınız. Ancak ilginiz yoksa size şöyle söyleyebilirim:&lt;/p&gt;
 &lt;p&gt;Marangoza gidip istediğiniz tahtaları hazırlatmayı istemek; normal bir web tasarım olarak görebilirsiniz.&lt;/p&gt;
 &lt;p&gt;Bunun aksine Framework ise istediğiniz malzemelerin hazır hallerini daha uyguna ve daha sağlam ( Destek ) bir şekilde elde etmenizi sağlayacak yoldur.&lt;/p&gt;
@@ -1003,10 +1003,10 @@ Bir sonraki derste Django kurulumu hakkında sizleri bilgilendireceğim. İyi g�
         </item>
         <item>
         <title></title>
-        <link>http://tolgahanuzun.com/p/</link>
+        <link>https://tolgahanuzun.com/p/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/p/</guid>
+        <guid>https://tolgahanuzun.com/p/</guid>
         <description></description>
         </item>
         

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on Tolgahan Üzün</title>
-        <link>http://tolgahanuzun.com/pages/</link>
+        <link>https://tolgahanuzun.com/pages/</link>
         <description>Recent content in Pages on Tolgahan Üzün</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>tr</language>
-        <copyright>Gücümü huGO&#39;dan alıyorum.</copyright><atom:link href="http://tolgahanuzun.com/pages/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>Gücümü huGO&#39;dan alıyorum.</copyright><atom:link href="https://tolgahanuzun.com/pages/index.xml" rel="self" type="application/rss+xml" /><item>
         <title></title>
-        <link>http://tolgahanuzun.com/pages/about/</link>
+        <link>https://tolgahanuzun.com/pages/about/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/pages/about/</guid>
+        <guid>https://tolgahanuzun.com/pages/about/</guid>
         <description>&lt;p&gt;title: Benim Hakkimda
 date: 2017/02/11 23:10:23&lt;/p&gt;
 &lt;br&gt;
@@ -24,10 +24,10 @@ date: 2017/02/11 23:10:23&lt;/p&gt;
         </item>
         <item>
         <title>Search</title>
-        <link>http://tolgahanuzun.com/pages/search/</link>
+        <link>https://tolgahanuzun.com/pages/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/pages/search/</guid>
+        <guid>https://tolgahanuzun.com/pages/search/</guid>
         <description></description>
         </item>
         

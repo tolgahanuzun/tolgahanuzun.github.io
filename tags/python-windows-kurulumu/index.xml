@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>python windows kurulumu on Tolgahan Üzün</title>
-        <link>http://tolgahanuzun.com/tags/python-windows-kurulumu/</link>
+        <link>https://tolgahanuzun.com/tags/python-windows-kurulumu/</link>
         <description>Recent content in python windows kurulumu on Tolgahan Üzün</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>tr</language>
         <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
-        <lastBuildDate>Sun, 27 Sep 2015 16:44:44 +0000</lastBuildDate><atom:link href="http://tolgahanuzun.com/tags/python-windows-kurulumu/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 27 Sep 2015 16:44:44 +0000</lastBuildDate><atom:link href="https://tolgahanuzun.com/tags/python-windows-kurulumu/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Windowsta Python Django Kurulumu</title>
-        <link>http://tolgahanuzun.com/windowsta-python-django-kurulumu/</link>
+        <link>https://tolgahanuzun.com/windowsta-python-django-kurulumu/</link>
         <pubDate>Sun, 27 Sep 2015 16:44:44 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/windowsta-python-django-kurulumu/</guid>
+        <guid>https://tolgahanuzun.com/windowsta-python-django-kurulumu/</guid>
         <description>&lt;p&gt;Django hakkında bilgilendirmeler yaptıktan sonra artık bir şeyler kurmaya başlayalım değil mi? :) Şimdi Windows için Django kurulumu hakkında sizlere bilgilendirmeler yapacağız. Bundan sonra elimden geldikçe, yazının yanında video serisi de paylaşmaya çalışacağım. Bu sayede hem dökümantasyon hem de video serisi olmuş olacak.&lt;/p&gt;
 &lt;h2 id=&#34;ilk-önce-python&#34;&gt;İlk Önce Python!&lt;/h2&gt;
 &lt;ul&gt;

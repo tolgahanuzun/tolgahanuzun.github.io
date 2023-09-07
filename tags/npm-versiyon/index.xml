@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Npm versiyon on Tolgahan Üzün</title>
-        <link>http://tolgahanuzun.com/tags/npm-versiyon/</link>
+        <link>https://tolgahanuzun.com/tags/npm-versiyon/</link>
         <description>Recent content in Npm versiyon on Tolgahan Üzün</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>tr</language>
         <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
-        <lastBuildDate>Thu, 14 Apr 2016 01:19:24 +0300</lastBuildDate><atom:link href="http://tolgahanuzun.com/tags/npm-versiyon/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 14 Apr 2016 01:19:24 +0300</lastBuildDate><atom:link href="https://tolgahanuzun.com/tags/npm-versiyon/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Nodejs-Npm Versiyon uyuşmazlığı</title>
-        <link>http://tolgahanuzun.com/nodejs-npm-versiyon-uyusmazligi/</link>
+        <link>https://tolgahanuzun.com/nodejs-npm-versiyon-uyusmazligi/</link>
         <pubDate>Thu, 14 Apr 2016 01:19:24 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/nodejs-npm-versiyon-uyusmazligi/</guid>
+        <guid>https://tolgahanuzun.com/nodejs-npm-versiyon-uyusmazligi/</guid>
         <description>&lt;p&gt;Bu yazım oldukça kısa ama bence oldukça işe yarar olacak diye umut ediyorum. Ben ubuntu kullanıcısıyım ve en sevdiğim yani evrensel program kütüphanesi olması. Bütün evrensel araçlar ubuntu windows vb. diye seçenek sunuluyor. Ama bugün 1 saattir bu olayın iğrençliği ile karşı karşıyayım. NPM ve NodeJs paketlerindeki uyuşmazlıklar!!!&lt;/p&gt;
 &lt;p&gt;Arkadaşlar Nodejs ve NPM paketlerini ubuntu üzerinde&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;

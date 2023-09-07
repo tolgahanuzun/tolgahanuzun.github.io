@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>pip komutları on Tolgahan Üzün</title>
-        <link>http://tolgahanuzun.com/tags/pip-komutlar%C4%B1/</link>
+        <link>https://tolgahanuzun.com/tags/pip-komutlar%C4%B1/</link>
         <description>Recent content in pip komutları on Tolgahan Üzün</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>tr</language>
         <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
-        <lastBuildDate>Mon, 11 Jul 2016 01:18:19 +0300</lastBuildDate><atom:link href="http://tolgahanuzun.com/tags/pip-komutlar%C4%B1/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 11 Jul 2016 01:18:19 +0300</lastBuildDate><atom:link href="https://tolgahanuzun.com/tags/pip-komutlar%C4%B1/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Python Paket Yönetim Sistemi - PİP Kurulumu</title>
-        <link>http://tolgahanuzun.com/python-paket-yonetimi-pip-kurulumu/</link>
+        <link>https://tolgahanuzun.com/python-paket-yonetimi-pip-kurulumu/</link>
         <pubDate>Mon, 11 Jul 2016 01:18:19 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/python-paket-yonetimi-pip-kurulumu/</guid>
+        <guid>https://tolgahanuzun.com/python-paket-yonetimi-pip-kurulumu/</guid>
         <description>&lt;p&gt;Canını yediğim Python dilinin en güzel şeylerinden birisi bence PİP. &lt;em&gt;Nedir bu pip?&lt;/em&gt; Başlıktan da anlaşılacağı üzerine paket yönetim sistemi. Burada birçok paket, güzel dökümantasyonlarıyla birlikte sunulmuş ve büyük topluluklar tarafından desteklenen bir yönetim sistemi olduğunu söyleyebilirim.&lt;/p&gt;
 &lt;h2 id=&#34;pip-kurulumu-nasıl-yapılır&#34;&gt;Pip kurulumu nasıl yapılır?&lt;/h2&gt;
 &lt;p&gt;Öncelikle bunun için bilgisayarınızda tabi ki python yüklü olması gerekiyor. Aşağıdaki adımları izleyerek hızlı bir şekilde &lt;strong&gt;PİP kurulumu&lt;/strong&gt;nu gerçekleştirebilirsiniz.&lt;/p&gt;

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>arduino 16x2 lcd kullanımı on Tolgahan Üzün</title>
-        <link>http://tolgahanuzun.com/tags/arduino-16x2-lcd-kullan%C4%B1m%C4%B1/</link>
+        <link>https://tolgahanuzun.com/tags/arduino-16x2-lcd-kullan%C4%B1m%C4%B1/</link>
         <description>Recent content in arduino 16x2 lcd kullanımı on Tolgahan Üzün</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>tr</language>
         <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
-        <lastBuildDate>Sat, 09 Jul 2016 15:18:50 +0300</lastBuildDate><atom:link href="http://tolgahanuzun.com/tags/arduino-16x2-lcd-kullan%C4%B1m%C4%B1/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 09 Jul 2016 15:18:50 +0300</lastBuildDate><atom:link href="https://tolgahanuzun.com/tags/arduino-16x2-lcd-kullan%C4%B1m%C4%B1/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Linux Ortamında Arduino Kurulumu ve Kullanımı</title>
-        <link>http://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi/</link>
+        <link>https://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi/</link>
         <pubDate>Sat, 09 Jul 2016 15:18:50 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi/</guid>
+        <guid>https://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi/</guid>
         <description>&lt;p&gt;Birkaç aydır Win7 + Ubuntu şeklinde işletim sistemi tercihim bulunuyordu. Şimdi ise artık full Linux kullanıcısı oldum diyebilirim. Bu durum da beni kullandığım programları linux ortamına taşımaya itti. İlk olarak Arduino programını çalışır bir hale getirmem gerekiyor.&lt;/p&gt;
 &lt;h2 id=&#34;linux-arduino-kurulumu-nasıl-olur&#34;&gt;Linux Arduino Kurulumu nasıl olur?&lt;/h2&gt;
 &lt;p&gt;Öncelikle ben şuan Linux dağıtımlarından Mint adı altında olan, tabanı ubuntu üzerine kurulmuş 64 bit&amp;rsquo;lik işletim sistemini kullanıyorum. Yapmanız gereken şey çok basit; kendi sitesi üzerinden size uygun olan 32-64bit sürümünü indirmeniz olacaktır.İndirdiğinizde dosyayı bulunduğu konuma çıkarmalısınız. Sonra CTRL+ALT+T komutlarıyla Terminali çağırın.&lt;/p&gt;

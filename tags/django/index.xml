@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>django on Tolgahan Üzün</title>
-        <link>http://tolgahanuzun.com/tags/django/</link>
+        <link>https://tolgahanuzun.com/tags/django/</link>
         <description>Recent content in django on Tolgahan Üzün</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>tr</language>
         <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
-        <lastBuildDate>Sun, 20 Sep 2015 14:28:10 +0000</lastBuildDate><atom:link href="http://tolgahanuzun.com/tags/django/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 20 Sep 2015 14:28:10 +0000</lastBuildDate><atom:link href="https://tolgahanuzun.com/tags/django/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Django Nedir? Neyin nesidir?</title>
-        <link>http://tolgahanuzun.com/django-nedir-neyin-nesidir/</link>
+        <link>https://tolgahanuzun.com/django-nedir-neyin-nesidir/</link>
         <pubDate>Sun, 20 Sep 2015 14:28:10 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/django-nedir-neyin-nesidir/</guid>
-        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/django.png" alt="Featured image of post Django Nedir? Neyin nesidir?" /&gt;&lt;h2 id=&#34;django-nedir&#34;&gt;Django nedir?&lt;/h2&gt;
+        <guid>https://tolgahanuzun.com/django-nedir-neyin-nesidir/</guid>
+        <description>&lt;img src="https://tolgahanuzun.com/theme/images/wp/django.png" alt="Featured image of post Django Nedir? Neyin nesidir?" /&gt;&lt;h2 id=&#34;django-nedir&#34;&gt;Django nedir?&lt;/h2&gt;
 &lt;p&gt;Arkadaşlar Django bir Web framework’u olarak tanımlayabiliriz. Eğer yazılımla ilgiliyseniz bunun ne olduğunu anlayacaksınız. Ancak ilginiz yoksa size şöyle söyleyebilirim:&lt;/p&gt;
 &lt;p&gt;Marangoza gidip istediğiniz tahtaları hazırlatmayı istemek; normal bir web tasarım olarak görebilirsiniz.&lt;/p&gt;
 &lt;p&gt;Bunun aksine Framework ise istediğiniz malzemelerin hazır hallerini daha uyguna ve daha sağlam ( Destek ) bir şekilde elde etmenizi sağlayacak yoldur.&lt;/p&gt;

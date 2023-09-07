@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>flask on Tolgahan Üzün</title>
-        <link>http://tolgahanuzun.com/tags/flask/</link>
+        <link>https://tolgahanuzun.com/tags/flask/</link>
         <description>Recent content in flask on Tolgahan Üzün</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>tr</language>
         <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
-        <lastBuildDate>Sat, 18 Feb 2017 17:50:58 +0300</lastBuildDate><atom:link href="http://tolgahanuzun.com/tags/flask/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 18 Feb 2017 17:50:58 +0300</lastBuildDate><atom:link href="https://tolgahanuzun.com/tags/flask/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Flask Hayat Kurtarir</title>
-        <link>http://tolgahanuzun.com/flask-hayat-kurtarir/</link>
+        <link>https://tolgahanuzun.com/flask-hayat-kurtarir/</link>
         <pubDate>Sat, 18 Feb 2017 17:50:58 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/flask-hayat-kurtarir/</guid>
-        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/flask.png" alt="Featured image of post Flask Hayat Kurtarir" /&gt;&lt;center&gt;
+        <guid>https://tolgahanuzun.com/flask-hayat-kurtarir/</guid>
+        <description>&lt;img src="https://tolgahanuzun.com/theme/images/wp/flask.png" alt="Featured image of post Flask Hayat Kurtarir" /&gt;&lt;center&gt;
 ![Flask](http://www.unixstickers.com/image/cache/data/stickers/flask/Flask.sh-600x600.png){:height=&#34;400px&#34; width=&#34;400px&#34;}
 &lt;/center&gt;
 ## Flask Micro Framework Web Catisi
@@ -84,10 +84,10 @@
         </item>
         <item>
         <title>Atom parçalamayacaklar için: Micro Framework Flask</title>
-        <link>http://tolgahanuzun.com/atom-parcalamayacaklar-icin-micro-framework-flask/</link>
+        <link>https://tolgahanuzun.com/atom-parcalamayacaklar-icin-micro-framework-flask/</link>
         <pubDate>Sat, 30 Jan 2016 22:13:40 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/atom-parcalamayacaklar-icin-micro-framework-flask/</guid>
+        <guid>https://tolgahanuzun.com/atom-parcalamayacaklar-icin-micro-framework-flask/</guid>
         <description>&lt;p&gt;Uzun süredir içerik girmediğim kanısına vardım. Gerek sınavlar gerek kendi tembelliğim ile bazı işlerim yarıda kesilmek zorunda kaldı. Bunlardan bir tanesi ise çektiğim dersler örnek verebilirim. Ancak yarıyıl tatili ile bir şeylerle ilgilenmeye geri döndüm.&lt;/p&gt;
 &lt;h2 id=&#34;flask-ile-basit-dokunuşlar&#34;&gt;Flask ile basit dokunuşlar&lt;/h2&gt;
 &lt;p&gt;Django derslerini yarıda bırakmışken bir başka kütüphane ile uğraşmam ne kadar doğru tartışılır ama ihtiyaç duyduğum bir araç olduğu için Flask ile haşır neşir olmaya başladım. Bir projem için django&amp;rsquo;nun gereksiz olacağını, fazla kaçacağını düşünüyordum ki gerçekten de öyle. Projelerimde kullandığım bir sitenin altında Flask ile yapıldığını görünce hemen araştırdım. Önceden duyduğum bu micro framework tam aradığım araç olduğunu düşünüyorum.&lt;/p&gt;

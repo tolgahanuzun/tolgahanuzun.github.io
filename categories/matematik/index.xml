@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Matematik on Tolgahan Üzün</title>
-        <link>http://tolgahanuzun.com/categories/matematik/</link>
+        <link>https://tolgahanuzun.com/categories/matematik/</link>
         <description>Recent content in Matematik on Tolgahan Üzün</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>tr</language>
         <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
-        <lastBuildDate>Tue, 26 Dec 2017 14:28:10 +0000</lastBuildDate><atom:link href="http://tolgahanuzun.com/categories/matematik/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 26 Dec 2017 14:28:10 +0000</lastBuildDate><atom:link href="https://tolgahanuzun.com/categories/matematik/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Markov zinciri ve Stokastik Süreçler</title>
-        <link>http://tolgahanuzun.com/markov-zinciri-projesi/</link>
+        <link>https://tolgahanuzun.com/markov-zinciri-projesi/</link>
         <pubDate>Tue, 26 Dec 2017 14:28:10 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/markov-zinciri-projesi/</guid>
-        <description>&lt;img src="http://tolgahanuzun.com/theme/images/markov-zinciri.png" alt="Featured image of post Markov zinciri ve Stokastik Süreçler" /&gt;&lt;h2 id=&#34;markov-zinciri-nedir&#34;&gt;Markov Zinciri Nedir?&lt;/h2&gt;
+        <guid>https://tolgahanuzun.com/markov-zinciri-projesi/</guid>
+        <description>&lt;img src="https://tolgahanuzun.com/theme/images/markov-zinciri.png" alt="Featured image of post Markov zinciri ve Stokastik Süreçler" /&gt;&lt;h2 id=&#34;markov-zinciri-nedir&#34;&gt;Markov Zinciri Nedir?&lt;/h2&gt;
 &lt;p&gt;Lisede kısmen; üniversitede ilgili bölümlerde (Mühendislik, yazılım veya matematik) iseniz Markov zincirini veya Stokastik süreçler kelime grubunu kesinlikle duymuşsunuzdur. Olasılık-Matematik ile ilgili olan bu kelime grubu; Andrey Markov adli Rus Matematikçi tarafından geliyor. Ancak etkilediği konular ise tam olarak bizi yani yazılım ile uğraşan insanlari ilgilendiriyor.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Markov zincirleri bize geçmişe bakmaksızın bir durum üzerinden bir başka bir duruma geçiş kurallarını olasılıksal olarak belirleyebildiğimiz bir model sunuyor. Bu sürecin en önemli özelliği hafızasız olması.
@@ -35,7 +35,7 @@ Ancak belleksizlik kavramıyla sadece o anki veriyi dikkate almamiz gerektiğini
 Yani bizim o anki verimiz sadece &lt;code&gt;günaydın&lt;/code&gt; ve bu veriyle bir sonraki gelecek olan kelime %50 ihtimal ile &lt;code&gt;okula&lt;/code&gt; ya da %50 ihtimal ile &lt;code&gt;işler&lt;/code&gt; kelimesi olacak.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Yukarıdaki örnek ile markov zincirini çalıştırdıgımda aşağıdaki veri ortaya çıkıyor.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://tolgahanuzun.com/theme/images/markov.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://tolgahanuzun.com/theme/images/markov.png&#34;
 	
 	
 	

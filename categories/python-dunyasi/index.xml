@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Python Dunyasi on Tolgahan Üzün</title>
-        <link>http://tolgahanuzun.com/categories/python-dunyasi/</link>
+        <link>https://tolgahanuzun.com/categories/python-dunyasi/</link>
         <description>Recent content in Python Dunyasi on Tolgahan Üzün</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>tr</language>
         <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
-        <lastBuildDate>Thu, 11 Jan 2018 23:28:10 +0000</lastBuildDate><atom:link href="http://tolgahanuzun.com/categories/python-dunyasi/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 11 Jan 2018 23:28:10 +0000</lastBuildDate><atom:link href="https://tolgahanuzun.com/categories/python-dunyasi/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Python paket oluşturma - PyPi</title>
-        <link>http://tolgahanuzun.com/pypi-ile-paket-olusturmak/</link>
+        <link>https://tolgahanuzun.com/pypi-ile-paket-olusturmak/</link>
         <pubDate>Thu, 11 Jan 2018 23:28:10 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/pypi-ile-paket-olusturmak/</guid>
-        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/pypi.png" alt="Featured image of post Python paket oluşturma - PyPi" /&gt;&lt;h2 id=&#34;pypi-nedir&#34;&gt;PYPI nedir?&lt;/h2&gt;
+        <guid>https://tolgahanuzun.com/pypi-ile-paket-olusturmak/</guid>
+        <description>&lt;img src="https://tolgahanuzun.com/theme/images/wp/pypi.png" alt="Featured image of post Python paket oluşturma - PyPi" /&gt;&lt;h2 id=&#34;pypi-nedir&#34;&gt;PYPI nedir?&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;PyPI — The Python Package Index&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Yazdığımız projeleri buraya ekleyerek &lt;code&gt;pip install paket&lt;/code&gt; seklinde çalışma dizinimize indirerek kullanmaya çalışacağız.&lt;/p&gt;
 &lt;h3 id=&#34;hadi-paket-olusturalım&#34;&gt;Hadi paket olusturalım.&lt;/h3&gt;
@@ -153,11 +153,11 @@ Standart bir sekilde github&amp;rsquo;a push yapma islemini yaptiktan sonra şu 
         </item>
         <item>
         <title>Markov zinciri ve Stokastik Süreçler</title>
-        <link>http://tolgahanuzun.com/markov-zinciri-projesi/</link>
+        <link>https://tolgahanuzun.com/markov-zinciri-projesi/</link>
         <pubDate>Tue, 26 Dec 2017 14:28:10 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/markov-zinciri-projesi/</guid>
-        <description>&lt;img src="http://tolgahanuzun.com/theme/images/markov-zinciri.png" alt="Featured image of post Markov zinciri ve Stokastik Süreçler" /&gt;&lt;h2 id=&#34;markov-zinciri-nedir&#34;&gt;Markov Zinciri Nedir?&lt;/h2&gt;
+        <guid>https://tolgahanuzun.com/markov-zinciri-projesi/</guid>
+        <description>&lt;img src="https://tolgahanuzun.com/theme/images/markov-zinciri.png" alt="Featured image of post Markov zinciri ve Stokastik Süreçler" /&gt;&lt;h2 id=&#34;markov-zinciri-nedir&#34;&gt;Markov Zinciri Nedir?&lt;/h2&gt;
 &lt;p&gt;Lisede kısmen; üniversitede ilgili bölümlerde (Mühendislik, yazılım veya matematik) iseniz Markov zincirini veya Stokastik süreçler kelime grubunu kesinlikle duymuşsunuzdur. Olasılık-Matematik ile ilgili olan bu kelime grubu; Andrey Markov adli Rus Matematikçi tarafından geliyor. Ancak etkilediği konular ise tam olarak bizi yani yazılım ile uğraşan insanlari ilgilendiriyor.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Markov zincirleri bize geçmişe bakmaksızın bir durum üzerinden bir başka bir duruma geçiş kurallarını olasılıksal olarak belirleyebildiğimiz bir model sunuyor. Bu sürecin en önemli özelliği hafızasız olması.
@@ -179,7 +179,7 @@ Ancak belleksizlik kavramıyla sadece o anki veriyi dikkate almamiz gerektiğini
 Yani bizim o anki verimiz sadece &lt;code&gt;günaydın&lt;/code&gt; ve bu veriyle bir sonraki gelecek olan kelime %50 ihtimal ile &lt;code&gt;okula&lt;/code&gt; ya da %50 ihtimal ile &lt;code&gt;işler&lt;/code&gt; kelimesi olacak.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Yukarıdaki örnek ile markov zincirini çalıştırdıgımda aşağıdaki veri ortaya çıkıyor.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://tolgahanuzun.com/theme/images/markov.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://tolgahanuzun.com/theme/images/markov.png&#34;
 	
 	
 	
@@ -207,10 +207,10 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
         </item>
         <item>
         <title>Python Paket Yönetim Sistemi - PİP Kurulumu</title>
-        <link>http://tolgahanuzun.com/python-paket-yonetimi-pip-kurulumu/</link>
+        <link>https://tolgahanuzun.com/python-paket-yonetimi-pip-kurulumu/</link>
         <pubDate>Mon, 11 Jul 2016 01:18:19 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/python-paket-yonetimi-pip-kurulumu/</guid>
+        <guid>https://tolgahanuzun.com/python-paket-yonetimi-pip-kurulumu/</guid>
         <description>&lt;p&gt;Canını yediğim Python dilinin en güzel şeylerinden birisi bence PİP. &lt;em&gt;Nedir bu pip?&lt;/em&gt; Başlıktan da anlaşılacağı üzerine paket yönetim sistemi. Burada birçok paket, güzel dökümantasyonlarıyla birlikte sunulmuş ve büyük topluluklar tarafından desteklenen bir yönetim sistemi olduğunu söyleyebilirim.&lt;/p&gt;
 &lt;h2 id=&#34;pip-kurulumu-nasıl-yapılır&#34;&gt;Pip kurulumu nasıl yapılır?&lt;/h2&gt;
 &lt;p&gt;Öncelikle bunun için bilgisayarınızda tabi ki python yüklü olması gerekiyor. Aşağıdaki adımları izleyerek hızlı bir şekilde &lt;strong&gt;PİP kurulumu&lt;/strong&gt;nu gerçekleştirebilirsiniz.&lt;/p&gt;
@@ -257,10 +257,10 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
         </item>
         <item>
         <title>Atom parçalamayacaklar için: Micro Framework Flask</title>
-        <link>http://tolgahanuzun.com/atom-parcalamayacaklar-icin-micro-framework-flask/</link>
+        <link>https://tolgahanuzun.com/atom-parcalamayacaklar-icin-micro-framework-flask/</link>
         <pubDate>Sat, 30 Jan 2016 22:13:40 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/atom-parcalamayacaklar-icin-micro-framework-flask/</guid>
+        <guid>https://tolgahanuzun.com/atom-parcalamayacaklar-icin-micro-framework-flask/</guid>
         <description>&lt;p&gt;Uzun süredir içerik girmediğim kanısına vardım. Gerek sınavlar gerek kendi tembelliğim ile bazı işlerim yarıda kesilmek zorunda kaldı. Bunlardan bir tanesi ise çektiğim dersler örnek verebilirim. Ancak yarıyıl tatili ile bir şeylerle ilgilenmeye geri döndüm.&lt;/p&gt;
 &lt;h2 id=&#34;flask-ile-basit-dokunuşlar&#34;&gt;Flask ile basit dokunuşlar&lt;/h2&gt;
 &lt;p&gt;Django derslerini yarıda bırakmışken bir başka kütüphane ile uğraşmam ne kadar doğru tartışılır ama ihtiyaç duyduğum bir araç olduğu için Flask ile haşır neşir olmaya başladım. Bir projem için django&amp;rsquo;nun gereksiz olacağını, fazla kaçacağını düşünüyordum ki gerçekten de öyle. Projelerimde kullandığım bir sitenin altında Flask ile yapıldığını görünce hemen araştırdım. Önceden duyduğum bu micro framework tam aradığım araç olduğunu düşünüyorum.&lt;/p&gt;
@@ -275,10 +275,10 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
         </item>
         <item>
         <title>Windowsta Python Django Kurulumu</title>
-        <link>http://tolgahanuzun.com/windowsta-python-django-kurulumu/</link>
+        <link>https://tolgahanuzun.com/windowsta-python-django-kurulumu/</link>
         <pubDate>Sun, 27 Sep 2015 16:44:44 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/windowsta-python-django-kurulumu/</guid>
+        <guid>https://tolgahanuzun.com/windowsta-python-django-kurulumu/</guid>
         <description>&lt;p&gt;Django hakkında bilgilendirmeler yaptıktan sonra artık bir şeyler kurmaya başlayalım değil mi? :) Şimdi Windows için Django kurulumu hakkında sizlere bilgilendirmeler yapacağız. Bundan sonra elimden geldikçe, yazının yanında video serisi de paylaşmaya çalışacağım. Bu sayede hem dökümantasyon hem de video serisi olmuş olacak.&lt;/p&gt;
 &lt;h2 id=&#34;ilk-önce-python&#34;&gt;İlk Önce Python!&lt;/h2&gt;
 &lt;ul&gt;
@@ -321,10 +321,10 @@ Sosyal medyada sizi pozitif anlamda etkileyen insanları takip ederek sizde haya
         </item>
         <item>
         <title>M-V-C Nedir ? (Model-view-controller)</title>
-        <link>http://tolgahanuzun.com/m-v-c-nedir-model-view-controller/</link>
+        <link>https://tolgahanuzun.com/m-v-c-nedir-model-view-controller/</link>
         <pubDate>Sun, 20 Sep 2015 16:00:18 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/m-v-c-nedir-model-view-controller/</guid>
+        <guid>https://tolgahanuzun.com/m-v-c-nedir-model-view-controller/</guid>
         <description>&lt;p&gt;Django nedir ? yazımda da bahsettiğim gibi son sözel / tanım ağırlıklı yazımı yazıyor ve teknik eğitimler için önümüzdeki sözel engelleri kaldırmak istiyorum.&lt;/p&gt;
 &lt;h2 id=&#34;model-view-controller-nedir&#34;&gt;Model-View-Controller Nedir?&lt;/h2&gt;
 &lt;p&gt;İsminden fark ettiğiniz gibi 3 farklı sekmede çalışan bir sistem olduğunu söylemek mümkün. Bu sistem. Parça parça çalışıp bir bütün olarak hareket etmektedir. Şöyle 3 madde ile bunun amacını anlatmaya çalışayım:&lt;/p&gt;
@@ -345,11 +345,11 @@ Bir sonraki derste Django kurulumu hakkında sizleri bilgilendireceğim. İyi g�
         </item>
         <item>
         <title>Django Nedir? Neyin nesidir?</title>
-        <link>http://tolgahanuzun.com/django-nedir-neyin-nesidir/</link>
+        <link>https://tolgahanuzun.com/django-nedir-neyin-nesidir/</link>
         <pubDate>Sun, 20 Sep 2015 14:28:10 +0000</pubDate>
         
-        <guid>http://tolgahanuzun.com/django-nedir-neyin-nesidir/</guid>
-        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/django.png" alt="Featured image of post Django Nedir? Neyin nesidir?" /&gt;&lt;h2 id=&#34;django-nedir&#34;&gt;Django nedir?&lt;/h2&gt;
+        <guid>https://tolgahanuzun.com/django-nedir-neyin-nesidir/</guid>
+        <description>&lt;img src="https://tolgahanuzun.com/theme/images/wp/django.png" alt="Featured image of post Django Nedir? Neyin nesidir?" /&gt;&lt;h2 id=&#34;django-nedir&#34;&gt;Django nedir?&lt;/h2&gt;
 &lt;p&gt;Arkadaşlar Django bir Web framework’u olarak tanımlayabiliriz. Eğer yazılımla ilgiliyseniz bunun ne olduğunu anlayacaksınız. Ancak ilginiz yoksa size şöyle söyleyebilirim:&lt;/p&gt;
 &lt;p&gt;Marangoza gidip istediğiniz tahtaları hazırlatmayı istemek; normal bir web tasarım olarak görebilirsiniz.&lt;/p&gt;
 &lt;p&gt;Bunun aksine Framework ise istediğiniz malzemelerin hazır hallerini daha uyguna ve daha sağlam ( Destek ) bir şekilde elde etmenizi sağlayacak yoldur.&lt;/p&gt;

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>mint arduino kurulumu on Tolgahan Üzün</title>
-        <link>http://tolgahanuzun.com/tags/mint-arduino-kurulumu/</link>
+        <link>https://tolgahanuzun.com/tags/mint-arduino-kurulumu/</link>
         <description>Recent content in mint arduino kurulumu on Tolgahan Üzün</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>tr</language>
         <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
-        <lastBuildDate>Sat, 09 Jul 2016 19:20:25 +0300</lastBuildDate><atom:link href="http://tolgahanuzun.com/tags/mint-arduino-kurulumu/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 09 Jul 2016 19:20:25 +0300</lastBuildDate><atom:link href="https://tolgahanuzun.com/tags/mint-arduino-kurulumu/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Arduino DHT11 Isı Sensörü ve 16x2 LCD Ekran Kullanımı</title>
-        <link>http://tolgahanuzun.com/arduino-dht11-isi-sensoru-ve-16x2-lcd-ekran-kullanimi/</link>
+        <link>https://tolgahanuzun.com/arduino-dht11-isi-sensoru-ve-16x2-lcd-ekran-kullanimi/</link>
         <pubDate>Sat, 09 Jul 2016 19:20:25 +0300</pubDate>
         
-        <guid>http://tolgahanuzun.com/arduino-dht11-isi-sensoru-ve-16x2-lcd-ekran-kullanimi/</guid>
-        <description>&lt;img src="http://tolgahanuzun.com/theme/images/wp/lcd.jpg" alt="Featured image of post Arduino DHT11 Isı Sensörü ve 16x2 LCD Ekran Kullanımı" /&gt;&lt;p&gt;Hız kesmeden devam! Bugün &lt;a class=&#34;link&#34; href=&#34;http://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi.html&#34; &gt;Linux Ortamında Arduino Kurulumu&lt;/a&gt; ile ilgili yazımdan hemen sonra yapmayı düşündüğüm bir projeyi hayata geçirdim. Öncelikle elimdeki malzemelerin eksikliği sebebiyle şuan yarım yamalak bir şekilde çalıştığını söylemem gerekiyor.&lt;/p&gt;
-&lt;p&gt;Yaklaşık 2 hafta önce yayınladığım &lt;a class=&#34;link&#34; href=&#34;http://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi.html&#34; &gt;Son 1 ay neler yaptım&lt;/a&gt; konusunda yeni bir bilgisayar topladığımı ve özelliklerini söylemiştim. Tabi ben dururmuyum, 1 hafta boyunca bilgisayarı iyi yordum. Öyle böyle değil. Şimdi normale dönse de bilgisayarın içi ne kadar sıcaklıkta, oyun oynarken veya kendimi kaptırırken ne kadar ısınıyor diye aklıma fikir geldi. Elimdeki malzemelerle bunu ölçen bir küçük uygulama yaptım. Şimdi aşamalardan bahsetmek istiyorum.&lt;/p&gt;
+        <guid>https://tolgahanuzun.com/arduino-dht11-isi-sensoru-ve-16x2-lcd-ekran-kullanimi/</guid>
+        <description>&lt;img src="https://tolgahanuzun.com/theme/images/wp/lcd.jpg" alt="Featured image of post Arduino DHT11 Isı Sensörü ve 16x2 LCD Ekran Kullanımı" /&gt;&lt;p&gt;Hız kesmeden devam! Bugün &lt;a class=&#34;link&#34; href=&#34;https://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi.html&#34; &gt;Linux Ortamında Arduino Kurulumu&lt;/a&gt; ile ilgili yazımdan hemen sonra yapmayı düşündüğüm bir projeyi hayata geçirdim. Öncelikle elimdeki malzemelerin eksikliği sebebiyle şuan yarım yamalak bir şekilde çalıştığını söylemem gerekiyor.&lt;/p&gt;
+&lt;p&gt;Yaklaşık 2 hafta önce yayınladığım &lt;a class=&#34;link&#34; href=&#34;https://tolgahanuzun.com/linux-ortaminda-arduino-kurulumu-ve-kullanimi.html&#34; &gt;Son 1 ay neler yaptım&lt;/a&gt; konusunda yeni bir bilgisayar topladığımı ve özelliklerini söylemiştim. Tabi ben dururmuyum, 1 hafta boyunca bilgisayarı iyi yordum. Öyle böyle değil. Şimdi normale dönse de bilgisayarın içi ne kadar sıcaklıkta, oyun oynarken veya kendimi kaptırırken ne kadar ısınıyor diye aklıma fikir geldi. Elimdeki malzemelerle bunu ölçen bir küçük uygulama yaptım. Şimdi aşamalardan bahsetmek istiyorum.&lt;/p&gt;
 &lt;h2 id=&#34;dht11-isı-sensörü-ve-16x2-lcd-ekran-kullanımı&#34;&gt;DHT11 Isı Sensörü ve 16x2 LCD Ekran Kullanımı&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;http://tolgahanuzun.com/theme/images/wp/lcd.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://tolgahanuzun.com/theme/images/wp/lcd.jpg&#34;
 	
 	
 	
@@ -59,7 +59,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Şimdi de sıra ısı sensörünü çalıştırmaya geldi! Aslıdan yapboz gibi birşey. DHT11 adı altında elime bulunan sensör, normalde 4 pin’e sahip ama kolaylık olsun diye 3 pin şeklinde yapmışlar. Tabi internetteki kaynaklar 4 pine göre hazırlanmış! Bende burada tökezledim. Çünkü VCC – GND ve Sinyal pini yerleri değişmiş oluyor.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://tolgahanuzun.com/theme/images/wp/arduino-dht11-3-pin.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://tolgahanuzun.com/theme/images/wp/arduino-dht11-3-pin.png&#34;
 	
 	
 	
