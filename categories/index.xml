@@ -7,7 +7,15 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>tr</language>
         <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
-        <lastBuildDate>Thu, 11 Jan 2018 23:28:10 +0000</lastBuildDate><atom:link href="https://tolgahanuzun.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 08 Sep 2023 09:38:27 +0300</lastBuildDate><atom:link href="https://tolgahanuzun.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>github</title>
+        <link>https://tolgahanuzun.com/categories/github/</link>
+        <pubDate>Fri, 08 Sep 2023 09:38:27 +0300</pubDate>
+        
+        <guid>https://tolgahanuzun.com/categories/github/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Python Dunyasi</title>
         <link>https://tolgahanuzun.com/categories/python-dunyasi/</link>
         <pubDate>Thu, 11 Jan 2018 23:28:10 +0000</pubDate>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>github custom page on Tolgahan Üzün</title>
+        <link>https://tolgahanuzun.com/tags/github-custom-page/</link>
+        <description>Recent content in github custom page on Tolgahan Üzün</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>tr</language>
+        <copyright>Gücümü huGO&#39;dan alıyorum.</copyright>
+        <lastBuildDate>Fri, 08 Sep 2023 09:38:27 +0300</lastBuildDate><atom:link href="https://tolgahanuzun.com/tags/github-custom-page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Guthub Page&#39;i kendi domainine bağlama</title>
+        <link>https://tolgahanuzun.com/github-page-kendi-domainini-baglama/</link>
+        <pubDate>Fri, 08 Sep 2023 09:38:27 +0300</pubDate>
+        
+        <guid>https://tolgahanuzun.com/github-page-kendi-domainini-baglama/</guid>
+        <description>&lt;img src="https://tolgahanuzun.com/theme/images/github-pages/github-pages.webp" alt="Featured image of post Guthub Page&#39;i kendi domainine bağlama" /&gt;&lt;p&gt;4-5 Yil önce bu işlem çok basitdi. Simdi isler biraz karisiklasmis gibi görünüyor. Benim 3-4 saatimi aldı ve bunu bir yaziya dökmek istedim. Yapilmasi gerekenleri basliklar altinda yazacagim.&lt;/p&gt;
+&lt;h2 id=&#34;github-pagei-kendi-domainize-nasil-bağlarsiniz&#34;&gt;Github Page&amp;rsquo;i Kendi domainize nasil bağlarsiniz?&lt;/h2&gt;
+&lt;h3 id=&#34;github-page-yaratmak-ve-githubio-domaini&#34;&gt;Github Page yaratmak ve github.io domaini&lt;/h3&gt;
+&lt;p&gt;Ilk önce bir github page yaratmaniz gerekiyor. Bunun icin ben Hugo adinda bir statik web sayfa yaraticisi araci kullaniyorum. Go ile yazilmis bir paket ve toplulugu oldukca gelismis. Güzel temalar ve geliştirmeler mevcut. Ayrica rahat editlenebilir.&lt;/p&gt;
+&lt;p&gt;Siz kendinize uygun bir araç ile github page yaratma işlemi yapin. Daha sonra &lt;code&gt;kullaniciadi.github.io&lt;/code&gt; erişmeye çalışın. Bu ilk adim.&lt;/p&gt;
+&lt;h3 id=&#34;github-profilinize-domain-bilgisini-eklemek&#34;&gt;Github Profilinize Domain bilgisini eklemek&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://tolgahanuzun.com/theme/images/github-pages/github-dns.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Github Dns&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Bir sonraki aşama profilinize eklemek istediginiz alan adini girin. Size DNS kayitlarina eklemeniz icin bir yönerge gelecek. Domain&amp;rsquo;in bağlı olduğu siteye girerek custom dns ayarlari sayfasina gidin. Bunu bir namespace ile baska bir araci sayfaya tasimis olabilirsiniz. Eger ns kaydi girdiyseniz, ns kaydi yaptiginiz araci servise giderek burada eklemeniz gerekiyor. Örnek olmasi acisindan benim eklediğim kaydin ekran goruntusunu asagiya koyuyorum.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tolgahanuzun.com/theme/images/github-pages/github-dns-txt.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Github Dns txt&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Bu islem sonrasi Github Ayarlar Page sayfasina giderek durumu kontrol edin. Eger onaylandiysa sonraki asamaya gecebiliriz.&lt;/p&gt;
+&lt;h3 id=&#34;github-page-repo-icerisine-domain-bilgilerini-eklemek&#34;&gt;Github Page Repo icerisine domain bilgilerini eklemek&lt;/h3&gt;
+&lt;p&gt;Burada işler biraz civcivleniyor. &lt;code&gt; The custom domain -tolgahanuzun.com- is already taken. If you are the owner of this domain, check out https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages for information about how to verify and release this domain.&lt;/code&gt;  şeklinde bir hata ile karsilastim. Ne yaparsam yapayim çözemedim. Sonra destek ekibine yazarak hallettim. Yaptigim aşamalardan bahsedeyim;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tolgahanuzun.com/theme/images/github-pages/github-a-record.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Github A record&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Bu aşamada ilk olarak dns kayitlarina yukaridaki gibi A ve Cname kayitlarini girdim. (Yakin zamanda bu yaziyi subdomain eklenebilir sekilde ek bir yazi daha girecegim.)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Kisa bir süre bekledikten sonra &lt;a class=&#34;link&#34; href=&#34;https://www.digwebinterface.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;digwebinterface dns araci&lt;/a&gt; üzerinden yaptigim degisiklikleri kontrol ettim. Burada sağ taraftaki &lt;code&gt;all&lt;/code&gt; secenegini secerseniz tüm populer dns&amp;rsquo;ler uzerinden toplu sorgulama yapabilirsiniz. Bu islemde tamam oldugunu varsayalim.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;hala-github-page-domainime-gelmedi&#34;&gt;Hala github page domain&amp;rsquo;ime gelmedi?&lt;/h4&gt;
+&lt;p&gt;Burada benim de bilmedigim bir durum oluştu. Eskiden bu a-cname kayitlari sonrasi otomatik oluyordu. Ama şimdi 7 günlük bir custom onaylama sürecine giriyormuş. Eğer sizde benim gibi sabirli değilseniz &lt;a class=&#34;link&#34; href=&#34;https://support.github.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;github support&lt;/a&gt; sayfasina girip durumu sorabilirsiniz. 1-2 saat icinde cevap alabilmek cok keyifliydi.&lt;/p&gt;
+&lt;h3 id=&#34;github-page-ssl-sorunu&#34;&gt;Github Page SSL sorunu&lt;/h3&gt;
+&lt;p&gt;Bitti mi? hayir. Simdi web sitesine gidebiliyoruz ama baska bir sorun var. SSL sertifikasi&amp;hellip; SSL sertifikasi sizin icin github tarafindan olusturulmasi gerekiyor. Burada yapmaniz gereken birsey yok birkac gun beklemeniz gerekiyor. Ama yukaridaki gibi support uzerinden durumu sorarsaniz, yetkililer manuel bir sekilde durumu tetikleyerek islemi hizlandirabiliyor.&lt;/p&gt;
+&lt;p&gt;Ve Tada! Github page sayfasini kendi domain&amp;rsquo;inize bağlamış oldunuz. Varsa sorunuz yorumlar üzerinden sorabilirsiniz. Bilgim dahilinde cevaplamaya çalışırim.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
